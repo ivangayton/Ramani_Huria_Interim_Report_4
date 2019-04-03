@@ -31,6 +31,7 @@
 \definecolor{RHgreen}{RGB}{30,165,43}
 \definecolor{RHyellow}{RGB}{251,210,0}
 \definecolor{code}{RGB}{200,200,200}
+\definecolor{textbox}{RGB}{200,255,200}
   
 \usepackage{sectsty}
 \sectionfont{\color{RHblue}} 
@@ -73,7 +74,9 @@
 \date{\displaydate{date}}
 
 \newcommand*{\vcenteredhbox}[1]{\begingroup
-\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup}
+\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup} % For creating vertically centered rows of logos
+
+\setcounter{tocdepth}{2} % Table of Contents includes only sections and subsections, not subsubsections.
 
 \begin{document}
 \thispagestyle{empty}
@@ -149,16 +152,21 @@ Unless otherwise noted, photos by the Ramani Huria team.
 \section{Executive Summary}
 \label{executivesummary}
 \begin{multicols}{2}
-With the support of the World Bank in Tanzania, the Ramani Huria (RH) team has been collecting data for urban resilience with a particular emphasis on flooding since 2015. As the program nears its end in September of 2019, the RH team is now primarily working to curate, organize, document, and publish the data, tools and knowledge that have been created. 
 
-\begin{mdframed}[hidealllines=true,backgroundcolor=green!20,innerleftmargin=3pt,innerrightmargin=3pt,leftmargin=-3pt,rightmargin=-3pt]
+  \begin{mdframed}[hidealllines=true,backgroundcolor=RHgreen!10,innerleftmargin=6pt,innerrightmargin=6pt,leftmargin=-3pt,rightmargin=-3pt]
+
+\color{RHgrey}
+    
+With the support of the World Bank in Tanzania, the Ramani Huria (RH) team has been collecting data for urban resilience with a particular emphasis on flooding since 2015. As the program nears its end in September of 2019, the RH team is now primarily working to curate, organize, document, and publish the data, tools and knowledge that have been created. 
 
 We are working to transfer knowledge and hand over to Tanzania Resilience Academy, the successor project to Ramani Huria. 
 \end{mdframed}
 
 Together with the coalescing Resilience Academy team, we are working to disseminate the knowledge and data to as many users---particularly those who are likely to have impact improving resilience---as possible. 
 
-I want this report to get 100\% marks. 
+I want this report to get 100\% marks.
+
+\lipsum[10-18]
 
 \end{multicols}
 
@@ -178,7 +186,9 @@ This report will tell you about stuff
 We also would like to point out a link to  \href{https://ramanihuria.org}{a website}\footnote{\url{http://ramanihuria.org}\color{RHgrey} { }because it's really, really interesting. You should click on that link.}. Did you notice that there was a footnote there? If you look at the footnote it contains the full URL of the link, so that people reading the document on paper can see what it links to? Cool, huh? The rest of the text on this page will be in two columns, just because we can do that with the \LaTeX{} \textbf{\textit{multicols}} plugin. By the way, I can highlight code with a color box like \textbf{\colorbox{code}{this.}}
 
 \begin{multicols}{2}
-Hey, here's some text that'll fall into justified columns! That's because of the multicols thingy.
+
+  \lipsum[5-8]
+  
 \end{multicols}
 
 \newpage
