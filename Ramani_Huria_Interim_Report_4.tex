@@ -2,7 +2,7 @@
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 \usepackage{wrapfig}
-%\usepackage{indentfirst} % Uncomment to indent first paragaph of each section (not really correct for academic papers, but follows more common business convention)
+%\usepackage{indentfirst} % Uncomment to indent first paragraph of each section (not really correct for academic papers, but follows more common business convention)
 
 \usepackage{geometry}
 \geometry{
@@ -237,13 +237,11 @@ We do the following steps
 
 
 \section{Datasets}
-Here are some descriptions of datasets!
 
 \subsection{Community Assets and Threats}
 
 \begin{multicols}{2}
-Community asset and threat inventory is a project that falls under pillar one in Tanzania Urban Resilience Programme (TURP) focusing on risk identification. TURP aims at mitigating risks through coordinated and strategic actions led by the Government of Tanzania with support from the World Bank and the UK Department for International Development. This programme works in risk identification, risk reduction, and emergency preparedness.
-The project begun from July-December 2018  conducted through local engagement  in order to access well-informed local knowledge. The aim is to understand key assets (resources or things that the community feels are important in their subward) and potential threats---in this inventory this was based on flood hazards. Community assets referred here are schools, hospitals, religious institutions, businesses, etc. and threats mean assets usually flooded or are at risk of flooding. This information can only be provided by the community itself since they understand their neighbourhoods better. The inventory covered  243 subwards in 49 wards of Dar es Salaam. 
+Flood risk identification on flood prone areas of the city by conducting a series of meetings with key people on specific subwards. Use of influential community members and leaders to identify assets (things that are important to the community), threats (things that the community "thinks" may flood if the hazard continues unabated) and issues that contribute to flooding in their subwards. This information can only be provided by the community itself since they understand their neighbourhoods better. The inventory covered  243 subwards in 49 wards of Dar es Salaam. 
 \end{multicols}
 
 \subsubsection{Spatial Extent}
@@ -447,62 +445,55 @@ All hyperlocal boundaries have been cleaned and verified for map production exce
 \newpage
 \subsection{Soil Sediment Sampling}
 
-With the support of the World Bank in Tanzania, Ramani Huria and JBA Consulting partnered to develop a surface soil dataset for the greater Dar es Salaam region of Tanzania. This was intended to support a geomorphological assessment taking into account soil characteristics for erosion and flood risk studies.
-
-\medskip
-
-A national-level soil profile had existed for Tanzania prior to this effort, but contained only a single sample from Dar es Salaam. This was not sufficient to analyse erosion potential across the city. The JBA team in consultation with Ramani Huria decided to use a 2km grid, which resulted in 731 sampling points being pre-established throughout the city.
+Soil sediment profiles giving the soil particle sizes for surface and subsurface soils. Contains 643 soil sample points in a 2km by 2km grid covering Dar es Salaam.
+Useful for erosion modeling, also potentially agriculture and building planning. 
 
 \subsubsection{Spatial Extent}
 
 \subsubsection{Data Collection Methodology}
 
 \begin{multicols}{2}
-A set of data was recorded at each site using OpenDataKit’s Android application ODK Collect. The team developed a form specific to this exercise. It included a GPS point, selection from a list of the Region, District, Ward, and Subward, the ID number of the sample site (from the numbering of the 2km 
-grid), a photograph before, during, and after the collection, information on accessibility, a note if the weather was wet or dry, characteristics of the site (loose or consolidated sediment, low, medium, or high vegetation cover, rural or urban setting) and a photo facing outward from the site in each cardinal direction.
+We created 2km by 2 km grid points. A set of data was recorded at each site using OpenDataKit’s Android application ODK Collect. Each field sampling team of two people carried the following equipment: trowel or small shovel, plastic “ziploc” bags with 1kg capacity, Android phone pre-loaded with ODK Collect---a separate maps and navigation application, maps.me---pre-loaded with the locations to be visited, first aid kit, marker pens, permission letter for the sampling activity from the municipal authorities and a tape measure.
 
-Each field sampling team of two people carried the following equipment: trowel or small shovel, plastic “ziploc” bags with 1kg capacity, Android phone pre-loaded with ODK Collect, a separate maps and navigation application, maps.me, pre-loaded with the locations to be visited (the 2km grid), first aid kit, marker pens, permission letter for the sampling activity from the municipal authorities and a tape measure.
-
-The pair of samples—top and bottom—from each site was passed through a set of progressively finer-mesh sieves, resulting in nine separate fractions. Each fraction was weighed. The resulting measurements, which represent the proportion of each sediment particle size at each site, were
+We got training from a geo-morphologist and set up our own citizen-style lab to analyze the soil samples. The pair of samples—top and bottom—from each site was passed through a set of progressively finer-mesh sieves, resulting in nine separate fractions. Each fraction was weighed. The resulting measurements, which represent the proportion of each sediment particle size at each site, were
 recorded.
 
-The following materials were used: a set of metal sieves, scales, hand wash station and gloves, brush, cloth, and towel for cleaning sieves, Android phone with ODK Collect and sieving survey.
+The following materials were used: a set of metal sieves, scales, hand wash station and gloves, brush, cloth and towel for cleaning sieves, an Android phone with ODK Collect and sieving survey.
 \end{multicols}
 
 \subsubsection{Data Model}
 
 \subsubsection{Timeline}
-11/10/2018 to 23/02/2019
+2018-10-11 to 2019-02-23
 
 \subsubsection{Quality Assurance}
 
-The 643 samples were analyzed by sieving each to separate the soil by particle size and weighing the resulting fractions for analysis. The resulting dataset, a geo-referenced set of soil profiles, has been published as open data.
+The quality control was done by  using ODK form to flag out any discrepancies such as negative masses or discrepancies in sums immediately.
 
-\bigskip
+\subsubsection{Access}
+\href{https://geonode.uhurulabs.org/layers/geonode\%3A_2019_02_26_dar_soil_sampling_final_results_v1}{https://geonode.uhurulabs.org/layers/geonode\%3A20190226darsoilsamplingfinalresultsv1}
 
-Sometimes we didn't weigh the dirt properly, or we didn't write down the correct number from the scale after we weighed the dirt. That was bad. 
+\subsubsection{Licencing}
+\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\footnote{\url{https://creativecommons.org/licenses/by/4.0/}}
 
-We had to go get a lot more dirt. Then we had to sieve and weigh it again. That was expensive, but it worked and now we have a nice dataset.
+\subsubsection{Statistics}
+731 soil sample points created using a 2 km grid. 643 points sampled and sieved; 88 sample points were either inaccessible or hard to collect sample e.g. paved areas, military base.
 
+\subsubsection{Data Visualization}
 \begin{figure}[h]
   \color{RHgreen}\caption{A detail of the map showing the soil particle size in Dar es Salaam. The upward-facing histogram bars represent the top (surface) samples, and the downward-facing bars represent the bottom samples.}
   \centering
   \includegraphics[width=1\textwidth]{soil_map_detail_peninsula_with_legend}
 \end{figure}
 
-\subsubsection{Statistics}
-731 soil sample points created using a 2 km grid. 643 points sampled and sieved; 88 sample points were either inaccessible or hard to collect sample e.g. paved areas, military base.
-
-\subsubsection{Data Visualization}
-
 \subsubsection{Use Case}
-This data is primarily intended for use with erosion modeling. For users not equipped with erosion modeling skills and toolkits, and for sharing the results with the public, a visual map has been prepared that gives a good first impression of the characteristics of the soil.
-The resulting dataset, a geo-referenced set of soil profiles, has been published as \href{https://geonode.uhurulabs.org/layers/geonode3A_2019_02_26_dar_soil_sampling_final_results_v1}{open data}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode3A_2019_02_26_dar_soil_sampling_final_results_v1}}.
+JBA  primarily intended for use this data for erosion modeling. The resulting dataset, a geo-referenced set of soil profiles, has been published as open data.
 
 \subsubsection{Data Gap}
-88 points were not collected because they were inaccessible
+We have size of particles and maps but there is no data showing the chemical decomposition of soil.
 
 \subsubsection{Lesson Learned}
+Management of data is highly needed to avoid unnecessary cost.
 
 \newpage
 \subsection{Trash Mapping in Formal Settlement (Green WastePro Limited)}
