@@ -238,109 +238,16 @@ We do the following steps
 
 \section{Datasets}
 
-\subsection{Community Assets and Threats}
-
-\begin{multicols}{2}
-Flood risk identification on flood prone areas of the city by conducting a series of meetings with key people on specific subwards. Use of influential community members and leaders to identify assets (things that are important to the community), threats (things that the community "thinks" may flood if the hazard continues unabated) and issues that contribute to flooding in their subwards. This information can only be provided by the community itself since they understand their neighbourhoods better. The inventory covered  243 subwards in 49 wards of Dar es Salaam. 
-\end{multicols}
-
-\subsubsection{Spatial Extent}
-
-\begin{figure}[h]
-  \color{RHgreen}\caption{49 Wards covered during the community asset and threat mapping inventory}
-  \centering
-  \includegraphics[width=0.8\textwidth]{images/asset_and_threat_wards.png}
-\end{figure}
-
-\subsubsection{Data Collection Methodology}
-
-We met with people and asked them questions.
-
-Sometimes they answered sensibly. Sometimes not. Sometimes we wrote down the answers. Sometimes not.
-
-\subsubsection{Data Model}
-
-A total of 5020 asset points were collected during the project. These include:
-\begin{itemize}
-    \item Assets at risk but not important---28 
-    \item Evacuation centers---42
-    \item Important assets and at risk---857
-    \item Important assets but not at risk---4093
-    \item Roads and road names, and
-    \item Landmarks
-\end{itemize}
-
-\subsubsection{Timeline}
-06/08/2018 to January, 2019
-
-\subsubsection{Quality Assurance}
-Excel, JOSM for buildings and assets and QGIS for roads
-
-\subsubsection{Data Visualization}
-
-\subsubsection{Use Case}
-March, 2019 community flood response, creating resilience plans, mitigation measures through community mapping and impact assessment.
-
-\subsubsection{Data Gap}
-Out of 49 wards, historical flood extent was conducted in only 11 wards. There is a need of conducting flood extent in the remaining wards to create a better understanding of flooding.
-
-\subsubsection{Lessons Learned}
-Community members should “never” be neglected during data collection in their neighbourhoods. They understand the extent very well, severity and pattern than anyone else because of the experience they have and how much the scenario affects them.
-
-\newpage
-\subsection{Flood Extents}
-
-Historical flood extent covered areas that are mostly affected by floods during rainy seasons. Households surveys were conducted to capture details in  subwards of the respective wards across the Msimbazi River rivers and streams that outflow to the main river.
-
-\medskip
-
-The information captured aimed to know whether the respondent had been affected by floods in the previous years, the flood depth and flood occurrence years---historical flood events. Individuals were asked to reflect on historical flood extents; therefore there is inherent subjectivity in their memories
-
-\subsubsection{Spatial Extent}
-\begin{figure}[h]
-  \color{RHgreen}\caption{Map showing the flood extent progress in Dar es Salaam}
-  \centering
-  \includegraphics[width=1\textwidth]{images/RH_Flood_Extent_Progress.png}
-\end{figure}
-
-\subsubsection{Data Collection Methodology}
-
-We met with people and asked them questions.
-
-Sometimes they answered sensibly. Sometimes not. Sometimes we wrote down the answers. Sometimes not.
-
-\subsubsection{Data Model}
-
-\subsubsection{Timeline}
-24/08/2017 to 12/04/2018
-
-\subsubsection{Quality Assurance}
-QGIS, Excel
-
-\bigskip
-People said all kinds of crazy crap. We checked on it.
-
-We ourselves often wrote down ridiculous things. We checked them.
-
-Our tracing and field mapping was sometimes awful. We looked for mistakes and corrected them.
-
-\subsubsection{Statistics}
-11 out of 44 prioritized Ramani Huria wards mapped, 30 000 household surveys
-
-\subsubsection{Data Visualization}
-
-\subsubsection{Use Case}
-
-\subsubsection{Data Gap}
-Individuals were asked to reflect on historical flood extents; therefore there is inherent subjectivity in their memories
-
-\subsubsection{Lessons Learned}
-
-\newpage
 \subsection{Drainage}
+\begin{wrapfigure}{r}{0.25\textwidth} %this figure will be at the right
+    \centering
+    \includegraphics[width=0.25\textwidth]{images/Drainage_Mapping.jpg}
+\end{wrapfigure}
 Drainage data collected in the most flood prone areas across Dar es Salaam using cheap  and practical methods. This information will be used to develop a flood model which requires accurately collected specifications of drains such as depth, width, blockage (by either vegetation or material), connectivity, and diameter (typically for culverts).
 
 \subsubsection{Spatial Extent}
+Drainage data covers 44 prioritized Ramani Huria wards most of which are along the Msimbazi and Ng’ombe rivers. Almost 90\% of the wards have been mapped.
+
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing the drainage mapping progress as of March, 2019}
   \centering
@@ -352,17 +259,35 @@ Drainage data collected in the most flood prone areas across Dar es Salaam using
 Drain points and segments data were traced using ODK Collect application. So far, drainage mapping has been completed in 38 wards of Dar es Salaam and 1 ward is still under cleaning process.
 
 \subsubsection{Data Model}
-\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria}{https://wiki.openstreetmap.org/wiki/Dar es Salaam/Ramani Huria}
+\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Drainage}{https://wiki.openstreetmap.org/wiki/Dar es Salaam/Ramani Huria\#Drainage}
 
 \subsubsection{Timeline}
-August, 2017 to Ongoing
+August, 2017 and Ongoing
 
 \subsubsection{Quality Assurance}
 
-Drainage data is cleaned using QGIS, a high resolution 2016 COWI imagery and in Hydro osm python model.
+Drainage data is cleaned using QGIS with pre-installed template styles for the segments and points, a high resolution 2016 COWI imagery and in Hydro osm python model to ensure all drain segments and points are connected.
+
+\subsubsection{Access}
+\begin{itemize}
+    \item \href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}
+    \item \href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}
+\end{itemize}
+
+\subsubsection{Licencing}
+\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\footnote{\url{https://creativecommons.org/licenses/by/4.0/}}
 
 \subsubsection{Statistics}
 38 out of 44 wards of Dar es Salaam Ramani Huria prioritized wards completed
+\begin{center}
+\begin{tabular}{ |c|c|c| }
+ \hline
+ Number of Segments & 16207 \\ 
+ \hline
+ Number of Points & 12620 \\ 
+ \hline
+\end{tabular}
+\end{center}
 
 \subsubsection{Data Visualization}
 
@@ -372,6 +297,150 @@ Development of a flood model and early warning systems
 \subsubsection{Data Gap}
 
 \subsubsection{Lessons Learned}
+
+\newpage
+\subsection{Soil Sediment Sampling}
+
+Soil sediment profiles giving the soil particle sizes for surface and subsurface soils. Contains 643 soil sample points in a 2km by 2km grid covering Dar es Salaam.
+Useful for erosion modeling, also potentially agriculture and building planning. 
+
+\subsubsection{Spatial Extent}
+Dar es Salaam and neighboring districts of Pwani region i.e. Bagamoyo, Kibaha and Kisarawe.
+
+\begin{figure}[h]
+  \color{RHgreen}\caption{A geo-referenced set of soil sediment profiles in Dar es Salaam and Pwani regions}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/soil_sample_locations.jpg}
+\end{figure}
+
+\subsubsection{Data Collection Methodology}
+
+\begin{multicols}{2}
+We created 2km by 2 km grid points. A set of data was recorded at each site using OpenDataKit’s Android application ODK Collect. Each field sampling team of two people carried the following equipment: trowel or small shovel, plastic “ziploc” bags with 1kg capacity, Android phone pre-loaded with ODK Collect---a separate maps and navigation application, maps.me---pre-loaded with the locations to be visited, first aid kit, marker pens, permission letter for the sampling activity from the municipal authorities and a tape measure.
+
+We got training from a geo-morphologist and set up our own citizen-style lab to analyze the soil samples. The pair of samples—top and bottom—from each site was passed through a set of progressively finer-mesh sieves, resulting in nine separate fractions. Each fraction was weighed. The resulting measurements, which represent the proportion of each sediment particle size at each site, were
+recorded.
+
+The following materials were used: a set of metal sieves, scales, hand wash station and gloves, brush, cloth and towel for cleaning sieves, an Android phone with ODK Collect and sieving survey.
+\end{multicols}
+
+\subsubsection{Data Model}
+
+\subsubsection{Timeline}
+2018-10-11 to 2019-02-23
+
+\subsubsection{Quality Assurance}
+
+The quality control was done by  using ODK form to flag out any discrepancies such as negative masses or discrepancies in sums immediately.
+
+\subsubsection{Access}
+\href{https://geonode.uhurulabs.org/layers/geonode\%3A_2019_02_26_dar_soil_sampling_final_results_v1}{https://geonode.uhurulabs.org/layers/geonode\%3A20190226darsoilsamplingfinalresultsv1}
+
+\subsubsection{Licencing}
+CC-BY 4.0
+
+\subsubsection{Statistics}
+731 soil sample points created using a 2 km grid. 643 points sampled and sieved; 88 sample points were either inaccessible or hard to collect sample e.g. paved areas, military base.
+
+\subsubsection{Data Visualization}
+\begin{figure}[h]
+  \color{RHgreen}\caption{A detail of the map showing the soil particle size in Dar es Salaam. The upward-facing histogram bars represent the top (surface) samples, and the downward-facing bars represent the bottom samples.}
+  \centering
+  \includegraphics[width=1\textwidth]{soil_map_detail_peninsula_with_legend}
+\end{figure}
+
+\subsubsection{Use Case}
+JBA  primarily intended for use this data for erosion modeling. The resulting dataset, a geo-referenced set of soil profiles, has been published as open data.
+
+\subsubsection{Data Gap}
+We have size of particles and maps but there is no data showing the chemical decomposition of soil.
+
+\subsubsection{Lesson Learned}
+Management of data is highly needed to avoid unnecessary cost.
+
+\newpage
+
+\subsection{Community Assets and Threats}
+
+\begin{multicols}{2}
+Flood risk identification on flood prone areas of the city by conducting a series of meetings with key people on specific subwards. Use of influential community members and leaders to identify assets (things that are important to the community), threats (things that the community "thinks" may flood if the hazard continues unabated) and issues that contribute to flooding in their subwards. This information can only be provided by the community itself since they understand their neighbourhoods better. The inventory covered  243 subwards in 49 wards of Dar es Salaam. 
+\end{multicols}
+
+\subsubsection{Spatial Extent}
+The inventory covered  243 subwards in 49 wards of Dar es Salaam. 
+
+\begin{figure}[h]
+  \color{RHgreen}\caption{49 Wards covered during the community asset and threat mapping inventory}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/asset_and_threat_wards.png}
+\end{figure}
+
+\subsubsection{Data Collection Methodology}
+
+Setting up meetings with community leaders and influential people i.e. religious leaders in the specific wards. We first introduced how the data can help in reducing flooding, then ask them to identify and trace their boundaries on a map printed in A1 and point out assets and disaster threats in their neighbourhoods. We also printed satellite image maps of the respective subward to simplify identification of areas in their subwards.
+
+Each meeting had 10 to 12 participants and 6 student mappers to facilitate the process. Student mappers split community members into three groups, each group guided by two students.
+
+The discussion was based on three major key points:
+\begin{enumerate}
+    \item Assets (Important things in the subward)
+    \item Assets under threats (incase the subward floods)
+    \item Main causes of flood in the subward
+\end{enumerate}
+
+\subsubsection{Data Model}
+
+\subsubsection{Timeline}
+2018-06-08 to 2018-09-02
+
+\subsubsection{Quality Assurance}
+JOSM for editing buildings and roads and QGIS for field data analysis. Other sites are used for Quality Assurance for JOSM data are:
+\begin{itemize}
+    \item \href{https://qa.poole.ch/#}{QA}\footnote{\url{https://qa.poole.ch/#}}
+    \item \href{https://osmose.openstreetmap.}{Osmose}\footnote{\url{https://osmose.openstreetmap.}}
+    \item \href{http://keepright.at/}{KeepRight}\footnote{\url{http://keepright.at/}}
+\end{itemize}
+
+\subsubsection{Access}
+\href{https://drive.google.com/drive/u/1/folders/1nW7luOI0A92GKi1vJtUJwt9P88OAzQ6h}{Dar es Salaam Asset and Threat Inventory}\footnote{\url{https://drive.google.com/drive/u/1/folders/1nW7luOI0A92GKi1vJtUJwt9P88OAzQ6h}}
+
+\subsubsection{Licencing}
+CC-BY 4.0
+
+\subsubsection{Statistics}
+A total of 5020 asset points were collected during the project. These include:
+\begin{center}
+\begin{tabular}{ |c|c|c| }
+ \hline
+ Assets at risk but not important & 28 \\ 
+ \hline
+ Evacuation centers & 42 \\ 
+ \hline
+ Important assets and at risk & 857 \\
+ \hline
+ Important assets but not at risk & 4093 \\
+ \hline
+ Roads and road names & 65868 \\
+ \hline
+ Landmarks & 1538 \\
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Data Visualization}
+
+\subsubsection{Use Case}
+March, 2019 community flood response, creating resilience plans, mitigation measures through community mapping and impact assessment.
+
+\subsubsection{Data Gap}
+Out of 49 wards, historical flood extent was conducted in only 11 wards. There is a need of conducting flood extent in the remaining wards to create a better understanding of flooding.
+
+\subsubsection{Lessons Learned}
+Planning on paper vs actual fieldwork. We underestimated the time allocation in the work plan and number of training days which in turn resulted to a crappy work (maps and reports) leading to an  extension of time from October 2018 as the planned completion month to January 2019.
+
+\medskip
+We selected a few competent and committed students to re-do the maps and reports.
+
 
 \newpage
 \subsection{Buildings and Infrastructure}
@@ -410,6 +479,7 @@ Apart from showing how buildings are arranged, the digitized data has been used 
 \subsection{Administrative Divisions and Landmarks}
 Hyperlocal boundaries are divisions within subwards regarded as political boundaries previously referred to as ten cell divisions as they were originally comprised of ten households.
 Due to the increase in population, they comprise of 30 to 200 households and are administered by local leaders (wajumbe). Wajumbe are increasingly functioning as non-partisan public servants, often the first---in most cases---point of interaction between the government and citizens.
+
 Given the rate of urbanization in Dar es Salaam, it is very difficult to locate people and their respective addresses due to the unplanned and informal nature of these communities. Using more granular boundaries however makes it easier to locate people and provide services more precisely. 
 
 \subsubsection{Spatial Extent}
@@ -430,7 +500,7 @@ Given the rate of urbanization in Dar es Salaam, it is very difficult to locate 
 QGIS, Excel
 
 \subsubsection{Statistics}
-2612 hyperlocal boundaries mapped in 35 wards of Dar es Salaam
+2612 local administrative boundaries mapped in 35 wards of Dar es Salaam
 
 \subsubsection{Data Visualization}
 
@@ -443,59 +513,6 @@ All hyperlocal boundaries have been cleaned and verified for map production exce
 \subsubsection{Lesson Learned}
 
 \newpage
-\subsection{Soil Sediment Sampling}
-
-Soil sediment profiles giving the soil particle sizes for surface and subsurface soils. Contains 643 soil sample points in a 2km by 2km grid covering Dar es Salaam.
-Useful for erosion modeling, also potentially agriculture and building planning. 
-
-\subsubsection{Spatial Extent}
-
-\subsubsection{Data Collection Methodology}
-
-\begin{multicols}{2}
-We created 2km by 2 km grid points. A set of data was recorded at each site using OpenDataKit’s Android application ODK Collect. Each field sampling team of two people carried the following equipment: trowel or small shovel, plastic “ziploc” bags with 1kg capacity, Android phone pre-loaded with ODK Collect---a separate maps and navigation application, maps.me---pre-loaded with the locations to be visited, first aid kit, marker pens, permission letter for the sampling activity from the municipal authorities and a tape measure.
-
-We got training from a geo-morphologist and set up our own citizen-style lab to analyze the soil samples. The pair of samples—top and bottom—from each site was passed through a set of progressively finer-mesh sieves, resulting in nine separate fractions. Each fraction was weighed. The resulting measurements, which represent the proportion of each sediment particle size at each site, were
-recorded.
-
-The following materials were used: a set of metal sieves, scales, hand wash station and gloves, brush, cloth and towel for cleaning sieves, an Android phone with ODK Collect and sieving survey.
-\end{multicols}
-
-\subsubsection{Data Model}
-
-\subsubsection{Timeline}
-2018-10-11 to 2019-02-23
-
-\subsubsection{Quality Assurance}
-
-The quality control was done by  using ODK form to flag out any discrepancies such as negative masses or discrepancies in sums immediately.
-
-\subsubsection{Access}
-\href{https://geonode.uhurulabs.org/layers/geonode\%3A_2019_02_26_dar_soil_sampling_final_results_v1}{https://geonode.uhurulabs.org/layers/geonode\%3A20190226darsoilsamplingfinalresultsv1}
-
-\subsubsection{Licencing}
-\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\footnote{\url{https://creativecommons.org/licenses/by/4.0/}}
-
-\subsubsection{Statistics}
-731 soil sample points created using a 2 km grid. 643 points sampled and sieved; 88 sample points were either inaccessible or hard to collect sample e.g. paved areas, military base.
-
-\subsubsection{Data Visualization}
-\begin{figure}[h]
-  \color{RHgreen}\caption{A detail of the map showing the soil particle size in Dar es Salaam. The upward-facing histogram bars represent the top (surface) samples, and the downward-facing bars represent the bottom samples.}
-  \centering
-  \includegraphics[width=1\textwidth]{soil_map_detail_peninsula_with_legend}
-\end{figure}
-
-\subsubsection{Use Case}
-JBA  primarily intended for use this data for erosion modeling. The resulting dataset, a geo-referenced set of soil profiles, has been published as open data.
-
-\subsubsection{Data Gap}
-We have size of particles and maps but there is no data showing the chemical decomposition of soil.
-
-\subsubsection{Lesson Learned}
-Management of data is highly needed to avoid unnecessary cost.
-
-\newpage
 \subsection{Trash Mapping in Formal Settlement (Green WastePro Limited)}
 Green WastePro Limited is a private company specialized in waste management with the aim to offer eco-friendly solutions in cleaning and waste management. They are mostly operate in formal settlements. The company needed digital methodology to obtain clients’ information including locations, clients contacts etc, so they can track clients and provide services accordingly.
 
@@ -504,11 +521,24 @@ Green WastePro Limited is a private company specialized in waste management with
 
 Joshemi Company Limited (JCL) is a company entitled by the Ilala Municipal to collect solid waste in Tabata ward with eight subwards therein. The system of collecting waste and doing cleanliness within the company was done locally by revenue collectors to collect service charges from the customers by using local tools.
 \subsubsection {Spatial Extent}
+\subsubsection{Methodology}
+\subsubsection{Data Model}
+\subsubsection{Timeline}
+\subsubsection{Quality Control}
+\subsubsection{Access}
+\subsubsection{Licensing}
+\subsubsection{Statistics}
+\subsubsection{Pictures}
+\subsubsection{Data Visualization}
+\subsubsection{Use Case}
+\subsubsection{Data Gap}
+\subsubsection{Lessons Learned}
+
 
 \newpage
 \subsection{Dar es Salaam Trash Data}
 
-A collaboration between Nipe Fagio (“give me the broom” in Swahili), a civil society organisation founded in 2013 and Ramani Huria that joined forces and mapped trash sites in Dar es Salaam. The trash mapping initiative was part and parcel of the large Let’s-Do-It-World campaign, a civic-led mass movement to clean up countries.
+A collaboration between Nipe Fagio (“give me the broom” in Swahili), a civil society organization founded in 2013 and Ramani Huria that joined forces and mapped trash sites in Dar es Salaam. The trash mapping initiative was part and parcel of the large Let’s-Do-It-World campaign, a civic-led mass movement to clean up countries.
 The mapped data helped to identify location of the areas with poorly managed waste materials, type and size of waste and clean up methods. This process helped ease cleaning the city on September 15th, 2018, a celebration of the world clean up day.
 
 \subsubsection{Data Collection Methodology}
@@ -521,6 +551,48 @@ Some categories such as handful and bagful were far too small to be collected an
 
 \newpage
 \subsection{Community Flood Response Mapping}
+
+\newpage
+\subsection{Historical Flood Extents}
+
+Historical flood extent covered areas that are mostly affected by floods during rainy seasons. Households surveys were conducted to capture details in  subwards of the respective wards across the Msimbazi River rivers and streams that outflow to the main river.
+
+\medskip
+
+The information captured aimed to know whether the respondent had been affected by floods in the previous years, the flood depth and flood occurrence years---historical flood events. Individuals were asked to reflect on historical flood extents; therefore there is inherent subjectivity in their memories
+
+\subsubsection{Spatial Extent}
+\begin{figure}[h]
+  \color{RHgreen}\caption{Map showing the flood extent mapping progress in Dar es Salaam}
+  \centering
+  \includegraphics[width=1\textwidth]{images/RH_Flood_Extent_Progress.png}
+\end{figure}
+
+\subsubsection{Data Collection Methodology}
+
+We met with people and asked them questions.
+
+Sometimes they answered sensibly. Sometimes not. Sometimes we wrote down the answers. Sometimes not.
+
+\subsubsection{Data Model}
+
+\subsubsection{Timeline}
+24/08/2017 to 12/04/2018
+
+\subsubsection{Quality Assurance}
+QGIS, Excel
+
+\subsubsection{Statistics}
+11 out of 44 prioritized Ramani Huria wards mapped, 30 000 household surveys
+
+\subsubsection{Data Visualization}
+
+\subsubsection{Use Case}
+
+\subsubsection{Data Gap}
+Individuals were asked to reflect on historical flood extents; therefore there is inherent subjectivity in their memories
+
+\subsubsection{Lessons Learned}
 
 \newpage
 \section{Annexes}
