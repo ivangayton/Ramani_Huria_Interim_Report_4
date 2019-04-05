@@ -259,7 +259,7 @@ Drainage data covers 44 prioritized Ramani Huria wards most of which are along t
 Drain points and segments data were traced using ODK Collect application. So far, drainage mapping has been completed in 38 wards of Dar es Salaam and 1 ward is still under cleaning process.
 
 \subsubsection{Data Model}
-\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Drainage}{https://wiki.openstreetmap.org/wiki/Dar es Salaam/Ramani Huria\#Drainage}
+\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Drainage}{https://wiki.openstreetmap.org/wiki/Dar\_es\_Salaam/Ramani_Huria\#Drainage}
 
 \subsubsection{Timeline}
 August, 2017 and Ongoing
@@ -379,7 +379,7 @@ The inventory covered  243 subwards in 49 wards of Dar es Salaam.
 
 Setting up meetings with community leaders and influential people i.e. religious leaders in the specific wards. We first introduced how the data can help in reducing flooding, then ask them to identify and trace their boundaries on a map printed in A1 and point out assets and disaster threats in their neighbourhoods. We also printed satellite image maps of the respective subward to simplify identification of areas in their subwards.
 
-Each meeting had 10 to 12 participants and 6 student mappers to facilitate the process. Student mappers split community members into three groups, each group guided by two students.
+Students worked in groups of six, visiting one subward at a time. After introductions were completed at the ward level, each subward mapping and data collection took approximately  4-5 days to complete. Threat and Asset inventory mappings were conducted in two different ways depending on whether the subward in question was mapped or unmapped. Student mappers split community members into three groups, each group guided by two students.
 
 The discussion was based on three major key points:
 \begin{enumerate}
@@ -391,13 +391,13 @@ The discussion was based on three major key points:
 \subsubsection{Data Model}
 
 \subsubsection{Timeline}
-2018-06-08 to 2018-09-02
+2018-06-08 to 2019-01-20
 
 \subsubsection{Quality Assurance}
 JOSM for editing buildings and roads and QGIS for field data analysis. Other sites are used for Quality Assurance for JOSM data are:
 \begin{itemize}
     \item \href{https://qa.poole.ch/#}{QA}\footnote{\url{https://qa.poole.ch/#}}
-    \item \href{https://osmose.openstreetmap.}{Osmose}\footnote{\url{https://osmose.openstreetmap.}}
+    \item \href{http://osmose.openstreetmap.fr}{Osmose}\footnote{\url{http://osmose.openstreetmap.fr}}
     \item \href{http://keepright.at/}{KeepRight}\footnote{\url{http://keepright.at/}}
 \end{itemize}
 
@@ -452,21 +452,36 @@ Re-digitization of the city to update and improve the quality of already digitiz
 
 \subsubsection{Data Collection Methodology}
 
-We traced buildings, we visited buildings, and we looked for things. We put them in OpenStreetMap.
+Tracing and adjusting buildings from Mbtiles (offline imagery) which is updated and with higher resolution.
 
 \subsubsection{Data Model}
-\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria}{https://wiki.openstreetmap.org/wiki/Dar es Salaam/Ramani Huria}
+\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Buildings}{https://wiki.openstreetmap.org/wiki/Dar\_es\_Salaam/Ramani\_Huria\#Buildings}
 
 \subsubsection{Timeline}
-24/08/2018 to 20/10/2018
+2018-08-24 to 2018-10-20
 
 \subsubsection{Quality Assurance}
-JOSM
+\begin{itemize}
+    \item JOSM
+    \item Tasking Manager
+\end{itemize}
 
 \subsubsection{Statistics}
 28 wards have been re-digitized, though all 95 wards are digitized
 
 \subsubsection{Data Visualization}
+
+\begin{figure}[h]
+  \color{RHgreen}\caption{Map showing Magomeni ward before re-digitization using UAV imagery}
+  \centering
+  \includegraphics[width=0.4\textwidth]{images/Magomeni_Before_Re-digitization.png}
+\end{figure}
+
+\begin{figure}[h]
+  \color{RHgreen}\caption{Map showing Magomeni ward after re-digitization using UAV imagery}
+  \centering
+  \includegraphics[width=0.4\textwidth]{images/Magomeni_After_Re-digitization.png}
+\end{figure}
 
 \subsubsection{Use Case}
 Apart from showing how buildings are arranged, the digitized data has been used in other Ramani Huria activities such as Green WastePro and Assets and Threat Mapping.
@@ -521,15 +536,26 @@ Green WastePro Limited is a private company specialized in waste management with
 
 Joshemi Company Limited (JCL) is a company entitled by the Ilala Municipal to collect solid waste in Tabata ward with eight subwards therein. The system of collecting waste and doing cleanliness within the company was done locally by revenue collectors to collect service charges from the customers by using local tools.
 \subsubsection {Spatial Extent}
+2 pilot subwards (Msimbazi Magharibi and Msimbazi Mama) out of eight subwards in Tabata ward
 \subsubsection{Methodology}
 \subsubsection{Data Model}
 \subsubsection{Timeline}
 \subsubsection{Quality Control}
+Google spreadsheet to fill in client information, JOSM for buildings, QGIS for client points
 \subsubsection{Access}
 \subsubsection{Licensing}
 \subsubsection{Statistics}
+20163 trash points collected in 2 subwards of Tabata ward
 \subsubsection{Pictures}
+\newpage
 \subsubsection{Data Visualization}
+\begin{figure}[h]
+  \color{RHgreen}\caption{A map showing client distribution, houses and hyperlocal boundaries in Msimbazi Magharibi}
+  \centering
+ \includegraphics[width=0.8 \textwidth]{images/msimbazi_mama_data_viz.png}
+\end{figure}
+
+
 \subsubsection{Use Case}
 \subsubsection{Data Gap}
 \subsubsection{Lessons Learned}
@@ -562,10 +588,11 @@ Historical flood extent covered areas that are mostly affected by floods during 
 The information captured aimed to know whether the respondent had been affected by floods in the previous years, the flood depth and flood occurrence years---historical flood events. Individuals were asked to reflect on historical flood extents; therefore there is inherent subjectivity in their memories
 
 \subsubsection{Spatial Extent}
+
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing the flood extent mapping progress in Dar es Salaam}
   \centering
-  \includegraphics[width=1\textwidth]{images/RH_Flood_Extent_Progress.png}
+  \includegraphics[width=0.8\textwidth]{images/RH_Flood_Extent_Progress.png}
 \end{figure}
 
 \subsubsection{Data Collection Methodology}
