@@ -4,6 +4,8 @@
 \usepackage{wrapfig}
 %\usepackage{indentfirst} % Uncomment to indent first paragraph of each section (not really correct for academic papers, but follows more common business convention)
 
+\usepackage{subcaption} 
+
 \usepackage{geometry}
 \geometry{
   a4paper,
@@ -243,6 +245,9 @@ We do the following steps
     \centering
     \includegraphics[width=0.25\textwidth]{images/Drainage_Mapping.jpg}
 \end{wrapfigure}
+
+\
+
 Drainage data collected in the most flood prone areas across Dar es Salaam using cheap  and practical methods. This information will be used to develop a flood model which requires accurately collected specifications of drains such as depth, width, blockage (by either vegetation or material), connectivity, and diameter (typically for culverts).
 
 \subsubsection{Spatial Extent}
@@ -471,16 +476,20 @@ Tracing and adjusting buildings from Mbtiles (offline imagery) which is updated 
 
 \subsubsection{Data Visualization}
 
-\begin{figure}[h]
-  \color{RHgreen}\caption{Map showing Magomeni ward before re-digitization using UAV imagery}
-  \centering
-  \includegraphics[width=0.4\textwidth]{images/Magomeni_Before_Re-digitization.png}
-\end{figure}
-
-\begin{figure}[h]
-  \color{RHgreen}\caption{Map showing Magomeni ward after re-digitization using UAV imagery}
-  \centering
-  \includegraphics[width=0.4\textwidth]{images/Magomeni_After_Re-digitization.png}
+\usepackage{subcaption} 
+... 
+\begin{figure}
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{Magomeni_Before_Re-digitization.png}
+    \caption{Map showing Magomeni ward before re-digitization using UAV imagery}
+    \label{fig:1}
+  \end{subfigure}
+  %
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{Magomeni_After_Re-digitization.png}
+    \caption{Map showing Magomeni ward after re-digitization using UAV imagery}
+    \label{fig:2}
+  \end{subfigure}
 \end{figure}
 
 \subsubsection{Use Case}
@@ -577,6 +586,10 @@ Some categories such as handful and bagful were far too small to be collected an
 
 \newpage
 \subsection{Community Flood Response Mapping}
+\subsubsection{Summary}
+As a response to heavy rainfall on March, 3rd, 2019, that resulted in heavy flooding in some wards of Dar es Salaam, the Ramani Huria team decided to conduct field mapping to engage affected communities with the aim of conducting a rapid assessment and producing impact maps.
+\subsubsection{Spatial Extent}
+3 majorly affected wards in Dar es Salaam with the March 3rd, 2019 rainfall, \colour{RH yellow} add map
 
 \newpage
 \subsection{Historical Flood Extents}
