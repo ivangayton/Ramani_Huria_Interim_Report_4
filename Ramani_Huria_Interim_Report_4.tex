@@ -260,11 +260,14 @@ Drainage data covers 44 prioritized Ramani Huria wards most of which are along t
 \end{figure}
 
 \subsubsection{Data Collection Methodology}
-
-Drain points and segments data were traced using ODK Collect application. So far, drainage mapping has been completed in 38 wards of Dar es Salaam and 1 ward is still under cleaning process.
+\ Data collection
+Preparation of field paper (soft copy) in KoBo Toolbox for the ODK application for drain segments and points. Field mappers then installed ODK on their Android phones and with the URL for the server to be used, they downloaded the survey forms, filled the required information from the field and uploaded the forms.
+Data cleaning
+During the data cleaning process, the ODK forms that were filled in the filled are downloaded from the server in Comma Separated Value (CSV) format and converted to GeoPackage (.gpkg) in QGIS. A plugin to convert the ODK form to CSV format is found in https://github.com/zestyping/odk_csv.
+The drain segments and points are styled with a pre-defined .qml style found in QGIS---Drain_lines_categorized_with_labels_and_directions and Drain_points_categorized_with_labels. After the data is cleaned, it is run in the Hydro OSM model to ensure all drain segments and points are connected.
 
 \subsubsection{Data Model}
-\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Drainage}{https://wiki.openstreetmap.org/wiki/Dar\_es\_Salaam/Ramani_Huria\#Drainage}
+\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Drainage}{https://wiki.openstreetmap.org/wiki/Dar\_es\_Salaam/Ramani\_Huria\#Drainage}
 
 \subsubsection{Timeline}
 August, 2017 and Ongoing
@@ -295,6 +298,10 @@ Drainage data is cleaned using QGIS with pre-installed template styles for the s
 \end{center}
 
 \subsubsection{Data Visualization}
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/Drainage_Visualization.jpeg}
+\end{figure}
 
 \subsubsection{Use Case}
 Development of a flood model and early warning systems
@@ -539,6 +546,21 @@ All hyperlocal boundaries have been cleaned and verified for map production exce
 \newpage
 \subsection{Trash Mapping in Formal Settlement (Green WastePro Limited)}
 Green WastePro Limited is a private company specialized in waste management with the aim to offer eco-friendly solutions in cleaning and waste management. They are mostly operate in formal settlements. The company needed digital methodology to obtain clients’ information including locations, clients contacts etc, so they can track clients and provide services accordingly.
+\subsubsection{Spatial Extent}
+\subsubsection{Methodology}
+Collection of building data for each structure and resident/client data for each unit (residence or business) within the buildings in Kisutu and Mchafukoge wards in Dar es Salaam. Robust barcode stickers were placed at the entry of each unit, and a survey was completed for each unit where possible. The building data was uploaded to OSM, along with some amenity information gleaned from the unit surveys, and the remainder of the per-unit data was provided to GWPL.
+\subsubsection{Data Model}
+\subsubsection{Timeline}
+October - November 2018
+\subsubsection{Quality Control}
+JOSM for buildings, QGIS for barcodes
+\subsubsection{Access}
+\subsubsection{Licensing}
+\subsubsection{Statistics}
+\subsubsection{Data Visualization}
+\subsubsection{Use Case}
+\subsubsection{Data Gaps}
+\subsubsection{Lessons Learned}
 
 \newpage
 \subsection{Trash Mapping in Informal Settlement (Joshemi Company Limited)}
