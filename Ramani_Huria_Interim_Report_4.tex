@@ -4,8 +4,6 @@
 \usepackage{wrapfig}
 %\usepackage{indentfirst} % Uncomment to indent first paragraph of each section (not really correct for academic papers, but follows more common business convention)
 
-\usepackage{subcaption} 
-
 \usepackage{geometry}
 \geometry{
   a4paper,
@@ -34,11 +32,16 @@
 \definecolor{RHyellow}{RGB}{251,210,0}
 \definecolor{code}{RGB}{200,200,200}
 \definecolor{textbox}{RGB}{200,255,200}
+\definecolor{captiongreen}{RGB}{50,165,60}
   
 \usepackage{sectsty}
 \sectionfont{\color{RHblue}} 
 \subsectionfont{\color{RHblue}}
 \subsubsectionfont{\color{RHblue}}
+
+\usepackage{caption}
+\usepackage[font={color=captiongreen,small,bf},figurename=Fig.,labelfont={small,it}]{caption}
+\usepackage{subcaption} 
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -126,11 +129,11 @@
 {\includegraphics[width=5cm]{Dar_Ramani_Huria_logo.png}}
 \end{center}
 
-This report was prepared by William Evans, Innocent Maholi, Ivan Buendia Gayton, and \textcolor{red}{OTHER PEOPLE} from the Humanitarian OpenStreetMap Team in Tanzania.
+This report was prepared by William Evans, Immaculate Mwanja, Hawa Andini, Innocent Maholi, Ivan Buendia Gayton, and many others from the Humanitarian OpenStreetMap Team in Tanzania.
 
 \medskip
 
-Layout and graphic design by Ivan Buendia Gayton based on the Ramani Huria design guideline by Darragh Amelia Coward, using the the \LaTeX { } typesetting system.
+Graphic design by Ivan Buendia Gayton and Immaculate Mwanja based on the Ramani Huria design guideline by Darragh Amelia Coward. Layout was done using the \LaTeX { } typesetting system.
 
 \medskip
 
@@ -138,13 +141,21 @@ Guidance and input on the project came from Edward Anderson, Caroline Gevaert, R
 
 \medskip
 
-Unless otherwise noted, photos by the Ramani Huria team.
-5
- Maps were prepared by the Ramani Huria team using QGIS.
+Unless otherwise noted, photos by the Ramani Huria team. Maps were prepared by the Ramani Huria team using QGIS.
 
-\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip\bigskip
 
-\textcolor{red}{LOTS OF LOGOS}
+\vcenteredhbox{\includegraphics[height=2cm]{images/logo_Coat_of_arms_of_Tanzania.png}}
+\vcenteredhbox{\includegraphics[height=2.2cm]{UK-aid_logo.png}}
+\vcenteredhbox{\includegraphics[height=1.2cm]{images/World_Bank_Group_logo.png}}
+\vcenteredhbox{\includegraphics[height=0.7cm]{images/logo_GFDRR.png}}
+
+\medskip
+
+\vcenteredhbox{\includegraphics[height=1.2cm]{images/logo_dar-es-salaam.jpg}}
+\vcenteredhbox{\includegraphics[height=1.2cm]{images/logo_Ardhi.png}}
+\vcenteredhbox{\includegraphics[height=1.2cm]{images/logo_costech.png}}
+\vcenteredhbox{\includegraphics[height=1.2cm]{images/logo_UDSM.jpg}}
 
 \newpage
 
@@ -260,14 +271,18 @@ Drainage data covers 44 prioritized Ramani Huria wards most of which are along t
 \end{figure}
 
 \subsubsection{Data Collection Methodology}
-\ Data collection
+\begin{multicols}{2}
+{\color{RHblue} Data collection}
+\
 Preparation of field paper (soft copy) in KoBo Toolbox for the ODK application for drain segments and points. Field mappers then installed ODK on their Android phones and with the URL for the server to be used, they downloaded the survey forms, filled the required information from the field and uploaded the forms.
-Data cleaning
-During the data cleaning process, the ODK forms that were filled in the filled are downloaded from the server in Comma Separated Value (CSV) format and converted to GeoPackage (.gpkg) in QGIS. A plugin to convert the ODK form to CSV format is found in https://github.com/zestyping/odk_csv.
-The drain segments and points are styled with a pre-defined .qml style found in QGIS---Drain_lines_categorized_with_labels_and_directions and Drain_points_categorized_with_labels. After the data is cleaned, it is run in the Hydro OSM model to ensure all drain segments and points are connected.
+
+{\color{RHblue} Data cleaning}
+\
+During the data cleaning process, the ODK forms that were filled in the field are downloaded from the server in Comma Separated Value (CSV) format and converted to GeoPackage (.gpkg) in QGIS. The plugin to convert ODK form to CSV format is found in \href{https://github.com/zestyping/odk_csv}{GitHub}\footnote{\url{https://github.com/zestyping/odk\_csv}}. The drain segments and points are styled with a pre-defined .qml style found in QGIS---Drain\_lines\_categorized\_with\_labels\_and\_directions and Drain\_points\_categorized\_with\_labels. After the data is cleaned, it is run in the \href{https://github.com/openearth/hydro-osm}{Hydro OSM model}\footnote{\url{https://github.com/openearth/hydro-osm}} to ensure all drain segments and points are connected.
+\end{multicols}
 
 \subsubsection{Data Model}
-\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Drainage}{https://wiki.openstreetmap.org/wiki/Dar\_es\_Salaam/Ramani\_Huria\#Drainage}
+\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Drainage}{Dar es Salaam\_Ramani Huria\_OpenStreetMap Wiki}\footnote{\url{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria#Drainage}}
 
 \subsubsection{Timeline}
 August, 2017 and Ongoing
@@ -278,8 +293,8 @@ Drainage data is cleaned using QGIS with pre-installed template styles for the s
 
 \subsubsection{Access}
 \begin{itemize}
-    \item \href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}
-    \item \href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}
+    \item \href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}{UhuruLabs\_Drain Segments}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}}
+    \item \href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}{UhuruLabs\_Drain Points}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}}
 \end{itemize}
 
 \subsubsection{Licencing}
@@ -320,7 +335,7 @@ Useful for erosion modeling, also potentially agriculture and building planning.
 Dar es Salaam and neighboring districts of Pwani region i.e. Bagamoyo, Kibaha and Kisarawe.
 
 \begin{figure}[h]
-  \color{RHgreen}\caption{A geo-referenced set of soil sediment profiles in Dar es Salaam and Pwani regions}
+  {\color{RHblue}\caption{A geo-referenced set of soil sediment profiles in Dar es Salaam and Pwani regions}}
   \centering
   \includegraphics[width=0.8\textwidth]{images/soil_sample_locations.jpg}
 \end{figure}
@@ -346,7 +361,7 @@ The following materials were used: a set of metal sieves, scales, hand wash stat
 The quality control was done by  using ODK form to flag out any discrepancies such as negative masses or discrepancies in sums immediately.
 
 \subsubsection{Access}
-\href{https://geonode.uhurulabs.org/layers/geonode\%3A_2019_02_26_dar_soil_sampling_final_results_v1}{https://geonode.uhurulabs.org/layers/geonode\%3A20190226darsoilsamplingfinalresultsv1}
+\href{https://geonode.uhurulabs.org/layers/geonode\%3A_2019_02_26_dar_soil_sampling_final_results_v1}{UhuruLabs\_Soil Sediment Sampling}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3A20190226darsoilsamplingfinalresultsv1}}
 
 \subsubsection{Licencing}
 CC-BY 4.0
@@ -356,7 +371,7 @@ CC-BY 4.0
 
 \subsubsection{Data Visualization}
 \begin{figure}[h]
-  \color{RHgreen}\caption{A detail of the map showing the soil particle size in Dar es Salaam. The upward-facing histogram bars represent the top (surface) samples, and the downward-facing bars represent the bottom samples.}
+  \caption{A detail of the map showing the soil particle size in Dar es Salaam. The upward-facing histogram bars represent the top (surface) samples, and the downward-facing bars represent the bottom samples.}
   \centering
   \includegraphics[width=1\textwidth]{soil_map_detail_peninsula_with_legend}
 \end{figure}
@@ -368,6 +383,30 @@ JBA  primarily intended for use this data for erosion modeling. The resulting da
 We have size of particles and maps but there is no data showing the chemical decomposition of soil.
 
 \subsubsection{Lesson Learned}
+{\color {RHblue}Budgeting time for seeking permissions-}
+\
+A common challenge in this type of activity is seeking permission for doing what may be suspicious-looking activities (running around random areas of a major city with a shovel, for example).
+
+{\color {RHblue}Inconsistent offset procedure-}
+\
+Looking at the map of the sites that were actually collected, there were several for which it is not precisely clear what offset procedure was actually used when a given grid site was not accessible.
+
+{\color{RHblue}Failure to realize the sensitivity of the error thresholds-}
+\
+When looking at individual measurements anecdotally, we found that most were of high quality. In other words, it was possible to examine a few dozen measurements and only find one or two potential errors, which on the surface appeared to show that things were going well. This was grossly misleading!
+
+{\color{RHblue} Field work outpacing analysis, insufficient early feedback-}
+\
+As the team felt that the field work would be the most difficult part (and certainly it was the larger consumer of time and resources), we focused on it, and failed to become alarmed when the analysis (sieving) work fell behind. This contributed to there being a substantial backlog of sieving to be done at the end of the field collection, but also contributed to our not discovering the high proportion of discrepancies until long after the field work was complete.
+
+{\color{RHblue}Inadequate backup of samples-}
+\
+We did not build backup into our analysis; we discarded all of the sediment immediately after sieving and measurement, and only collected enough for a single round of sieving at each site.
+
+{\color{RHblue}Data entry system design-}
+\
+It’s critical to design the tools carefully. We encountered problems in data entry, in part because we didn’t invest enough in making sure the system was robust and simple.
+
 Management of data is highly needed to avoid unnecessary cost.
 
 \newpage
@@ -375,7 +414,7 @@ Management of data is highly needed to avoid unnecessary cost.
 \subsection{Community Assets and Threats}
 
 \begin{multicols}{2}
-Flood risk identification on flood prone areas of the city by conducting a series of meetings with key people on specific subwards. Use of influential community members and leaders to identify assets (things that are important to the community), threats (things that the community "thinks" may flood if the hazard continues unabated) and issues that contribute to flooding in their subwards. This information can only be provided by the community itself since they understand their neighbourhoods better. The inventory covered  243 subwards in 49 wards of Dar es Salaam. 
+Flood risk identification on flood prone areas of the city by conducting a series of meetings with key people on specific subwards. Use of influential community members and leaders to identify assets (things that are important to the community), threats (things that the community "thinks" may flood if the hazard continues unabated) and issues that contribute to flooding in their subwards. This information can only be provided by the community itself since they understand their neighbourhoods better.
 \end{multicols}
 
 \subsubsection{Spatial Extent}
@@ -455,7 +494,7 @@ We selected a few competent and committed students to re-do the maps and reports
 
 
 \newpage
-\subsection{Buildings and Infrastructure}
+\subsection{Buildings Footprint Digitization}
 \begin{multicols}{2}
 Re-digitization of the city to update and improve the quality of already digitized layers using COWI imagery with 10cm resolution provided by the Ministry of Lands, Housing and Human Settlements. (Previously the city was digitized using either Bing, Mapbox or Digitalglobe which have lower resolutions compared to COWI imagery. So far the team has been able to digitize 28 out of 44 Ramani Huria wards. Namely Kisutu, Temeke, Vingunguti, Upanga Mashariki, Upanga Magharibi, Jangwani, Sandali, Kivukoni, Mwananyamala, Tabata, Kigogo, Kariakoo, Gerezani, Mchikichini, Hananasifu, Sinza, Kjitonyama, Magomeni, Tandale, Buguruni, Ilala, Keko, Mbagala, Mbagala kuu, Mabibo, Mchafukoge and Mzimuni. The wards digitized have a total of 299,691 buildings. This number includes new and existing buildings altogether.
 \end{multicols}
@@ -467,7 +506,7 @@ Re-digitization of the city to update and improve the quality of already digitiz
 Tracing and adjusting buildings from Mbtiles (offline imagery) which is updated and with higher resolution.
 
 \subsubsection{Data Model}
-\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Buildings}{https://wiki.openstreetmap.org/wiki/Dar\_es\_Salaam/Ramani\_Huria\#Buildings}
+\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Buildings}{Dar es Salaam\_Ramani Huria\_OpenStreetMap Wiki}\footnote{\url{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria#Buildings}}
 
 \subsubsection{Timeline}
 2018-08-24 to 2018-10-20
@@ -545,7 +584,18 @@ All hyperlocal boundaries have been cleaned and verified for map production exce
 
 \newpage
 \subsection{Trash Mapping in Formal Settlement (Green WastePro Limited)}
+
+\begin{wrapfigure}{r}{0.25\textwidth} %this figure will be at the right
+    \centering
+    
+    \includegraphics[width=0.25\textwidth]{images/Scanning_barcodes.png}
+\end{wrapfigure}
+
+
+\
+
 Green WastePro Limited is a private company specialized in waste management with the aim to offer eco-friendly solutions in cleaning and waste management. They are mostly operate in formal settlements. The company needed digital methodology to obtain clients’ information including locations, clients contacts etc, so they can track clients and provide services accordingly.
+
 \subsubsection{Spatial Extent}
 \subsubsection{Methodology}
 Collection of building data for each structure and resident/client data for each unit (residence or business) within the buildings in Kisutu and Mchafukoge wards in Dar es Salaam. Robust barcode stickers were placed at the entry of each unit, and a survey was completed for each unit where possible. The building data was uploaded to OSM, along with some amenity information gleaned from the unit surveys, and the remainder of the per-unit data was provided to GWPL.
