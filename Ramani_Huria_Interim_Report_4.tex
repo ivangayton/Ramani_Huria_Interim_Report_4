@@ -63,7 +63,6 @@
   filecolor=magenta,      
   urlcolor=cyan,
   pdftitle={RH Interim Report 4},
-  bookmarks=true,
   %pdfpagemode=FullScreen,
 }
 %\urlstyle{same}
@@ -500,10 +499,17 @@ Re-digitization of the city to update and improve the quality of already digitiz
 \end{multicols}
 
 \subsubsection{Spatial Extent}
+28 out of 44 Ramani Huria prioritized wards in Dar es Salaam have been re-digitized
+\begin{figure}[h]
+  \caption{28 prioritized Ramani Huria wards have been re-digitized by the team}
+  \centering
+  \includegraphics[width=1\textwidth]{images/Building_Footprint_Digitization.png}
+\end{figure}
+
 
 \subsubsection{Data Collection Methodology}
 
-Tracing and adjusting buildings from Mbtiles (offline imagery) which is updated and with higher resolution.
+The purpose of the work was introduced to the team and mbtiles for the wards were created in \href{https://www.gdal.org/gdaladdo.html}{GDAL}\footnote{\url{https://www.gdal.org/gdaladdo.html}} (gdaladdo)---a utility used to build or rebuild overview images. Supervisors of the team created mapping projects on \href{https://tasks.hotosm.org/}{HOT Tasking Manager}\footnote{\url{https://tasks.hotosm.org/}} which were then assigned to the digitization team. Using the 2016 COWI imagery, buildings were re-digitized in JOSM and validation of the re-digitization was done by the validation team.
 
 \subsubsection{Data Model}
 \href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Buildings}{Dar es Salaam\_Ramani Huria\_OpenStreetMap Wiki}\footnote{\url{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Buildings}}
@@ -517,13 +523,17 @@ Tracing and adjusting buildings from Mbtiles (offline imagery) which is updated 
     \item Tasking Manager
 \end{itemize}
 
+\subsubsection{Access}
+\href{https://drive.google.com/drive/u/1/folders/1Aly4pDcq5JP14vB6VY-IxahTwvt6Ukrv}{Dar es Salaam Buildings}\footnote{\url{https://drive.google.com/drive/u/1/folders/1Aly4pDcq5JP14vB6VY-IxahTwvt6Ukrv}}
+
+\subsubsection{Licensing}
+\href{https://opendatacommons.org/licenses/odbl/index.html}{Open Data Commons Open Database License (ODbL)}\footnote{\url{https://opendatacommons.org/licenses/odbl/index.html}}
+
 \subsubsection{Statistics}
 28 wards have been re-digitized, though all 95 wards are digitized
 
 \subsubsection{Data Visualization}
 
-
-... 
 \begin{figure}
   \begin{subfigure}[b]{0.5\textwidth}
     \includegraphics[width=\textwidth]{Magomeni_Before_Re-digitization.png}
@@ -543,7 +553,12 @@ Apart from showing how buildings are arranged, the digitized data has been used 
 
 \subsubsection{Data Gap}
 
+Only 28 wards out of 44 Ramani Huria wards have been re-digitized by using high resolution imagery. Still we have a burden to do the same for the rest of all Ramani Huria wards. 
 \subsubsection{Lessons Learned}
+Dar es Salaam is a fast growing city and with that there are physical changes or development of the city in terms of buildings. New buildings are constructed and some are demolished from time to time therefore there is a need for re-digitization of the whole city.
+\medskip
+
+Re-digitization using a high quality imagery is important because the features can be seen clearly and it is difficult to miss any features when the image is clearer.
 
 \newpage
 \subsection{Administrative Divisions and Landmarks}
@@ -564,7 +579,7 @@ Given the rate of urbanization in Dar es Salaam, it is very difficult to locate 
 \subsubsection{Data Model}
 
 \subsubsection{Timeline}
-13/09/2018 to 24/12/2018
+2018-09-13 to 2018-12-24
 
 \subsubsection{Quality Assurance}
 QGIS, Excel
