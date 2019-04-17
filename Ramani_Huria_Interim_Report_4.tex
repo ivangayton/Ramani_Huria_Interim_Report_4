@@ -422,7 +422,7 @@ The inventory covered  243 subwards in 49 wards of Dar es Salaam.
 \begin{figure}[h]
   \color{RHgreen}\caption{49 Wards covered during the community asset and threat mapping inventory}
   \centering
-  \includegraphics[width=0.8\textwidth]{images/asset_and_threat_wards.png}
+  \includegraphics[width=0.8\textwidth]{images/Asset&Threat.png}
 \end{figure}
 
 \subsubsection{Data Collection Methodology}
@@ -530,20 +530,43 @@ The purpose of the work was introduced to the team and mbtiles for the wards wer
 \href{https://opendatacommons.org/licenses/odbl/index.html}{Open Data Commons Open Database License (ODbL)}\footnote{\url{https://opendatacommons.org/licenses/odbl/index.html}}
 
 \subsubsection{Statistics}
-28 wards have been re-digitized, though all 95 wards are digitized
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+   Buildings before re-digitization & 460,917 \\
+\hline
+   Buildings after re-digitization & 677,478 \\
+\hline
+\end{tabular}
+\end{center}
 
 \subsubsection{Data Visualization}
-
 \begin{figure}
   \begin{subfigure}[b]{0.5\textwidth}
-    \includegraphics[width=\textwidth]{Magomeni_Before_Re-digitization.png}
+    \includegraphics[width=\textwidth]{Magomeni_Before_Redigitization.png}
    \color{RHgreen}\caption{Map showing Magomeni ward before re-digitization using UAV imagery}
     \label{fig:1}
   \end{subfigure}
   %
   \begin{subfigure}[b]{0.5\textwidth}
-    \includegraphics[width=\textwidth]{Magomeni_After_Re-digitization.png}
+    \includegraphics[width=\textwidth]{Magomeni_After_Redigitization.png}
     \color{RHgreen}\caption{Map showing Magomeni ward after re-digitization using UAV imagery}
+    \label{fig:2}
+  \end{subfigure}
+\end{figure}
+
+ \vspace{2mm}
+ 
+\begin{figure}
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{images/Detailed_Magomeni_Before_Redigitization.png}
+   \color{RHgreen}\caption{Detailed image showing Magomeni ward before re-digitization using UAV imagery}
+    \label{fig:1}
+  \end{subfigure}
+  %
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{images/Detailed_Magomeni_After_Redigitization.png}
+    \color{RHgreen}\caption{Detailed image showing Magomeni ward after re-digitization using UAV imagery}
     \label{fig:2}
   \end{subfigure}
 \end{figure}
@@ -552,8 +575,7 @@ The purpose of the work was introduced to the team and mbtiles for the wards wer
 Apart from showing how buildings are arranged, the digitized data has been used in other Ramani Huria activities such as Green WastePro and Assets and Threat Mapping.
 
 \subsubsection{Data Gap}
-
-Only 28 wards out of 44 Ramani Huria wards have been re-digitized by using high resolution imagery. Still we have a burden to do the same for the rest of all Ramani Huria wards. 
+Only 28 wards out of 44 Ramani Huria wards have been re-digitized by using high resolution imagery. There is a need to do the same for the remaining 20 Ramani Huria wards.
 \subsubsection{Lessons Learned}
 Dar es Salaam is a fast growing city and with that there are physical changes or development of the city in terms of buildings. New buildings are constructed and some are demolished from time to time therefore there is a need for re-digitization of the whole city.
 \medskip
@@ -564,17 +586,24 @@ Re-digitization using a high quality imagery is important because the features c
 \subsection{Administrative Divisions and Landmarks}
 Hyperlocal boundaries are divisions within subwards regarded as political boundaries previously referred to as ten cell divisions as they were originally comprised of ten households.
 Due to the increase in population, they comprise of 30 to 200 households and are administered by local leaders (wajumbe). Wajumbe are increasingly functioning as non-partisan public servants, often the first---in most cases---point of interaction between the government and citizens.
+\medskip
 
 Given the rate of urbanization in Dar es Salaam, it is very difficult to locate people and their respective addresses due to the unplanned and informal nature of these communities. Using more granular boundaries however makes it easier to locate people and provide services more precisely. 
 
 \subsubsection{Spatial Extent}
+36 out of 44 prioritized Ramani Huria wards in Dar es Salaam
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing Ramani Huria collaboration with Data Zetu hyper-local boundaries mapping}
   \centering
-  \includegraphics[width=0.8\textwidth]{images/RH_DZ_shina_boundaries.png}
+  \includegraphics[width=0.8\textwidth]{images/hyperlocal_boundary.png}
 \end{figure}
 
 \subsubsection{Data Collection Methodology}
+\begin{itemize}
+    \item Introduction of the project from subward offices followed by training of selected community mappers on how to use ODK.
+    \item Trained mappers work with wajumbe to trace their administrative boundaries. With assistance from supervisors, the collected data is checked and uploaded to the server. 
+    \item Data cleaning was done using excel  and map creation using QGIS.
+\end{itemize}
 
 \subsubsection{Data Model}
 
@@ -584,8 +613,14 @@ Given the rate of urbanization in Dar es Salaam, it is very difficult to locate 
 \subsubsection{Quality Assurance}
 QGIS, Excel
 
+\subsubsection{Access}
+\href{https://drive.google.com/drive/u/1/folders/1bagTRoBVYX88VJpgYm61Rl2WXHgrvBJi}{Hyperlocal administrative boundary data}\footnote{\url{https://drive.google.com/drive/u/1/folders/1bagTRoBVYX88VJpgYm61Rl2WXHgrvBJi}}
+
+\subsubsection{Licencing}
+CC-BY 4.0
+
 \subsubsection{Statistics}
-2612 local administrative boundaries mapped in 35 wards of Dar es Salaam
+2612 hyperlocal boundaries mapped in 36 wards of Dar es Salaam
 
 \subsubsection{Data Visualization}
 
@@ -596,35 +631,58 @@ To find people’s address in Dar es Salaam, \href{https://www.hotosm.org/update
 All hyperlocal boundaries have been cleaned and verified for map production except Mabibo subward. The team faced political misunderstandings among wajumbe as most of the hyperlocal boundaries overlapped among different political parties and made it difficult for the team to trace the boundaries.
 
 \subsubsection{Lesson Learned}
+\begin{itemize}
+    \item Overlaying of hyperlocal boundaries:
+\end{itemize}
+Some community leaders did not know their administrative boundaries which led to a number of buildings to fall in two or three different boundaries which made the data cleaning process very difficult.
+\begin{itemize}
+    \item Validation of cleaned data:
+\end{itemize}
+After identification of the problems, the team decided to validate the already cleaned data with local leaders in order to make sure that the errors are resolved. To ensure that this problem does not repeat itself, as soon as the community leaders finished tracing the boundaries, they worked with the supervisors to trace their boundaries on an A1 printed map with a satellite imagery to ensure data quality. 
+
 
 \newpage
-\subsection{Trash Mapping in Formal Settlement (Green WastePro Limited)}
-
-\begin{wrapfigure}{r}{0.25\textwidth} %this figure will be at the right
-    \centering
-    
-    \includegraphics[width=0.25\textwidth]{images/Scanning_barcodes.png}
-\end{wrapfigure}
-
-
-\
+\subsection{Trash Mapping in Formal Settlements (Green WastePro Limited)}
 
 Green WastePro Limited is a private company specialized in waste management with the aim to offer eco-friendly solutions in cleaning and waste management. They are mostly operate in formal settlements. The company needed digital methodology to obtain clients’ information including locations, clients contacts etc, so they can track clients and provide services accordingly.
 
 \subsubsection{Spatial Extent}
+\begin{figure}[h]
+  \color{RHgreen}\caption{Map showing the mapped wards with GreenWaste Pro Limited}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/GWPL_trial.png}
+\end{figure}
+
 \subsubsection{Methodology}
 Collection of building data for each structure and resident/client data for each unit (residence or business) within the buildings in Kisutu and Mchafukoge wards in Dar es Salaam. Robust barcode stickers were placed at the entry of each unit, and a survey was completed for each unit where possible. The building data was uploaded to OSM, along with some amenity information gleaned from the unit surveys, and the remainder of the per-unit data was provided to GWPL.
 \subsubsection{Data Model}
 \subsubsection{Timeline}
-October - November 2018
+October to November 2018
 \subsubsection{Quality Control}
 JOSM for buildings, QGIS for barcodes
 \subsubsection{Access}
+\href{https://drive.google.com/drive/u/1/folders/17DZDPi-_4FZlgXXd1qQ8deMHI57vdZcY}{GreenWaste Pro Limited data}\footnote{\url{https://drive.google.com/drive/u/1/folders/17DZDPi-_4FZlgXXd1qQ8deMHI57vdZcY}}
 \subsubsection{Licensing}
+CC-BY 4.0
 \subsubsection{Statistics}
 \subsubsection{Data Visualization}
+\begin{figure}
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{images/GWPL_client_map.png}
+   \color{RHgreen}\caption{Map showing detailed collected points at Kisutu ward}
+    \label{fig:1}
+  \end{subfigure}
+  %
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{images/GWPL_client_tracking_system.png}
+    \color{RHgreen}\caption{GWPL new client tracking system}
+    \label{fig:2}
+  \end{subfigure}
+\end{figure}
 \subsubsection{Use Case}
+Creation of a client tracking system now used by GWPL to keep track of their clients
 \subsubsection{Data Gaps}
+Data was collected in only 2 wards of Dar es Salaam. The process needs to be replicated to other wards of the city
 \subsubsection{Lessons Learned}
 
 \newpage
@@ -634,28 +692,58 @@ Joshemi Company Limited (JCL) is a company entitled by the Ilala Municipal to co
 \subsubsection {Spatial Extent}
 2 pilot subwards (Msimbazi Magharibi and Msimbazi Mama) out of eight subwards in Tabata ward
 \subsubsection{Methodology}
+We used OpenDataKit (ODK) Collect and OpenMapKit (OMK) an extension of ODK which is a free and open android application for data collection. The team worked with revenue collectors to map the clients as they have a better understanding of the area to simplify the process of data collection. 
+\medskip
+
+Ramani Huria team switched to working with local community leaders (wajumbe) who better understand their area of administration which normally ranges from 30 to 200 households. Among other things, wajumbe  are responsible for allocating resident leases and titles, therefore were able to provide clients’ details even when the clients were absent.
+\medskip
+
+Tabata ward is 50\% informally developed hence most houses do not have house numbers. In order to connect the buildings’ geo locations with client information we developed “fake house ID” numbers as a baseline for the use of collected data.
+
 \subsubsection{Data Model}
+
 \subsubsection{Timeline}
+November, 2018 to February, 2019
+
 \subsubsection{Quality Control}
 Google spreadsheet to fill in client information, JOSM for buildings, QGIS for client points
+
 \subsubsection{Access}
+\href{https://drive.google.com/drive/u/1/folders/1tUg6Tk2fQ4paIn-nQeUNFoQfmhkAaQYA}{Joshemi Company Limited (JCL) data}\footnote{\url{https://drive.google.com/drive/u/1/folders/1tUg6Tk2fQ4paIn-nQeUNFoQfmhkAaQYA}}
+
 \subsubsection{Licensing}
+CC-BY 4.0
+
 \subsubsection{Statistics}
 20163 trash points collected in 2 subwards of Tabata ward
-\subsubsection{Pictures}
-\newpage
+
+\
+
 \subsubsection{Data Visualization}
-\begin{figure}[h]
-  \color{RHgreen}\caption{A map showing client distribution, houses and hyperlocal boundaries in Msimbazi Magharibi}
-  \centering
- \includegraphics[width=0.8 \textwidth]{images/msimbazi_mama_data_viz.png}
+\begin{figure}
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{images/Msimbazi_mama.png}
+   \color{RHgreen}\caption{A map showing client distribution, houses and hyperlocal boundaries in Msimbazi Mama}
+    \label{fig:1}
+  \end{subfigure}
+  %
+  \begin{subfigure}[b]{0.5\textwidth}
+    \includegraphics[width=\textwidth]{images/Msimbazi_magharibi.png}
+    \color{RHgreen}\caption{Map showing client distribution, houses and hyperlocal boundaries in Msimbazi Magharibi}
+    \label{fig:2}
+  \end{subfigure}
 \end{figure}
 
-
 \subsubsection{Use Case}
-\subsubsection{Data Gap}
-\subsubsection{Lessons Learned}
+The replication of the processes, system and using of trash dataset  in other wards & subwards to help  in the trash management. This can also reduce blockage of drains/waterways and hence make the ward flood resilient.
 
+\subsubsection{Data Gap}
+A system to collect  revenues and update clients who pay for the trash services has been created but the most hindrance is that, the personnel responsible to collect and use the system do not have/ own android smartphones---a requirement for data collection---and the company is hesitant to buy phones to be used by the revenue collectors.
+
+\subsubsection{Lessons Learned}
+There is a need to establish  a strong digital system of trash data collection to support companies and investors who are interested in waste management.
+
+There must be a channel that links the company to people so as to avoid challenges during data collection.
 
 \newpage
 \subsection{Dar es Salaam Trash Data}
@@ -663,7 +751,10 @@ Google spreadsheet to fill in client information, JOSM for buildings, QGIS for c
 A collaboration between Nipe Fagio (“give me the broom” in Swahili), a civil society organization founded in 2013 and Ramani Huria that joined forces and mapped trash sites in Dar es Salaam. The trash mapping initiative was part and parcel of the large Let’s-Do-It-World campaign, a civic-led mass movement to clean up countries.
 The mapped data helped to identify location of the areas with poorly managed waste materials, type and size of waste and clean up methods. This process helped ease cleaning the city on September 15th, 2018, a celebration of the world clean up day.
 
-\subsubsection{Data Collection Methodology}
+\subsubsection{Spatial Extent}
+50 wards in Dar es Salaam
+
+\subsubsection{Methodology}
 Using OpenDataKit to collect trash points in the city and filling out the survey on the type of waste (debris, glass, metal), and the size of trash (hand full, bag full, truckload, cart etc) to ease cleaning process.
 
 Before field work, introduction letters were sent to ward officers so they can be informed and for mappers security in case there is any assistance needed from the ward office.
@@ -671,12 +762,98 @@ Before field work, introduction letters were sent to ward officers so they can b
 \subsubsection{Quality Assurance}
 Some categories such as handful and bagful were far too small to be collected and sometimes confused the mappers therefore a decision to remove these points had to be made which dropped the number of points to approximately 9,000.
 
+\subsubsection{Data Model}
+\subsubsection{Timeline}
+2018-07-30 to 2018-08-03
+
+\subsubsection{Quality Control}
+QGIS, data visualization tool
+
+\subsubsection{Access}
+
+\subsubsection{Licensing}
+CC-BY 4.0
+
+\subsubsection{Statistics}
+A total of 20,392 points were collected and reduced to 9,452 after cleaning
+
+\subsubsection{Data Visualization}
+\begin{figure}[h]
+  \color{RHgreen}\caption{Trash points collected during Dar es Salaam Trash Mapping}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/dar_trash.png}
+\end{figure}
+
+\subsubsection{Use Case}
+Data was used in the world clean up day on  September 15th, 2018 to help clean up the city.
+
+\subsubsection{Data Gaps}
+A decision to retain the data model used by the pioneers of the Clean Up the World Movement in Estonia was made since the model included the collection of waste piles as small as a handful or bagful, which in the context of Dar es Salaam was far too small and mappers possibly confused by the “bagful” category in some cases collected the locations of waste which was bagged and prepared for pickup by waste disposal personnel. The removal of the two attributes dropped the number of trash points from 20,392 to 9,452.
+
+\subsubsection{Lesson Learned}
+
 \newpage
 \subsection{Community Flood Response Mapping}
 \subsubsection{Summary}
-As a response to heavy rainfall on March, 3rd, 2019, that resulted in heavy flooding in some wards of Dar es Salaam, the Ramani Huria team decided to conduct field mapping to engage affected communities with the aim of conducting a rapid assessment and producing impact maps.
+As a response to heavy rainfall on March, 3rd, 2019, that resulted in heavy flooding in some wards of Dar es Salaam, the Ramani Huria team decided to conduct field mapping to engage affected communities with the aim of \textit{conducting a rapid assessment and producing impact maps.}
+
 \subsubsection{Spatial Extent}
-3 majorly affected wards in Dar es Salaam with the March 3rd, 2019 rainfall (add map)
+3 majorly affected wards in Dar es Salaam with the March 3rd, 2019 rainfall
+\begin{figure}[h]
+  \color{RHgreen}\caption{Map showing the wards mapped during the March flood response}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/flood_response.png}
+\end{figure}
+
+\subsubsection{Methodology}
+Meetings with ward leaders in the three most affected subwards and zone the affected areas on a printed map with tracing paper and calculate the number of affected houses.
+
+Field visit to survey the affected area and take points to verify what community leaders zoned on the map
+
+\subsubsection{Data Model}
+\subsubsection{Timeline}
+2019-03-05
+
+\subsubsection{Quality Control}
+QGIS
+
+\subsubsection{Access}
+\href{https://drive.google.com/drive/u/1/folders/1Wmx3VyrHSpHmltPAF0RgfuO1mIrGyVI1}{Flood response mapping}\footnote{\url{https://drive.google.com/drive/u/1/folders/1Wmx3VyrHSpHmltPAF0RgfuO1mIrGyVI1}}
+
+\subsubsection{Licensing}
+CC-BY 4.0
+
+\subsubsection{Statistics}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\color[RHgreen]{Ward & Subward & Total number of houses flooded} \\
+\hline
+Hannanasifu & Mkunguni B & 150 houses \\
+\hline
+Tandale & Mkunduge & 1100 houses \\
+\hline
+Tandale & Sokoni & 230 houses \\
+\hline
+Jangwani & Mtambani & 427 houses \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Data Visualization}
+
+\subsubsection{Use Case}
+To extract some types of information which are otherwise difficult to access by traditional methods, particularly for flood forecasting and flood water movement through identifying the affected areas and causative.
+Conducting damage assessment of the affected areas.
+
+\subsubsection{Data Gaps}
+We did  community flood response for only 3 wards which were affected with flood but were not able to visit other wards which were also affected.
+
+\subsubsection{Lessons Learned}
+The team was  not prepared for the incidence because flood response has never been done before. Therefore when it happened we did not have tools and a proper methodology to conduct the survey which includes going  directly to the flooded area.
+\medskip
+
+Due to poor accessibility to the flooded area, we collected flood response points with help from local leaders /wajumbe who know to  what extent the rains affected people’s houses. This information, however, might not be 100\% correct.
 
 \newpage
 \subsection{Historical Flood Extents}
@@ -723,5 +900,6 @@ Individuals were asked to reflect on historical flood extents; therefore there i
 
 \newpage
 \section{Annexes}
+
 
 \end{document}
