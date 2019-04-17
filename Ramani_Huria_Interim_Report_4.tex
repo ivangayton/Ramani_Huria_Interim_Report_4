@@ -1,8 +1,9 @@
-\documentclass[a4paper,12pt,twoside]{article}
+\documentclass[a4paper,12pt,twoside,draft]{article}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 \usepackage{wrapfig}
 %\usepackage{indentfirst} % Uncomment to indent first paragraph of each section (not really correct for academic papers, but follows more common business convention)
+\usepackage{pdfpages,caption,geometry} %enables you to add pdf and a caption
 
 \usepackage{geometry}
 \geometry{
@@ -418,12 +419,9 @@ Flood risk identification on flood prone areas of the city by conducting a serie
 
 \subsubsection{Spatial Extent}
 The inventory covered  243 subwards in 49 wards of Dar es Salaam. 
+ \color{RHgreen}\caption{49 Wards covered during the community asset and threat mapping inventory}
+ \includepdf[width=\columnwidth]{Asset&Threat.pdf}
 
-\begin{figure}[h]
-  \color{RHgreen}\caption{49 Wards covered during the community asset and threat mapping inventory}
-  \centering
-  \includegraphics[width=0.8\textwidth]{images/Asset&Threat.png}
-\end{figure}
 
 \subsubsection{Data Collection Methodology}
 
@@ -592,11 +590,9 @@ Given the rate of urbanization in Dar es Salaam, it is very difficult to locate 
 
 \subsubsection{Spatial Extent}
 36 out of 44 prioritized Ramani Huria wards in Dar es Salaam
-\begin{figure}[h]
-  \color{RHgreen}\caption{Map showing Ramani Huria collaboration with Data Zetu hyper-local boundaries mapping}
-  \centering
-  \includegraphics[width=0.8\textwidth]{images/hyperlocal_boundary.png}
-\end{figure}
+ \color{RHgreen}\caption{Map showing Ramani Huria collaboration with Data Zetu hyper-local boundaries mapping}
+ \includepdf[width=\columnwidth]{hyperlocal_boundary.pdf}
+
 
 \subsubsection{Data Collection Methodology}
 \begin{itemize}
@@ -616,7 +612,7 @@ QGIS, Excel
 \subsubsection{Access}
 \href{https://drive.google.com/drive/u/1/folders/1bagTRoBVYX88VJpgYm61Rl2WXHgrvBJi}{Hyperlocal administrative boundary data}\footnote{\url{https://drive.google.com/drive/u/1/folders/1bagTRoBVYX88VJpgYm61Rl2WXHgrvBJi}}
 
-\subsubsection{Licencing}
+\subsubsection{Licensing}
 CC-BY 4.0
 
 \subsubsection{Statistics}
@@ -799,11 +795,9 @@ As a response to heavy rainfall on March, 3rd, 2019, that resulted in heavy floo
 
 \subsubsection{Spatial Extent}
 3 majorly affected wards in Dar es Salaam with the March 3rd, 2019 rainfall
-\begin{figure}[h]
-  \color{RHgreen}\caption{Map showing the wards mapped during the March flood response}
-  \centering
-  \includegraphics[width=0.8\textwidth]{images/flood_response.png}
-\end{figure}
+
+ \color{RHgreen}\caption{Map showing the wards mapped during the March flood response}
+ \includepdf[width=\columnwidth]{flood_response.pdf}
 
 \subsubsection{Methodology}
 Meetings with ward leaders in the three most affected subwards and zone the affected areas on a printed map with tracing paper and calculate the number of affected houses.
@@ -827,7 +821,7 @@ CC-BY 4.0
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
-\color[RHgreen]{Ward & Subward & Total number of houses flooded} \\
+\textbf{Ward & Subward & Total number of houses flooded \\}
 \hline
 Hannanasifu & Mkunguni B & 150 houses \\
 \hline
@@ -865,12 +859,8 @@ Historical flood extent covered areas that are mostly affected by floods during 
 The information captured aimed to know whether the respondent had been affected by floods in the previous years, the flood depth and flood occurrence years---historical flood events. Individuals were asked to reflect on historical flood extents; therefore there is inherent subjectivity in their memories
 
 \subsubsection{Spatial Extent}
-
-\begin{figure}[h]
-  \color{RHgreen}\caption{Map showing the flood extent mapping progress in Dar es Salaam}
-  \centering
-  \includegraphics[width=0.8\textwidth]{images/RH_Flood_Extent_Progress.png}
-\end{figure}
+ \color{RHgreen}\caption{Map showing the flood extent mapping progress in Dar es Salaam}
+ \includepdf[width=\columnwidth]{Flood_Extent.pdf}
 
 \subsubsection{Data Collection Methodology}
 
