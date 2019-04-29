@@ -129,7 +129,7 @@
 {\includegraphics[width=5cm]{Dar_Ramani_Huria_logo.png}}
 \end{center}
 
-This report was prepared by William Evans, Immaculate Mwanja, Hawa Andini, Innocent Maholi, Ivan Buendia Gayton, and many others from the Humanitarian OpenStreetMap Team in Tanzania.
+This report was prepared by William Evans, Immaculate Mwanja, Hawa Adinani, Innocent Maholi, Ivan Buendia Gayton, and many others from the Humanitarian OpenStreetMap Team in Tanzania.
 
 \medskip
 
@@ -157,29 +157,49 @@ Unless otherwise noted, photos by the Ramani Huria team. Maps were prepared by t
 \vcenteredhbox{\includegraphics[height=1.2cm]{images/logo_costech.png}}
 \vcenteredhbox{\includegraphics[height=1.2cm]{images/logo_UDSM.jpg}}
 
+
+\newpage
+{\color{RHblue}\LARGE{Licensing}}
+\begin{itemize}
+    \item
+    \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons (CC-BY 4.0)}\footnote{\url{https://creativecommons.org/licenses/by/4.0/}}
+This is a public copyright license that enables the free distribution of an otherwise copyrighted work. A CC license is used when an author wants to give other people the right to share, use, and build upon a work that he or she has created. Most of the Ramani Huria data use a public copyright license to enable users to share and use the data freely.
+\item 
+\href{https://en.wikipedia.org/wiki/Open_Database_License}{Open Data Commons Open Database License (ODbL)}\footnote{\url{https://en.wikipedia.org/wiki/Open_Database_License}}.
+The ODbL was created with the goal of allowing users to share their data freely without worrying about problems relating to copyright or ownership. It allows users to make free use of the data in the database without worrying about copyright of the creators, and add to the data or use in other databases. The license establishes the rights of users of the database, as well as the correct procedure for attributing credit where credit is due for the data, and how to make changes or improvements in the data, thus simplifying the sharing and comparison of data. Users no longer need to worry of repercussions of violations of copyright law or stolen information when using an Open Database License.
+
+\end{itemize}
+\bigskip
+
+{\color{RHblue}\LARGE{Data Model}}\bigskip
+
+Only data that have been uploaded to OpenStreetMap have a clear defined data model, So for data with no defined data modle will be linked to ODK survey questions that was used to collect them or linked to the wikipage that clarify how that dataset was obtained.
 \newpage
 
 \tableofcontents
-
 \newpage
 \section{Executive Summary}
 \label{executivesummary}
 \begin{multicols}{2}
 
-  \begin{mdframed}[hidealllines=true,backgroundcolor=RHgreen!10,innerleftmargin=6pt,innerrightmargin=6pt,leftmargin=-3pt,rightmargin=-3pt]
-
-\color{RHgrey}
+ 
     
 With the support of the World Bank in Tanzania, the Ramani Huria (RH) team has been collecting data for urban resilience with a particular emphasis on flooding since 2015. As the program nears its end in September of 2019, the RH team is now primarily working to curate, organize, document, and publish the data, tools and knowledge that have been created. 
 
 We are working to transfer knowledge and hand over to Tanzania Resilience Academy, the successor project to Ramani Huria. 
-\end{mdframed}
+
 
 Together with the coalescing Resilience Academy team, we are working to disseminate the knowledge and data to as many users---particularly those who are likely to have impact improving resilience---as possible. 
 
-I want this report to get 100\% marks.
+%I want this report to get 100\% marks
 
-\lipsum[10-18]
+Ramani Huria 2.0 is next to last in June 2019, During this phase we have collected a number of datasets that can serve for different purposes. 
+Data set collected include; Soil sediment sampling, Drainage mapping, Flood extent data, Hyperlocal boundaries mapping, Threat and asset mapping (Flood risks identification), Trash mapping for waste management, Flood response mapping (damage assessment) and buildings footprint digitization.
+
+This overview of digital datasets is meant to be used as an annex to the final report on June 2019. It contains a brief summary of the dataset, spatial extent, methodology used for data collection, data model and/or survey form used, Methods used to ensure data quality, data gap, timeline, statistics, visualization of data, link to access data, Licencing (incase of sharing), data use case and lessons learned throughout the process of data collection.
+
+Ramani Huria team conducted a number of activities including Community flood response following the heavy rainfall on March 3rd 2019, Soil sediment analysis for geomorphological assessment of the city and erosion modeling, Participated in Innovation week on March 2019 to showcase how we conducted sediment analysis using cheap yet practical method and came out with professional results and The ongoing River mapping activity --flying drones along major rivers of dar es salaam to  provide a digital photographic mark-up of the current status of Dar es Salaam’s waterways, to help in solid waste management on major rivers of the city.
+
 
 \end{multicols}
 
@@ -200,13 +220,38 @@ We also would like to point out a link to  \href{https://ramanihuria.org}{a webs
 
 \begin{multicols}{2}
 
-  \lipsum[5-8]
+  This report describes the activities of Ramani Huria 2.0 from October to February and provides an overview of digital assets collected since October. 
   
 \end{multicols}
 
 \newpage
 \section{Monthly Activity Summary}
+\subsection{Community Flood Response}
+As a response to heavy rainfall on March, 3rd, 2019 which started from 6am to 10 am, that resulted in heavy flooding in some wards of Dar es Salaam, the Ramani Huria team decided to conduct field mapping to engage affected communities with the aim of conducting a rapid assessment and producing impact maps. In the wards we surveyed, a total of 1907 houses were flooded. 
+On 5th - 6th March 2019 the Ramani Huria team visited Mkunguni B Subward (Hananasif Ward), Mkunduge Subward and Sokoni Subward (Tandale ward) as well as Mtambani A Subward (Jangwani Ward). These areas were prioritized by first communicating with the local leaders over the phone. The team used their \href{https://docs.google.com/spreadsheets/d/1x8fJiSwX-zM05GCxfd4t1XsQqwRf7Us7V6cQaNlkq8E/edit#gid=0}{contact database}\footnote{\url{https://docs.google.com/spreadsheets/d/1x8fJiSwX-zM05GCxfd4t1XsQqwRf7Us7V6cQaNlkq8E/edit#gid=0}} which contains more than 3000 phone numbers of Subward Executive Officers, Ward Executive Officers, Chairpersons, and local leaders. In order to identify the affected communities, we conducted a community meeting with MEO’s, chairpersons and shina leaders.
 
+\medskip
+\href{https://docs.google.com/document/d/1gZR94UHdUNR5646agKCPFX7jrdJKmXhMjetb9MweOJ4/edit#}{Community Flood Response Report}\footnote{\url{https://docs.google.com/document/d/1gZR94UHdUNR5646agKCPFX7jrdJKmXhMjetb9MweOJ4/edit#}}
+
+\medskip
+\href{https://drive.google.com/drive/u/0/folders/14Bp8qZxcOSvfb3JlEbHWNRYSeq6JcqmX}{Flood Response Maps}\footnote{\url{https://drive.google.com/drive/u/0/folders/14Bp8qZxcOSvfb3JlEbHWNRYSeq6JcqmX}}
+\subsection{Soil Sampling}
+With the support of the World Bank in Tanzania, Ramani Huria and JBA Consulting partnered in October 2018 to develop a surface soil sediment dataset for the greater Dar es Salaam region of Tanzania. This was intended to support a geomorphological assessment taking into account soil sediment characteristics for erosion and flood risk studies.
+A national-level soil profile had existed for Tanzania prior to this effort but contained only a single sample from Dar es Salaam. This was not sufficient to analyse erosion potential across the city. The JBA team in consultation with Ramani Huria decided to use a 2km grid, which resulted in 731 sampling points being pre-established throughout the city. A team of 10 field mappers and 4 office technicians—all Tanzanian youth participants in the Ramani Huria project—were trained in sample collection and analysis (sieving). A total of 643 points were sampled and sieved; 88 sites were inaccessible for one or another reason.
+The 643 samples were analyzed by sieving each to separate the sediment by particle size and weighing the resulting fractions. The resulting dataset, a geo-referenced set of soil sediment profiles, is published and available as \href{https://geonode.uhurulabs.org/layers/geonode3A_2019_02_26_dar_soil_sampling_final_results_v1}{open data}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode3A_2019_02_26_dar_soil_sampling_final_results_v1}}.
+
+\subsection{Innovation Week}
+This is a week-long series of events hosted by Human Development Innovation Fund (HDIF) and COSTECH with support from UKAid. This year’s innovation week took place from the 25th - 30th of March with a theme “Scaling and Sustaining Innovation for Human Development”. Ramani Huria team participated by showcasing the soil sediment sampling project that we did using cheap but yet practical methods and came out with sediment characteristics of the whole city.
+We also showcased a drone that was built locally using bamboo with the aim of capturing aerial images at a low cost without importing drones, which might be expensive. This also aligns with our slogan of local people, local devices and open knowledge.
+
+\subsection{River Mapping}
+Several drone flights have been conducted along five major rivers of Dar es Salaam i.e. Msimbazi, Mpiji, Tegeta, Kizinga and Mzinga Rivers, covering a total length of approximately 60 km of Dar es Salaam’s critical water arteries. The drone flights provide a digital photographic mark-up of the current status of Dar es Salaam’s waterways. The broad purpose of this work is to provide Nipe Fagio, I4ID and other partners with high-quality and interactive spatial data to better understand solid waste management and service quality across all five municipalities of Dar es Salaam and all of the city’s key five rivers.
+
+Drone flights are capable of studying any aggregations of waste/ informal dumps that are on the banks of the river/ waterway or within five metres of its bank on either side. 
+Such data will be presented as three-dimensional imagery of waste piles/ aggregations, further assisting the study team to estimate rough waste volumes.
+
+
+\newpage
 \begin{itemize}
 
 \textbf{\item October 2018}    
@@ -247,17 +292,18 @@ We also would like to point out a link to  \href{https://ramanihuria.org}{a webs
         \item Data publication on GeoNode with Uhurulabs
     \end{itemize}
 \end{itemize}
-
+\newpage
 \section{Team Composition and Assignments}
 Hi there!
-
+\newpage
 \section{Data Quality}
-This is the data quality process. 
+The process of data profiling to discover inconsistencies and other anomalies in the data, as well as performing data cleaning activities (e.g. removing outliers, missing data interpolation) to improve the data quality. Data description is done using descriptive statistics; these are used to describe the basic features of the data in a study. They provide simple summaries about the sample and the measures. Together with simple graphics analysis, they form the basis of virtually every quantitative analysis of data. Data quality activities involve data rationalization and validation.
+Ramani Huria data uses a data quality framework as a guide for each dataset to ensure the data is cleaned following certain procedures and steps. The objective of the framework is to provide insight into the Ramani Huria data quality process as well as to guide future projects in best practices. See  \href{https://docs.google.com/document/d/1IE1ARLs6i4d_KTK73X9LGbU2OoEHCgDRefE47J6LJn8/edit#}{Ramani Huria Data Quality Framework}\footnote{\url{https://docs.google.com/document/d/1IE1ARLs6i4d_KTK73X9LGbU2OoEHCgDRefE47J6LJn8/edit#}}
 
-We do the following steps
 
 
 \section{Datasets}
+In this case a dataset contain all digital data collected by Ramani Huria from October to February. Not all data can contain all character of a 'dataset' but rather providing an overview of Ramani Huria data collected. The following is a list of datasets all presented in the same format for consistency. 
 \subsection{Drainage}
 \begin{wrapfigure}{r}{0.25\textwidth} %this figure will be at the right
     \centering
@@ -278,15 +324,11 @@ Drainage data covers 44 prioritized Ramani Huria wards most of which are along t
 \end{figure}
 
 \subsubsection{Data Collection Methodology}
-\begin{multicols}{2}
+
 {\color{RHblue} Data collection}
 \
 Preparation of field paper (soft copy) in KoBo Toolbox for the ODK application for drain segments and points. Field mappers then installed ODK on their Android phones and with the URL for the server to be used, they downloaded the survey forms, filled the required information from the field and uploaded the forms.
 
-{\color{RHblue} Data cleaning}
-\
-During the data cleaning process, the ODK forms that were filled in the field are downloaded from the server in Comma Separated Value (CSV) format and converted to GeoPackage (.gpkg) in QGIS. The plugin to convert ODK form to CSV format is found in \href{https://github.com/zestyping/odk_csv}{GitHub}\footnote{\url{https://github.com/zestyping/odk\_csv}}. The drain segments and points are styled with a pre-defined .qml style found in QGIS---Drain\_lines\_categorized\_with\_labels\_and\_directions and Drain\_points\_categorized\_with\_labels. After the data is cleaned, it is run in the \href{https://github.com/openearth/hydro-osm}{Hydro OSM model}\footnote{\url{https://github.com/openearth/hydro-osm}} to ensure all drain segments and points are connected.
-\end{multicols}
 
 \subsubsection{Data Model}
 \href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Drainage}{Dar es Salaam\_Ramani Huria\_OpenStreetMap Wiki}\footnote{\url{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Drainage}}
@@ -295,8 +337,9 @@ During the data cleaning process, the ODK forms that were filled in the field ar
 August, 2017 and Ongoing
 
 \subsubsection{Quality Assurance}
+During the data cleaning process, the ODK forms that were filled in the field are downloaded from the server in Comma Separated Value (CSV) format and converted to GeoPackage (.gpkg) in QGIS. The plugin to convert ODK form to CSV format is found in \href{https://github.com/zestyping/odk_csv}{GitHub}\footnote{\url{https://github.com/zestyping/odk\_csv}}. The drain segments and points are styled with a pre-defined .qml style found in QGIS---Drain\_lines\_categorized\_with\_labels\_and\_directions and Drain\_points\_categorized\_with\_labels. After the data is cleaned, it is run in the \href{https://github.com/openearth/hydro-osm}{Hydro OSM model}\footnote{\url{https://github.com/openearth/hydro-osm}} to ensure all drain segments and points are connected.
 
-Drainage data is cleaned using QGIS with pre-installed template styles for the segments and points, a high resolution 2016 COWI imagery and in Hydro osm python model to ensure all drain segments and points are connected.
+The team also used QGIS with pre-installed template styles for the segments and points, a high resolution 2016 COWI imagery.
 
 \subsubsection{Access}
 \begin{itemize}
@@ -308,15 +351,22 @@ Drainage data is cleaned using QGIS with pre-installed template styles for the s
 \href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\footnote{\url{https://creativecommons.org/licenses/by/4.0/}}
 
 \subsubsection{Statistics}
-38 out of 44 wards of Dar es Salaam Ramani Huria prioritized wards completed
+38 out of 44 wards of Dar es Salaam Ramani Huria prioritized wards completed. 
+
+
+Number of segments culverts, drains, ditches and decommissioned (destroyed or burried) mapped are 16207 with 653 kilometers and 12620 number of drain points.
+This is summerised in the table below
+
 \begin{center}
-\begin{tabular}{ |c|c|c| }
- \hline
- Number of Segments & 16207 \\ 
- \hline
- Number of Points & 12620 \\ 
- \hline
-\end{tabular}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ c|c|c|c }
+    \hline
+     Number of Segments & 16207 \\
+     \hline
+     Number of Points & 12620 \\
+    \end{tabular}
+\end{table}
 \end{center}
 
 \subsubsection{Data Visualization}
