@@ -550,9 +550,18 @@ A total of 5020 asset points were collected during the project. These include:
 \end{center}
 
 \subsubsection{Data Visualization}
+\begin{figure}[h]
+{\color{RHgreen}\caption{Screenshot Showing Risk Identification Map of Kawe Ward }}
+ \centering
+  \includegraphics[width=0.8\textwidth]{images/Asset_and_Threat_Data_Viz.png}
+\end{figure}
 
 \subsubsection{Use Case}
-March, 2019 community flood response, creating resilience plans, mitigation measures through community mapping and impact assessment.
+\begin{enumerate}
+    \item Develop disaster management plan in collaboration with Deltares
+    \item March, 2019 community flood response, creating resilience plans, mitigation measures through community mapping and impact assessment.
+\end{enumerate}
+
 
 \subsubsection{Data Gap}
 Out of 49 wards, historical flood extent was conducted in only 11 wards. There is a need of conducting flood extent in the remaining wards to create a better understanding of flooding.
@@ -766,26 +775,41 @@ Creation of a client tracking system now used by GWPL to keep track of their cli
 \subsubsection{Data Gaps}
 Data was collected in only 2 wards of Dar es Salaam. The process needs to be replicated to other wards of the city
 \subsubsection{Lessons Learned}
+\begin{enumerate}
+    \item Trash collection companies lose a lot of money because they lack clear data.
+
+    \item From the experience with GWPL there is a need to set a workshop with trash collection companies in the city, to understand their challenges and how data can help overcome those challenges.
+\end{enumerate}
+
+
 
 \newpage
 \subsection{Trash Mapping in Informal Settlement (Joshemi Company Limited)}
 
-Joshemi Company Limited (JCL) is a company entitled by the Ilala Municipal to collect solid waste in Tabata ward with eight subwards therein. The system of collecting waste and doing cleanliness within the company was done locally by revenue collectors to collect service charges from the customers by using local tools.
+Ramani Huria partnered with Joshemi Company Limited, a company  dealing with trash collection in Tabata ward with eight subwards therein. JCL needed to know the number of clients as it was very difficult to track them all, revenue flow and an effective feedback system on services provided by the company. The aim was shifting JCL’s analogue system of trash collection to a digital system by providing them with their own maps of clients’ locations and a system of tracking them. This way, JCL would improve their services to clients, increase their revenues and create an effective waste collection mechanism.
 
 \subsubsection {Spatial Extent}
 2 pilot subwards (Msimbazi Magharibi and Msimbazi Mama) out of eight subwards in Tabata ward.
-
+\begin{figure}[h]
+  \caption{A Screenshot of a map showing subwards in Tabata where trash mapping was conducted(green), pending subwards (blue) and yellow represent other infromal areas that needs to be mapped}
+  \centering
+  \includegraphics[width=1\textwidth]{images/JCL_Spatial_Extent.png}
+\end{figure}
+\newpage
 \subsubsection{Methodology}
 \begin{multicols}{2}
+
+
 We used OpenDataKit (ODK) Collect and OpenMapKit (OMK) an extension of ODK which is a free and open android application for data collection. The team worked with revenue collectors to map the clients as they have a better understanding of the area to simplify the process of data collection. 
 
 Ramani Huria team switched to working with local community leaders (wajumbe) who better understand their area of administration which normally ranges from 30 to 200 households. Among other things, wajumbe  are responsible for allocating resident leases and titles, therefore were able to provide clients’ details even when the clients were absent.
 
-Tabata ward is 50\% informally developed hence most houses do not have house numbers. In order to connect the buildings’ geo locations with client information we developed “fake house ID” numbers as a baseline for the use of collected data.
+Tabata ward is 50 percent informally developed hence most houses do not have house numbers. In order to connect the buildings’ geo locations with client information we developed “fake house ID” numbers as a baseline for the use of collected data.
+
 \end{multicols}
 
 \subsubsection{Data Model}
-
+\href{https://drive.google.com/open?id=1vwZyjcsQLQaZ95yjMnNf00GYtrqVkYBS}{ODK Form Used} \footnote{\url{https://drive.google.com/open?id=1vwZyjcsQLQaZ95yjMnNf00GYtrqVkYBS}}
 \subsubsection{Timeline}
 November, 2018 to February, 2019
 
@@ -801,7 +825,7 @@ CC-BY 4.0
 \subsubsection{Statistics}
 20163 trash points collected in 2 subwards of Tabata ward
 
-\
+\newpage
 
 \subsubsection{Data Visualization}
 \begin{figure}
@@ -819,7 +843,7 @@ CC-BY 4.0
 \end{figure}
 
 \subsubsection{Use Case}
-The replication of the processes, system and using of trash dataset  in other wards & subwards to help  in the trash management. This can also reduce blockage of drains/waterways and hence make the ward flood resilient.
+Data is used in the subward by Joshemi company in daily trash collection and tracking clients for payment. The process needs to be replicated to other wards of the city as it will help in managing solid waste, reduce improper dumping which cause blockage of drains and rivers 
 
 \subsubsection{Data Gap}
 A system to collect  revenues and update clients who pay for the trash services has been created but the most hindrance is that, the personnel responsible to collect and use the system do not have/ own android smartphones---a requirement for data collection---and the company is hesitant to buy phones to be used by the revenue collectors.
@@ -847,9 +871,6 @@ Using OpenDataKit to collect trash points in the city and filling out the survey
 
 Before field work, introduction letters were sent to ward officers so they can be informed and for mappers security in case there is any assistance needed from the ward office.
 
-\subsubsection{Quality Assurance}
-Some categories such as handful and bagful were far too small to be collected and sometimes confused the mappers therefore a decision to remove these points had to be made which dropped the number of points to approximately 9,000.
-
 \subsubsection{Data Model}
 \href{https://drive.google.com/file/d/1rWE-HYP_a84RAZSYKzy7DhoKaA_uZXag/view?ts=5cc0244a}{ODK Form Used}\footnote{\url{https://drive.google.com/file/d/1rWE-HYP_a84RAZSYKzy7DhoKaA_uZXag/view?ts=5cc0244a}}
 
@@ -857,7 +878,13 @@ Some categories such as handful and bagful were far too small to be collected an
 2018-07-30 to 2018-08-03
 
 \subsubsection{Quality Control}
-QGIS, data visualization tool
+\begin{itemize}
+    \item QGIS to remove bag full and handful categories.
+    These categories were removed because they didn't seem like trash points but rather people just placed them for tracks to pass and pick them.
+    \item These categories were far too small to be collected and sometimes confused the mappers therefore a decision to remove these points had to be made which dropped the number of points to approximately 9,000.
+\end{itemize}
+
+
 
 \subsubsection{Access}
 \begin{itemize}
@@ -883,7 +910,10 @@ A total of 20,392 points were collected and reduced to 9,452 after cleaning
 Data was used in the world clean up day on  September 15th, 2018 to help clean up the city.
 
 \subsubsection{Data Gaps}
+
+
 A decision to retain the data model used by the pioneers of the Clean Up the World Movement in Estonia was made since the model included the collection of waste piles as small as a handful or bagful, which in the context of Dar es Salaam was far too small and mappers possibly confused by the \textit{bagful} category in some cases collected the locations of waste which was bagged and prepared for pickup by waste disposal personnel. The removal of the two attributes dropped the number of trash points from 20,392 to 9,452.
+
 
 \subsubsection{Lessons Learned}
 A clear piloting and training with examples to mappers is needed before field excursion, from the analysis mappers seemed to collect trash even from peoples backyard which was out of the context. This will serve time and costs during data collection.
@@ -905,12 +935,16 @@ Meetings with ward leaders in the three most affected subwards and zone the affe
 
 Field visit to survey the affected area and take points to verify what community leaders zoned on the map
 
-\subsubsection{Data Model}
 \subsubsection{Timeline}
 2019-03-05
 
 \subsubsection{Quality Control}
-QGIS
+\begin{itemize}
+    \item Using QGIS to trace affected areas using data from the field to get the clear picture of the extent the flood. 
+   \item Calculating houses affected during rainfall together with  water level in the houses  and produce flood response map.
+\end{itemize}
+
+
 
 \subsubsection{Access}
 \href{https://drive.google.com/drive/u/1/folders/1Wmx3VyrHSpHmltPAF0RgfuO1mIrGyVI1}{Flood response mapping}\footnote{\url{https://drive.google.com/drive/u/1/folders/1Wmx3VyrHSpHmltPAF0RgfuO1mIrGyVI1}}
@@ -934,12 +968,21 @@ Jangwani & Mtambani & 427 houses \\
 \hline
 \end{tabular}
 \end{center}
-
+\newpage
 \subsubsection{Data Visualization}
+\begin{figure}[h]
+  \color{RHgreen}\caption{Map showing flooded subward in Tandale ward, The whole ward was flooded during March, 2019 rainfall}
+  \centering
+    \includegraphics[width=0.8\textwidth]{images/Flood_Response_Data_Viz.png}
+\end{figure}
+
 
 \subsubsection{Use Case}
-To extract some types of information which are otherwise difficult to access by traditional methods, particularly for flood forecasting and flood water movement through identifying the affected areas and causative.
-Conducting damage assessment of the affected areas.
+\begin{enumerate}
+    \item To extract some types of information which are otherwise difficult to access by traditional methods, particularly for flood forecasting and flood water movement through identifying the affected areas and causative.
+    \item Conducting damage assessment of the affected areas.
+\end{enumerate}
+
 
 \subsubsection{Data Gaps}
 We did  community flood response for only 3 wards which were affected with flood but were not able to visit other wards which were also affected.
@@ -974,7 +1017,8 @@ The information captured aimed to know whether the respondent had been affected 
 Using ODK survey form and asking questions to community members about their experience of floods in their neighbourhoods. Community members of the respective wards were trained on how to collect data using ODK and were the ones to collect these information in their own neighborhood.
 
 \subsubsection{Data Model}
-
+\href{https://drive.google.com/file/d/1AeOFvxXFKlXTxc-Je8Mo0riiWLg4jVQw/view?usp=sharing
+}{ODK Form Used} \footnote{\url{https://drive.google.com/file/d/1AeOFvxXFKlXTxc-Je8Mo0riiWLg4jVQw/view?usp=sharing}}
 \subsubsection{Timeline}
 2017-08-24 to 2018-04-12
 
@@ -1012,7 +1056,11 @@ Approximately 30 000 houses were surveyed during the historical flood extents
 
 
 \subsubsection{Data Visualization}
-
+\begin{figure}[h]
+  \color{RHgreen}\caption{Flood Extent Map, Red dots shows flooded areas}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/Flood_Extent_Data_Viz.png}%I will change this image to a good viz
+\end{figure}
 \subsubsection{Use Case}
 Designing of the lower Msimbazi River catchment area, data is used to understand the extent to which houses are affected from Msimbazi valley.
 
