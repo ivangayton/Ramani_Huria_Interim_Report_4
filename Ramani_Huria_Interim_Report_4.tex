@@ -2,7 +2,7 @@
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 \usepackage{wrapfig}
-%\usepackage{indentfirst} % Uncomment to indent first paragraph of each section (not really correct for academic papers, but follows more common business convention)
+\usepackage{indentfirst} % indent first paragraph of each section (not really correct for academic papers, but follows more common business convention)
 \usepackage{pdfpages,caption,geometry} %enables you to add pdf and a caption
 
 \usepackage{geometry}
@@ -68,8 +68,11 @@
 }
 %\urlstyle{same}
 
+\usepackage{footnote}
+\makesavenoteenv{tabular} %For creating footnotes in a table
+
 \usepackage[framemethod=tikz]{mdframed}
-\usepackage{lipsum}
+\usepackage{lipsum} %For creating a tight box around text
 
 
 \title{Ramani Huria Interim Report 4}
@@ -86,7 +89,7 @@
 \begin{document}
 \thispagestyle{empty}
 \begin{center}
-\includegraphics[width=\textwidth]{Cover_photo_with_logo.jpg}
+\includegraphics[width=\textwidth]{images/cover_page.jpg}
 \end{center}
 \bigskip
 \begin{center}
@@ -181,9 +184,9 @@ Together with the coalescing Resilience Academy team, we are working to dissemin
 Ramani Huria 2.0 is next to last in June 2019, During this phase we have collected a number of datasets that can serve for different purposes. 
 Data set collected include; Soil sediment sampling, Drainage mapping, Flood extent data, Hyperlocal boundaries mapping, Threat and asset mapping (Flood risks identification), Trash mapping for waste management, Flood response mapping (damage assessment) and buildings footprint digitization.
 
-This overview of digital datasets is meant to be used as an annex to the final report on June 2019. It contains a brief summary of the dataset, spatial extent, methodology used for data collection, data model and/or survey form used, Methods used to ensure data quality, data gap, timeline, statistics, visualization of data, link to access data, Licencing (incase of sharing), data use case and lessons learned throughout the process of data collection.
+This overview of digital datasets is meant to be used as an annex to the final report on June 2019. It contains a brief summary of the dataset, spatial extent, methodology used for data collection, data model and/or survey form used, Methods used to ensure data quality, data gap, timeline, statistics, visualization of data, link to access data, Licensing (incase of sharing), data use case and lessons learned throughout the process of data collection.
 
-Ramani Huria team conducted a number of activities including Community flood response following the heavy rainfall on March 3rd 2019, Soil sediment analysis for geomorphological assessment of the city and erosion modeling, Participated in Innovation week on March 2019 to showcase how we conducted sediment analysis using cheap yet practical method and came out with professional results and The ongoing River mapping activity --flying drones along major rivers of dar es salaam to  provide a digital photographic mark-up of the current status of Dar es Salaam’s waterways, to help in solid waste management on major rivers of the city.
+Ramani Huria team conducted a number of activities including Community flood response following the heavy rainfall on March 3rd 2019, Soil sediment analysis for geomorphological assessment of the city and erosion modeling, Participated in Innovation week on March 2019 to showcase how we conducted sediment analysis using cheap yet practical method and came out with professional results and The ongoing River mapping activity --flying drones along major rivers of Dar es Salaam to  provide a digital photographic mark-up of the current status of Dar es Salaam’s waterways, to help in solid waste management on major rivers of the city.
 
 
 \end{multicols}
@@ -194,22 +197,13 @@ Ramani Huria team conducted a number of activities including Community flood res
 \section{Introduction}
 \label{Introduction}
 
-This report will tell you about stuff
-
-\begin{itemize}
-  \item Like this
-  \item And this
-\end{itemize}
-
+ This report describes the activities of Ramani Huria 2.0 from October to February providing an overview of digital assets collected since October 2018. 
+\bigskip
 We also would like to point out a link to  \href{https://ramanihuria.org}{a website}\footnote{\url{http://ramanihuria.org}\color{RHgrey} { }because it's really, really interesting. You should click on that link.}. Did you notice that there was a footnote there? If you look at the footnote it contains the full URL of the link, so that people reading the document on paper can see what it links to? Cool, huh? The rest of the text on this page will be in two columns, just because we can do that with the \LaTeX{} \textbf{\textit{multicols}} plugin. By the way, I can highlight code with a color box like \textbf{\colorbox{code}{this.}}
 
-\begin{multicols}{2}
 
-  This report describes the activities of Ramani Huria 2.0 from October to February and provides an overview of digital assets collected since October. 
-  
-\end{multicols}
 \newpage
-{\color{RHblue}\LARGE{Licensing}}
+{\color{RHblue}\Large{Licensing}}
 \begin{itemize}
     \item
     \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons (CC-BY 4.0)}\footnote{\url{https://creativecommons.org/licenses/by/4.0/}}
@@ -221,14 +215,35 @@ The ODbL was created with the goal of allowing users to share their data freely 
 \end{itemize}
 \bigskip
 
-{\color{RHblue}\LARGE{Data Model}}\bigskip
+{\color{RHblue}\Large{Data Model}}\bigskip
 
 Only data that have been uploaded to OpenStreetMap have a clear defined data model. For data with no defined data model, there will be links to ODK survey forms that were used to collect the data or linked to the wikipage that clarify how that dataset was obtained.
+\bigskip
+
+{\color{RHblue}\Large{Spatial Extent Color Schema}}
+\medskip
+
+\begin{tabular}{|c|c|c|}
+\hline
+Finished & {\colorbox{code}{RHgreen}} & \#27a73b  \\
+\hline
+RH data collection pending i.e. working on it & RHblue & \#3a8fcc \\
+\hline
+Should be followed up on by the Resilience Academy & RHyellow & \#f8c910 \\
+\hline
+Outside scope of interest & RHgrey & \#e4e4e4 \\
+\hline
+Data collected but still not analyzed & RHolive & \#eff07d \\
+\hline
+\end{tabular}
 
 \newpage
 \section{Monthly Activity Summary}
+
+\begin{multicols}{2}
 \subsection{Community Flood Response}
-As a response to heavy rainfall on March, 3rd, 2019 which started from 6am to 10 am, that resulted in heavy flooding in some wards of Dar es Salaam, the Ramani Huria team decided to conduct field mapping to engage affected communities with the aim of conducting a rapid assessment and producing impact maps. In the wards we surveyed, a total of 1907 houses were flooded. 
+As a response to heavy rainfall on March, 3rd, 2019 which started from 6am to 10 am, that resulted in heavy flooding in some wards of Dar es Salaam, the Ramani Huria team decided to conduct field mapping to engage affected communities with the aim of conducting a rapid assessment and producing impact maps. In the wards we surveyed, a total of 1907 houses were flooded.
+
 On 5th - 6th March 2019 the Ramani Huria team visited Mkunguni B Subward (Hananasif Ward), Mkunduge Subward and Sokoni Subward (Tandale ward) as well as Mtambani A Subward (Jangwani Ward). These areas were prioritized by first communicating with the local leaders over the phone. The team used their \href{https://docs.google.com/spreadsheets/d/1x8fJiSwX-zM05GCxfd4t1XsQqwRf7Us7V6cQaNlkq8E/edit#gid=0}{contact database}\footnote{\url{https://docs.google.com/spreadsheets/d/1x8fJiSwX-zM05GCxfd4t1XsQqwRf7Us7V6cQaNlkq8E/edit#gid=0}} which contains more than 3000 phone numbers of Subward Executive Officers, Ward Executive Officers, Chairpersons, and local leaders. In order to identify the affected communities, we conducted a community meeting with MEO’s, chairpersons and shina leaders.
 
 \medskip
@@ -238,7 +253,9 @@ On 5th - 6th March 2019 the Ramani Huria team visited Mkunguni B Subward (Hanana
 \href{https://drive.google.com/drive/u/0/folders/14Bp8qZxcOSvfb3JlEbHWNRYSeq6JcqmX}{Flood Response Maps}\footnote{\url{https://drive.google.com/drive/u/0/folders/14Bp8qZxcOSvfb3JlEbHWNRYSeq6JcqmX}}
 \subsection{Soil Sampling}
 With the support of the World Bank in Tanzania, Ramani Huria and JBA Consulting partnered in October 2018 to develop a surface soil sediment dataset for the greater Dar es Salaam region of Tanzania. This was intended to support a geomorphological assessment taking into account soil sediment characteristics for erosion and flood risk studies.
-A national-level soil profile had existed for Tanzania prior to this effort but contained only a single sample from Dar es Salaam. This was not sufficient to analyse erosion potential across the city. The JBA team in consultation with Ramani Huria decided to use a 2km grid, which resulted in 731 sampling points being pre-established throughout the city. A team of 10 field mappers and 4 office technicians—all Tanzanian youth participants in the Ramani Huria project—were trained in sample collection and analysis (sieving). A total of 643 points were sampled and sieved; 88 sites were inaccessible for one or another reason.
+A national-level soil profile had existed for Tanzania prior to this effort but contained only a single sample from Dar es Salaam. 
+
+This was not sufficient to analyse erosion potential across the city. The JBA team in consultation with Ramani Huria decided to use a 2km grid, which resulted in 731 sampling points being pre-established throughout the city. A team of 10 field mappers and 4 office technicians—all Tanzanian youth participants in the Ramani Huria project—were trained in sample collection and analysis (sieving). A total of 643 points were sampled and sieved; 88 sites were inaccessible for one or another reason.
 The 643 samples were analyzed by sieving each to separate the sediment by particle size and weighing the resulting fractions. The resulting dataset, a geo-referenced set of soil sediment profiles, is published and available as \href{https://geonode.uhurulabs.org/layers/geonode3A_2019_02_26_dar_soil_sampling_final_results_v1}{open data}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode3A_2019_02_26_dar_soil_sampling_final_results_v1}}.
 
 \subsection{Innovation Week}
@@ -250,7 +267,7 @@ Several drone flights have been conducted along five major rivers of Dar es Sala
 
 Drone flights are capable of studying any aggregations of waste/ informal dumps that are on the banks of the river/ waterway or within five metres of its bank on either side. 
 Such data will be presented as three-dimensional imagery of waste piles/ aggregations, further assisting the study team to estimate rough waste volumes.
-
+\end{multicols}
 
 \newpage
 \begin{itemize}
@@ -302,7 +319,6 @@ The process of data profiling to discover inconsistencies and other anomalies in
 Ramani Huria data uses a data quality framework as a guide for each dataset to ensure the data is cleaned following certain procedures and steps. The objective of the framework is to provide insight into the Ramani Huria data quality process as well as to guide future projects in best practices. See  \href{https://docs.google.com/document/d/1IE1ARLs6i4d_KTK73X9LGbU2OoEHCgDRefE47J6LJn8/edit#}{Ramani Huria Data Quality Framework}\footnote{\url{https://docs.google.com/document/d/1IE1ARLs6i4d_KTK73X9LGbU2OoEHCgDRefE47J6LJn8/edit#}}
 
 
-
 \section{Datasets}
 In this case a dataset contain all digital data collected by Ramani Huria from October to February. Not all data can contain all character of a 'dataset' but rather providing an overview of Ramani Huria data collected. The following is a list of datasets all presented in the same format for consistency. 
 \subsection{Drainage}
@@ -330,31 +346,36 @@ Drainage data covers 44 prioritized Ramani Huria wards most of which are along t
 \
 Preparation of field paper (soft copy) in KoBo Toolbox for the ODK application for drain segments and points. Field mappers then installed ODK on their Android phones and with the URL for the server to be used, they downloaded the survey forms, filled the required information from the field and uploaded the forms.
 
+\bigskip
+\subsubsection{Data Model, Timeline, Access and Licensing}
+\begin{center}
+  \begin{tabular}{|c|c|c|}  
+ \hline
+    Data Model    &   \href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Drainage}{Dar es Salaam\_Ramani Huria\_OpenStreetMap Wiki}\footnote{\url{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Drainage}} \\
+ \hline
+   Timeline  &   August, 2017 and Ongoing \\
+ \hline  
+ \multirow {Access}
+       & \multicolumn{1}{l}
+       {\href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}{UhuruLabs\_Drain Points}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}}} \\\
+       & \multicolumn{1}{l}{\href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}{UhuruLabs\_Drain Segments}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}}} \\\
+       
+ \hline      
+  Licensing & 
+\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\footnote{\url{https://creativecommons.org/licenses/by/4.0/}} \\
+ \hline
+  
+\end{tabular}
+\end{center}
 
-\subsubsection{Data Model}
-\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Drainage}{Dar es Salaam\_Ramani Huria\_OpenStreetMap Wiki}\footnote{\url{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Drainage}}
-
-\subsubsection{Timeline}
-August, 2017 and Ongoing
-
+\bigskip
 \subsubsection{Quality Assurance}
 During the data cleaning process, the ODK forms that were filled in the field are downloaded from the server in Comma Separated Value (CSV) format and converted to GeoPackage (.gpkg) in QGIS. The plugin to convert ODK form to CSV format is found in \href{https://github.com/zestyping/odk_csv}{GitHub}\footnote{\url{https://github.com/zestyping/odk\_csv}}. The drain segments and points are styled with a pre-defined .qml style found in QGIS---Drain\_lines\_categorized\_with\_labels\_and\_directions and Drain\_points\_categorized\_with\_labels. After the data is cleaned, it is run in the \href{https://github.com/openearth/hydro-osm}{Hydro OSM model}\footnote{\url{https://github.com/openearth/hydro-osm}} to ensure all drain segments and points are connected.
 
 The team also used QGIS with pre-installed template styles for the segments and points, a high resolution 2016 COWI imagery.
 
-\subsubsection{Access}
-\begin{itemize}
-    \item \href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}{UhuruLabs\_Drain Segments}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}}
-    \item \href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}{UhuruLabs\_Drain Points}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}}
-\end{itemize}
-
-\subsubsection{Licensing}
-\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\footnote{\url{https://creativecommons.org/licenses/by/4.0/}}
 
 \subsubsection{Statistics}
-38 out of 44 wards of Dar es Salaam Ramani Huria prioritized wards completed. 
-
-
 Number of segments culverts, drains, ditches and decommissioned (destroyed or buried) mapped are 16207 with 653 kilometers and 12620 number of drain points.
 This is summarized in the table below
 
@@ -418,20 +439,23 @@ recorded.
 The following materials were used: a set of metal sieves, scales, hand wash station and gloves, brush, cloth and towel for cleaning sieves, an Android phone with ODK Collect and sieving survey.
 \end{multicols}
 
-\subsubsection{Data Model}
-\href{https://wiki.openstreetmap.org/wiki/Soil_Sediment_Sampling}{Soil Sediment Sampling Wikipage} \footnote{\url{https://wiki.openstreetmap.org/wiki/Soil_Sediment_Sampling}}
-\subsubsection{Timeline}
-2018-10-11 to 2019-02-23
-
-\subsubsection{Quality Assurance}
-
-The quality control was done by  using ODK form to flag out any discrepancies such as negative masses or discrepancies in sums immediately.
-
-\subsubsection{Access}
-\href{https://geonode.uhurulabs.org/layers/geonode\%3A_2019_02_26_dar_soil_sampling_final_results_v1}{UhuruLabs\_Soil Sediment Sampling}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3A20190226darsoilsamplingfinalresultsv1}}
-
-\subsubsection{Licensing}
-CC-BY 4.0
+\medskip
+\subsubsection{Data Model, Timeline, Access and Licensing}
+\begin{center}
+  \begin{tabular}{|c|c|c|}  
+ \hline
+    Data Model    &   \href{https://wiki.openstreetmap.org/wiki/Soil_Sediment_Sampling}{Soil Sediment Sampling Wikipage} \footnote{\url{https://wiki.openstreetmap.org/wiki/Soil_Sediment_Sampling}} \\
+ \hline
+   Timeline  &   2018-10-11 to 2019-02-23 \\
+ \hline  
+ Access  & 
+    \href{https://geonode.uhurulabs.org/layers/geonode\%3A_2019_02_26_dar_soil_sampling_final_results_v1}{UhuruLabs\_Soil Sediment Sampling} \footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3A20190226darsoilsamplingfinalresultsv1}} \\
+    \hline
+Licensing &  CC-BY 4.0 \\
+ \hline
+  
+\end{tabular}
+\end{center}
 
 \subsubsection{Statistics}
 731 soil sample points created using a 2 km grid. 643 points sampled and sieved; 88 sample points were either inaccessible or hard to collect sample e.g. paved areas, military base.
@@ -506,8 +530,23 @@ The discussion was based on three major key points:
     \item Main causes of flood in the subward
 \end{enumerate}
 
-\subsubsection{Timeline}
-2018-06-08 to 2019-01-20
+\medskip
+\subsubsection{Timeline, Access and Licensing}
+\begin{center}
+\begin{tabular}{|c|c|c|}  
+ \hline
+  Timeline  &   2018-06-08 to 2019-01-20 \\
+\hline  
+ Access  & 
+    \href{https://drive.google.com/drive/u/1/folders/1nW7luOI0A92GKi1vJtUJwt9P88OAzQ6h}{Dar es Salaam Asset and Threat Inventory}\footnote{\url{https://drive.google.com/drive/u/1/folders/1nW7luOI0A92GKi1vJtUJwt9P88OAzQ6h}} \\
+   
+\hline 
+    Licensing &  CC-BY 4.0 \\
+\hline
+\end{tabular}
+\end{center}
+
+
 
 \subsubsection{Quality Assurance}
 JOSM for editing buildings and roads and QGIS for field data analysis. Other sites are used for Quality Assurance for JOSM data are:
@@ -522,12 +561,6 @@ JOSM for editing buildings and roads and QGIS for field data analysis. Other sit
     It shows automatically detected errors on map or in  list    which are quality assurance sites for JOSM data.
 
 \end{itemize}
-
-\subsubsection{Access}
-\href{https://drive.google.com/drive/u/1/folders/1nW7luOI0A92GKi1vJtUJwt9P88OAzQ6h}{Dar es Salaam Asset and Threat Inventory}\footnote{\url{https://drive.google.com/drive/u/1/folders/1nW7luOI0A92GKi1vJtUJwt9P88OAzQ6h}}
-
-\subsubsection{Licensing}
-CC-BY 4.0
 
 \subsubsection{Statistics}
 A total of 5020 asset points were collected during the project. These include:
@@ -592,21 +625,29 @@ Re-digitization of the city to update and improve the quality of already digitiz
 
 The purpose of the work was introduced to the team and mbtiles for the wards were created in \href{https://www.gdal.org/gdaladdo.html}{GDAL}\footnote{\url{https://www.gdal.org/gdaladdo.html}} (gdaladdo)---a utility used to build or rebuild overview images. Supervisors of the team created mapping projects on \href{https://tasks.hotosm.org/}{HOT Tasking Manager}\footnote{\url{https://tasks.hotosm.org/}} which were then assigned to the digitization team. Using the 2016 COWI imagery, buildings were re-digitized in JOSM and validation of the re-digitization was done by the validation team.
 
+\medskip
+\subsubsection{Data Model, Timeline, Access and Licensing}
+\begin{center}
+\begin{tabular}{|c|c|c|}  
+ \hline
+Data Model &
+        \href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Buildings}{Dar es Salaam\_Ramani Huria\_OpenStreetMap Wiki}\footnote{\url{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Buildings}} \\
+ \hline
+  Timeline  &  2018-08-24 to 2018-10-20 \\
+\hline  
+ Access  & 
+    \href{https://drive.google.com/drive/u/1/folders/1Aly4pDcq5JP14vB6VY-IxahTwvt6Ukrv}{Dar es Salaam Buildings}\footnote{\url{https://drive.google.com/drive/u/1/folders/1Aly4pDcq5JP14vB6VY-IxahTwvt6Ukrv}} \\
+   
+\hline 
+    Licencing & \href{https://opendatacommons.org/licenses/odbl/index.html}{Open Data Commons Open Database License (ODbL)}\footnote{\url{https://opendatacommons.org/licenses/odbl/index.html}} \\
+\hline
+\end{tabular}
+\end{center}
 \subsubsection{Data Model}
 \href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Buildings}{Dar es Salaam\_Ramani Huria\_OpenStreetMap Wiki}\footnote{\url{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Buildings}}
 
-\subsubsection{Timeline}
-2018-08-24 to 2018-10-20
-
 \subsubsection{Quality Assurance}
 JOSM - using filters to show if the buildings are well aligned and if there are any duplicates and validation tool to see if there is any errors i.e unconnected nodes.
-
-
-\subsubsection{Access}
-\href{https://drive.google.com/drive/u/1/folders/1Aly4pDcq5JP14vB6VY-IxahTwvt6Ukrv}{Dar es Salaam Buildings}\footnote{\url{https://drive.google.com/drive/u/1/folders/1Aly4pDcq5JP14vB6VY-IxahTwvt6Ukrv}}
-
-\subsubsection{Licensing}
-\href{https://opendatacommons.org/licenses/odbl/index.html}{Open Data Commons Open Database License (ODbL)}\footnote{\url{https://opendatacommons.org/licenses/odbl/index.html}}
 
 \subsubsection{Statistics}
 \begin{center}
@@ -686,11 +727,24 @@ Given the rate of urbanization in Dar es Salaam, it is very difficult to locate 
     \item Data cleaning was done using excel  and map creation using QGIS.
 \end{itemize}
 
-\subsubsection{Data Model}
-\href{https://drive.google.com/file/d/1Wcl96kcEUswsG94r5cSotlYUgRi232xS/view?usp=sharing}{ODK Form Used} \footnote{\url{https://drive.google.com/file/d/1Wcl96kcEUswsG94r5cSotlYUgRi232xS/view?usp=sharing}}
-
-\subsubsection{Timeline}
-2018-09-13 to 2018-12-24
+\medskip
+\subsubsection{Data Model, Timeline, Access and Licensing}
+\begin{center}
+\begin{tabular}{|c|c|c|}  
+ \hline
+Data Model &
+        \href{https://drive.google.com/file/d/1Wcl96kcEUswsG94r5cSotlYUgRi232xS/view?usp=sharing}{ODK Form Used} \footnote{\url{https://drive.google.com/file/d/1Wcl96kcEUswsG94r5cSotlYUgRi232xS/view?usp=sharing}} \\
+ \hline
+  Timeline  &  2018-09-13 to 2018-12-24 \\
+\hline  
+ Access  & 
+    \href{https://drive.google.com/drive/u/1/folders/1bagTRoBVYX88VJpgYm61Rl2WXHgrvBJi}{Hyperlocal administrative boundary data}\footnote{\url{https://drive.google.com/drive/u/1/folders/1bagTRoBVYX88VJpgYm61Rl2WXHgrvBJi}} \\
+   
+\hline 
+    Licencing & CC-BY 4.0 \\
+\hline
+\end{tabular}
+\end{center}
 
 \subsubsection{Quality Assurance}
 \begin{enumerate}
@@ -700,17 +754,16 @@ Given the rate of urbanization in Dar es Salaam, it is very difficult to locate 
 
 \end{enumerate}
 
-\subsubsection{Access}
-\href{https://drive.google.com/drive/u/1/folders/1bagTRoBVYX88VJpgYm61Rl2WXHgrvBJi}{Hyperlocal administrative boundary data}\footnote{\url{https://drive.google.com/drive/u/1/folders/1bagTRoBVYX88VJpgYm61Rl2WXHgrvBJi}}
-
-\subsubsection{Licensing}
-CC-BY 4.0
-
 \subsubsection{Statistics}
 2612 hyperlocal boundaries mapped in 36 wards of Dar es Salaam
 
+\newpage
 \subsubsection{Data Visualization}
-
+\begin{figure}[h]
+  \color{RHgreen}\caption{Shina Data Visualization}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/Shinas_Data_Viz.png}
+\end{figure}
 \subsubsection{Use Case}
 To find people’s address in Dar es Salaam, \href{https://www.hotosm.org/updates/piloting-tanzanias-first-patient-origin-tracking-system/}{Amana Hospital patient origin tracking system}\footnote{\url{https://www.hotosm.org/updates/piloting-tanzanias-first-patient-origin-tracking-system/}}
 
@@ -744,19 +797,38 @@ Ramani Huria and Green Waste Pro Ltd. (GWPL) partnered in August 2018 to provide
 
 Collection of building data for each structure and resident/client data for each unit (residence or business) within the buildings in Kisutu and Mchafukoge wards in Dar es Salaam. Robust barcode stickers were placed at the entry of each unit, and a survey was completed for each unit where possible. The building data was uploaded to OSM, along with some amenity information gleaned from the unit surveys, and the remainder of the per-unit data was provided to GWPL.
 
-\subsubsection{Data Model}
-\href{https://drive.google.com/open?id=1_E6kuXI6Ax8O5J_2Sq-WtNQtxQYIoNQo}{ODK Form Used} \footnote{\url{https://drive.google.com/open?id=1_E6kuXI6Ax8O5J_2Sq-WtNQtxQYIoNQo}}
-
-\subsubsection{Timeline}
-October to November 2018
+\medskip
+\subsubsection{Data Model, Timeline, Access and Licensing}
+\begin{center}
+\begin{tabular}{|c|c|c|}  
+ \hline
+Data Model &
+       \href{https://drive.google.com/open?id=1_E6kuXI6Ax8O5J_2Sq-WtNQtxQYIoNQo}{ODK Form Used} \footnote{\url{https://drive.google.com/open?id=1_E6kuXI6Ax8O5J_2Sq-WtNQtxQYIoNQo}} \\
+ \hline
+  Timeline  &  October to November 2018 \\
+\hline  
+ Access  & 
+    \href{https://drive.google.com/drive/u/1/folders/17DZDPi-_4FZlgXXd1qQ8deMHI57vdZcY}{GreenWaste Pro Limited data}\footnote{\url{https://drive.google.com/drive/u/1/folders/17DZDPi-_4FZlgXXd1qQ8deMHI57vdZcY}} \\
+   
+\hline 
+    Licencing & CC-BY 4.0 \\
+\hline
+\end{tabular}
+\end{center}
 \subsubsection{Quality Control}
+
 JOSM for buildings, QGIS for barcodes
-\subsubsection{Access}
-\href{https://drive.google.com/drive/u/1/folders/17DZDPi-_4FZlgXXd1qQ8deMHI57vdZcY}{GreenWaste Pro Limited data}\footnote{\url{https://drive.google.com/drive/u/1/folders/17DZDPi-_4FZlgXXd1qQ8deMHI57vdZcY}}
-\subsubsection{Licensing}
-CC-BY 4.0
+\begin{itemize}
+    \item Josm used to check if buildings and other necessary information have been correctly, for example, checking spellings, writing. 
+     \item QGIS to check if clients points have been placed on buildings precisely and to make sure scanned barcodes corresponds with the buildings 
+\end{itemize}
+
 \subsubsection{Statistics}
+Two wards of the city, mapped 4706 clients and around 4500 client data are used by the company to collect trash.
+
+\newpage
 \subsubsection{Data Visualization}
+
 \begin{figure}
   \begin{subfigure}[b]{0.4\textwidth}
     \includegraphics[width=\textwidth]{images/GWPL_client_map.png}
@@ -807,23 +879,30 @@ Ramani Huria team switched to working with local community leaders (wajumbe) who
 Tabata ward is 50 percent informally developed hence most houses do not have house numbers. In order to connect the buildings’ geo locations with client information we developed “fake house ID” numbers as a baseline for the use of collected data.
 
 \end{multicols}
-
-\subsubsection{Data Model}
-\href{https://drive.google.com/open?id=1vwZyjcsQLQaZ95yjMnNf00GYtrqVkYBS}{ODK Form Used} \footnote{\url{https://drive.google.com/open?id=1vwZyjcsQLQaZ95yjMnNf00GYtrqVkYBS}}
-\subsubsection{Timeline}
-November, 2018 to February, 2019
+\medskip
+\subsubsection{Data Model, Timeline, Access and Licensing}
+\begin{center}
+\begin{tabular}{|c|c|c|}  
+ \hline
+Data Model &
+      \href{https://drive.google.com/open?id=1vwZyjcsQLQaZ95yjMnNf00GYtrqVkYBS}{ODK Form Used} \footnote{\url{https://drive.google.com/open?id=1vwZyjcsQLQaZ95yjMnNf00GYtrqVkYBS}} \\
+ \hline
+  Timeline  &  November, 2018 to February, 2019 \\
+\hline  
+ Access  & 
+   \href{https://drive.google.com/drive/u/1/folders/1tUg6Tk2fQ4paIn-nQeUNFoQfmhkAaQYA}{Joshemi Company Limited (JCL) data}\footnote{\url{https://drive.google.com/drive/u/1/folders/1tUg6Tk2fQ4paIn-nQeUNFoQfmhkAaQYA}} \\
+   
+\hline 
+    Licencing & CC-BY 4.0 \\
+\hline
+\end{tabular}
+\end{center}
 
 \subsubsection{Quality Control}
 Google spreadsheet to fill in client information, JOSM for buildings, QGIS for client points
 
-\subsubsection{Access}
-\href{https://drive.google.com/drive/u/1/folders/1tUg6Tk2fQ4paIn-nQeUNFoQfmhkAaQYA}{Joshemi Company Limited (JCL) data}\footnote{\url{https://drive.google.com/drive/u/1/folders/1tUg6Tk2fQ4paIn-nQeUNFoQfmhkAaQYA}}
-
-\subsubsection{Licensing}
-CC-BY 4.0
-
 \subsubsection{Statistics}
-20163 trash points collected in 2 subwards of Tabata ward
+20163 client points collected in 2 subwards of Tabata ward
 
 \newpage
 
@@ -871,11 +950,25 @@ Using OpenDataKit to collect trash points in the city and filling out the survey
 
 Before field work, introduction letters were sent to ward officers so they can be informed and for mappers security in case there is any assistance needed from the ward office.
 
-\subsubsection{Data Model}
-\href{https://drive.google.com/file/d/1rWE-HYP_a84RAZSYKzy7DhoKaA_uZXag/view?ts=5cc0244a}{ODK Form Used}\footnote{\url{https://drive.google.com/file/d/1rWE-HYP_a84RAZSYKzy7DhoKaA_uZXag/view?ts=5cc0244a}}
+\medskip
+\subsubsection{Data Model, Timeline, Access and Licensing}
+\begin{center}
+\begin{tabular}{|c|c|c|}  
 
-\subsubsection{Timeline}
-2018-07-30 to 2018-08-03
+ \hline
+Data Model &
+\href{https://drive.google.com/file/d/1rWE-HYP_a84RAZSYKzy7DhoKaA_uZXag/view?ts=5cc0244a}{ODK Form Used}\footnote{\url{https://drive.google.com/file/d/1rWE-HYP_a84RAZSYKzy7DhoKaA_uZXag/view?ts=5cc0244a}} \\
+ \hline
+  Timeline  &  2018-07-30 to 2018-08-03 \\
+\hline  
+ Access  & 
+   \href{http://dar-trash-viz.herokuapp.com/}{Visualised in Application}\footnote{\url{http://dar-trash-viz.herokuapp.com/}} \\
+   Access  &  \href{https://drive.google.com/file/d/1asvYaiCwnR-SO-GaJwGAURHFEOndLuri/view?usp=sharing_eil&ts=5cb889ca}{Dar-Trash-with-Image-Path.geojson}
+    \footnote{\url{https://drive.google.com/file/d/1asvYaiCwnR-SO-GaJwGAURHFEOndLuri/view?usp=sharing_eil&ts=5cb889ca}} \\
+\hline
+\hline
+\end{tabular}
+\end{center}
 
 \subsubsection{Quality Control}
 \begin{itemize}
@@ -883,18 +976,6 @@ Before field work, introduction letters were sent to ward officers so they can b
     These categories were removed because they didn't seem like trash points but rather people just placed them for tracks to pass and pick them.
     \item These categories were far too small to be collected and sometimes confused the mappers therefore a decision to remove these points had to be made which dropped the number of points to approximately 9,000.
 \end{itemize}
-
-
-
-\subsubsection{Access}
-\begin{itemize}
-    \item \href{http://dar-trash-viz.herokuapp.com/}{Visualised in Application}\footnote{\url{http://dar-trash-viz.herokuapp.com/}}
-    \item \href{https://drive.google.com/file/d/1asvYaiCwnR-SO-GaJwGAURHFEOndLuri/view?usp=sharing_eil&ts=5cb889ca}
-    {Dar-Trash-with-Image-Path.geojson}
-    \footnote{\url{https://drive.google.com/file/d/1asvYaiCwnR-SO-GaJwGAURHFEOndLuri/view?usp=sharing_eil&ts=5cb889ca}}
-\end{itemize}
-\subsubsection{Licensing}
-CC-BY 4.0
 
 \subsubsection{Statistics}
 A total of 20,392 points were collected and reduced to 9,452 after cleaning
@@ -935,22 +1016,28 @@ Meetings with ward leaders in the three most affected subwards and zone the affe
 
 Field visit to survey the affected area and take points to verify what community leaders zoned on the map
 
-\subsubsection{Timeline}
-2019-03-05
+\medskip
+\subsubsection{Timeline, Access and Licensing}
+\begin{center}
+\begin{tabular}{|c|c|c|}  
+ \hline
+  Timeline  &  2019-03-05 \\
+\hline  
+ Access  & 
+   \href{https://drive.google.com/drive/u/1/folders/1Wmx3VyrHSpHmltPAF0RgfuO1mIrGyVI1}{Flood response mapping}\footnote{\url{https://drive.google.com/drive/u/1/folders/1Wmx3VyrHSpHmltPAF0RgfuO1mIrGyVI1}} \\
+  
+\hline
+Licensing   &  CC-BY 4.0 \\
+\hline
+
+\end{tabular}
+\end{center}
 
 \subsubsection{Quality Control}
 \begin{itemize}
     \item Using QGIS to trace affected areas using data from the field to get the clear picture of the extent the flood. 
    \item Calculating houses affected during rainfall together with  water level in the houses  and produce flood response map.
 \end{itemize}
-
-
-
-\subsubsection{Access}
-\href{https://drive.google.com/drive/u/1/folders/1Wmx3VyrHSpHmltPAF0RgfuO1mIrGyVI1}{Flood response mapping}\footnote{\url{https://drive.google.com/drive/u/1/folders/1Wmx3VyrHSpHmltPAF0RgfuO1mIrGyVI1}}
-
-\subsubsection{Licensing}
-CC-BY 4.0
 
 \subsubsection{Statistics}
 \begin{center}
@@ -1016,15 +1103,31 @@ The information captured aimed to know whether the respondent had been affected 
 \subsubsection{Data Collection Methodology}
 Using ODK survey form and asking questions to community members about their experience of floods in their neighbourhoods. Community members of the respective wards were trained on how to collect data using ODK and were the ones to collect these information in their own neighborhood.
 
-\subsubsection{Data Model}
-\href{https://drive.google.com/file/d/1AeOFvxXFKlXTxc-Je8Mo0riiWLg4jVQw/view?usp=sharing
-}{ODK Form Used} \footnote{\url{https://drive.google.com/file/d/1AeOFvxXFKlXTxc-Je8Mo0riiWLg4jVQw/view?usp=sharing}}
-\subsubsection{Timeline}
-2017-08-24 to 2018-04-12
+\medskip
+\subsubsection{Data Model, Timeline, Access and Licensing}
+\begin{center}
+\begin{tabular}{|c|c|c|}  
+\hline
+Data Model &  \href{https://drive.google.com/file/d/1AeOFvxXFKlXTxc-Je8Mo0riiWLg4jVQw/view?usp=sharing
+}{ODK Form Used} \footnote{\url{https://drive.google.com/file/d/1AeOFvxXFKlXTxc-Je8Mo0riiWLg4jVQw/view?usp=sharing}} \\
+ \hline
+  Timeline  &  2017-08-24 to 2018-04-12 \\
+\hline  
+ Access  & 
+    \href{https://drive.google.com/drive/u/1/folders/1F8P8A5tmxnC8pth4ZDrR6G_OwHF0rV5k}{Historical flood extent data}\footnote{\url{https://drive.google.com/drive/u/1/folders/1F8P8A5tmxnC8pth4ZDrR6G_OwHF0rV5k}}\\
+Access & 
+    \href{http://geonode.uhurulabs.org/layers/geonode\%3Adar_flood_depths#more}{Dar es Salaam Flood Survey}\footnote{\url{http://geonode.uhurulabs.org/layers/geonode\%3Adar_flood_depths#more}}\\
+ Access &    
+     \href{http://geonode.uhurulabs.org/layers/geonode\%3Adar_flood_depths#more}{Dar es Salaam Flood Depths}\footnote{\url{http://geonode.uhurulabs.org/layers/geonode\%3Adar_flood_depths#more}} \\
+\hline
+Licensing   &  CC-BY 4.0 \\
+\hline
+\end{tabular}
+\end{center}
 
 \subsubsection{Quality Assurance}
-\large{Excel}
-\begin{itemize}
+    \large{Excel}
+    \begin{itemize}
     \item was used  to clean spelling error of the data collected especially open ended questions,removing unnecessary columns that are not needed during map making and also sorting of all data in ascending order
     \end{itemize}
     \large{QGIS}
@@ -1038,18 +1141,6 @@ Using ODK survey form and asking questions to community members about their expe
         \item Moving house by house with local leaders to make sure all houses are collected.
 Data verification with subward leaders after producing draft map to be confident that there are no mistakes and missing data before producing the final output.
     \end{itemize}
-      
-
-
-\subsubsection{Access}
-\begin{itemize}
-    \item \href{https://drive.google.com/drive/u/1/folders/1F8P8A5tmxnC8pth4ZDrR6G_OwHF0rV5k}{Historical flood extent data}\footnote{\url{https://drive.google.com/drive/u/1/folders/1F8P8A5tmxnC8pth4ZDrR6G_OwHF0rV5k}}
-    \item \href{http://geonode.uhurulabs.org/layers/geonode\%3Adar_flood_depths#more}{Dar es Salaam Flood Survey}\footnote{\url{http://geonode.uhurulabs.org/layers/geonode\%3Adar_flood_depths#more}}
-    \item \href{http://geonode.uhurulabs.org/layers/geonode\%3Adar_flood_depths#more}{Dar es Salaam Flood Depths}\footnote{\url{http://geonode.uhurulabs.org/layers/geonode\%3Adar_flood_depths#more}}
-\end{itemize}
-
-\subsubsection{Licensing}
-CC-BY 4.0
 
 \subsubsection{Statistics}
 Approximately 30 000 houses were surveyed during the historical flood extents
