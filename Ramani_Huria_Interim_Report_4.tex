@@ -34,6 +34,7 @@
 \definecolor{code}{RGB}{200,200,200}
 \definecolor{textbox}{RGB}{200,255,200}
 \definecolor{captiongreen}{RGB}{50,165,60}
+\definecolor{RHolive}{RGB}{239, 240, 125}
   
 \usepackage{sectsty}
 \sectionfont{\color{RHblue}} 
@@ -181,12 +182,13 @@ Together with the coalescing Resilience Academy team, we are working to dissemin
 
 %I want this report to get 100\% marks
 
-Ramani Huria 2.0 is next to last in June 2019, During this phase we have collected a number of datasets that can serve for different purposes. 
-Data set collected include; Soil sediment sampling, Drainage mapping, Flood extent data, Hyperlocal boundaries mapping, Threat and asset mapping (Flood risks identification), Trash mapping for waste management, Flood response mapping (damage assessment) and buildings footprint digitization.
+Ramani Huria 2.0 is next to last in June 2019. During this phase, we have collected a number of datasets that can serve for several purposes including the primary focus of the project, creating maps for flood resilience in the city. 
+Datasets collected during this phase include; soil sediment sampling data, city drainage data, historical flood extent data, hyperlocal boundaries data, asset and threat data for flood risks identification, city trash hotspots data for waste management, flood responses data for assessing damage and buildings footprint digitization.
 
-This overview of digital datasets is meant to be used as an annex to the final report on June 2019. It contains a brief summary of the dataset, spatial extent, methodology used for data collection, data model and/or survey form used, Methods used to ensure data quality, data gap, timeline, statistics, visualization of data, link to access data, Licensing (incase of sharing), data use case and lessons learned throughout the process of data collection.
+This overview of digital datasets is an annex to the final project report to be submitted in June 2019. It contains a brief summary of the dataset, spatial extent, methodology used for data collection, data model and/or survey form used, methods used to review data quality, data gap, timeline, statistics, visualization of data, link to access the data, licencing (incase of data sharing), data use case and lessons learned throughout the process of data collection.
 
-Ramani Huria team conducted a number of activities including Community flood response following the heavy rainfall on March 3rd 2019, Soil sediment analysis for geomorphological assessment of the city and erosion modeling, Participated in Innovation week on March 2019 to showcase how we conducted sediment analysis using cheap yet practical method and came out with professional results and The ongoing River mapping activity --flying drones along major rivers of Dar es Salaam to  provide a digital photographic mark-up of the current status of Dar es Salaam’s waterways, to help in solid waste management on major rivers of the city.
+Ramani Huria team conducted a number of activities including Community Flood Response following the heavy rainfall on March 3rd 2019, Soil sediment analysis for geomorphological assessment of the city and erosion modeling, participated in Innovation Week on March 2019 to showcase how we conducted sediment analysis using cheap yet practical methods and came out with professional results and the ongoing River Mapping activities---flying drones along the major rivers of Dar es Salaam to  provide a digital photographic mark-up of the current status of Dar es Salaam’s waterways, to help in solid waste management on major rivers of the city.
+
 
 
 \end{multicols}
@@ -197,7 +199,7 @@ Ramani Huria team conducted a number of activities including Community flood res
 \section{Introduction}
 \label{Introduction}
 
- This report describes the activities of Ramani Huria 2.0 from October to February providing an overview of digital assets collected since October 2018. 
+ This report describes the activities of Ramani Huria 2.0 from October to April providing an overview of digital assets collected since October 2018. 
 \bigskip
 We also would like to point out a link to  \href{https://ramanihuria.org}{a website}\footnote{\url{http://ramanihuria.org}\color{RHgrey} { }because it's really, really interesting. You should click on that link.}. Did you notice that there was a footnote there? If you look at the footnote it contains the full URL of the link, so that people reading the document on paper can see what it links to? Cool, huh? The rest of the text on this page will be in two columns, just because we can do that with the \LaTeX{} \textbf{\textit{multicols}} plugin. By the way, I can highlight code with a color box like \textbf{\colorbox{code}{this.}}
 
@@ -217,23 +219,24 @@ The ODbL was created with the goal of allowing users to share their data freely 
 
 {\color{RHblue}\Large{Data Model}}\bigskip
 
-Only data that have been uploaded to OpenStreetMap have a clear defined data model. For data with no defined data model, there will be links to ODK survey forms that were used to collect the data or linked to the wikipage that clarify how that dataset was obtained.
+Data that have been uploaded to OpenStreetMap have a clear defined data model. Links to ODK survey forms that were used to collect data or a wiki page containing information on the process of data collection and that clarifies how datasets were obtained will be provided for data with no defined data models.
+
 \bigskip
 
 {\color{RHblue}\Large{Spatial Extent Color Schema}}
 \medskip
 
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-Finished & {\colorbox{code}{RHgreen}} & \#27a73b  \\
+Finished & RHgreen & \#27a73b & {\colorbox{RHgreen}{   }} \\
 \hline
-RH data collection pending i.e. working on it & RHblue & \#3a8fcc \\
+RH data collection pending i.e. working on it & RHblue & \#3a8fcc & {\colorbox{RHblue}{   }} \\
 \hline
-Should be followed up on by the Resilience Academy & RHyellow & \#f8c910 \\
+Should be followed up on by the Resilience Academy & RHyellow & \#f8c910 & {\colorbox{RHyellow}{   }} \\
 \hline
-Outside scope of interest & RHgrey & \#e4e4e4 \\
+Outside scope of interest & RHgrey & \#e4e4e4 & {\colorbox{RHgrey}{   }} \\
 \hline
-Data collected but still not analyzed & RHolive & \#eff07d \\
+Data collected but still not analyzed & RHolive & \#eff07d & {\colorbox{RHolive}{   }} \\
 \hline
 \end{tabular}
 
@@ -315,12 +318,14 @@ Such data will be presented as three-dimensional imagery of waste piles/ aggrega
 Hi there!
 \newpage
 \section{Data Quality}
-The process of data profiling to discover inconsistencies and other anomalies in the data, as well as performing data cleaning activities (e.g. removing outliers, missing data interpolation) to improve the data quality. Data description is done using descriptive statistics; these are used to describe the basic features of the data in a study. They provide simple summaries about the sample and the measures. Together with simple graphics analysis, they form the basis of virtually every quantitative analysis of data. Data quality activities involve data rationalization and validation.
+\begin{multicols}{2}
+The process of data profiling to discover inconsistencies and other anomalies in the data, as well as performing data cleaning activities (e.g. removing outliers, missing data interpolation) to improve the \textit{data quality}. Data description is done using descriptive statistics; these are used to describe the basic features of the data in a study. They provide simple summaries about the sample and the measures. Together with simple graphics analysis, they form the basis of virtually every quantitative analysis of data. Data quality activities involve data rationalization and validation.
 Ramani Huria data uses a data quality framework as a guide for each dataset to ensure the data is cleaned following certain procedures and steps. The objective of the framework is to provide insight into the Ramani Huria data quality process as well as to guide future projects in best practices. See  \href{https://docs.google.com/document/d/1IE1ARLs6i4d_KTK73X9LGbU2OoEHCgDRefE47J6LJn8/edit#}{Ramani Huria Data Quality Framework}\footnote{\url{https://docs.google.com/document/d/1IE1ARLs6i4d_KTK73X9LGbU2OoEHCgDRefE47J6LJn8/edit#}}
+\end{multicols}
 
 
 \section{Datasets}
-In this case a dataset contain all digital data collected by Ramani Huria from October to February. Not all data can contain all character of a 'dataset' but rather providing an overview of Ramani Huria data collected. The following is a list of datasets all presented in the same format for consistency. 
+In this case, a dataset contains all digital assets/ data collected by Ramani Huria from October to March. Not all data can contain characteristics of a 'dataset' but rather provide an overview of the data collected in the Ramani Huria project. The following is a list of datasets presented in the same format for consistency. 
 \subsection{Drainage}
 \begin{wrapfigure}{r}{0.25\textwidth} %this figure will be at the right
     \centering
@@ -334,10 +339,35 @@ Drainage data collected in the most flood prone areas across Dar es Salaam using
 \subsubsection{Spatial Extent}
 Drainage data covers 44 prioritized Ramani Huria wards most of which are along the Msimbazi and Ng’ombe rivers. Almost 90\% of the wards have been mapped.
 
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+\hline
+ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
+\hline
+1 & Tandale & 16 & Mburahati & 31 & Magomeni\\
+2 & Hananasifu & 17 & Makurumla & 32 & Vingunguti\\
+3 & Kinyerezi & 18 & Upanga Mashariki & 33 & Tabata\\
+4 & Msigani & 19 & Kigogo & 34 & Mwananyamala\\
+5 & Makumbusho & 20 & Ukonga & 35 & Kimanga\\
+6 & Buguruni & 21 & Kawe & 36 & Sinza\\
+7 & Temeke & 22 & Kipawa & 37 & Gongo la Mboto\\
+8 & Makongo & 23 & Kinondoni & 38 & Makuburi\\
+9 & Ubungo & 24 & Pugu & 39 & Manzese\\
+10 & Mikocheni & 25 & Kimara & 40 & Kunduchi\\
+11 & Ndugumbi & 26 & Upanga Magharibi & 41 & Msasani\\
+12 & Ilala & 27 & Mabibo & 42 & Kwembe\\
+13 & Kijitonyama & 28 & Mchikichini & 43 & Segerea\\
+14 & Saranga & 29 & Jangwani & 44 & Kariakoo\\
+15 & Sandali & 30 & Mzimuni & 45 & Tandika\\
+{} & {} & {} & {} & 46 & Makangarawe\\
+ \hline
+\end{tabular}
+\end{center}
+
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing the drainage mapping progress as of March, 2019}
   \centering
-  \includegraphics[width=1\textwidth]{images/Dar_drainage_mapping_progress.png}
+  \includegraphics[width=0.8\textwidth]{images/Drain_Mapping.png}
 \end{figure}
 
 \subsubsection{Data Collection Methodology}
@@ -357,18 +387,14 @@ Preparation of field paper (soft copy) in KoBo Toolbox for the ODK application f
  \hline  
  \multirow {Access}
        & \multicolumn{1}{l}
-       {\href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}{UhuruLabs\_Drain Points}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}}} \\\
-       & \multicolumn{1}{l}{\href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}{UhuruLabs\_Drain Segments}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}}} \\\
-       
+       {\href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}{UhuruLabs\_Drain Points}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}}}\\ 
+       & \multicolumn{1}{l}{\href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}{UhuruLabs\_Drain Segments}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}}} \\ 
  \hline      
-  Licensing & 
-\href{https://creativecommons.org/licenses/by/4.0/}{CC-BY 4.0}\footnote{\url{https://creativecommons.org/licenses/by/4.0/}} \\
+  Licensing & CC-BY 4.0 \\
  \hline
-  
 \end{tabular}
 \end{center}
 
-\bigskip
 \subsubsection{Quality Assurance}
 During the data cleaning process, the ODK forms that were filled in the field are downloaded from the server in Comma Separated Value (CSV) format and converted to GeoPackage (.gpkg) in QGIS. The plugin to convert ODK form to CSV format is found in \href{https://github.com/zestyping/odk_csv}{GitHub}\footnote{\url{https://github.com/zestyping/odk\_csv}}. The drain segments and points are styled with a pre-defined .qml style found in QGIS---Drain\_lines\_categorized\_with\_labels\_and\_directions and Drain\_points\_categorized\_with\_labels. After the data is cleaned, it is run in the \href{https://github.com/openearth/hydro-osm}{Hydro OSM model}\footnote{\url{https://github.com/openearth/hydro-osm}} to ensure all drain segments and points are connected.
 
@@ -522,7 +548,6 @@ Setting up meetings with community leaders and influential people i.e. religious
 Students worked in groups of six, visiting one subward at a time. After introductions were completed at the ward level, each subward mapping and data collection took approximately  4-5 days to complete. Threat and Asset inventory mappings were conducted in two different ways depending on whether the subward in question was mapped or unmapped. Student mappers split community members into three groups, each group guided by two students.
 \end{multicols}
 
-
 The discussion was based on three major key points:
 \begin{enumerate}
     \item Assets (Important things in the subward)
@@ -541,24 +566,22 @@ The discussion was based on three major key points:
     \href{https://drive.google.com/drive/u/1/folders/1nW7luOI0A92GKi1vJtUJwt9P88OAzQ6h}{Dar es Salaam Asset and Threat Inventory}\footnote{\url{https://drive.google.com/drive/u/1/folders/1nW7luOI0A92GKi1vJtUJwt9P88OAzQ6h}} \\
    
 \hline 
-    Licensing &  CC-BY 4.0 \\
+    Licensing & CC-BY 4.0 \\
 \hline
 \end{tabular}
 \end{center}
-
-
 
 \subsubsection{Quality Assurance}
 JOSM for editing buildings and roads and QGIS for field data analysis. Other sites are used for Quality Assurance for JOSM data are:
 \begin{itemize}
     \item \href{https://qa.poole.ch/\#}{QA}\footnote{\url{https://qa.poole.ch/\#}}
-    A tool to show streets with no names.
+    A tool to show roads or streets with no names.
 
     \item \href{http://osmose.openstreetmap.fr}{Osmose}\footnote{\url{http://osmose.openstreetmap.fr}}
-    To  control, verify and correct openstreetmap issues.
+    To  control, validate and correct issues in OpenStreetMap.
 
     \item \href{http://keepright.at/}{KeepRight}\footnote{\url{http://keepright.at/}}
-    It shows automatically detected errors on map or in  list    which are quality assurance sites for JOSM data.
+    A tool showing automatically detected errors on map or in list which are quality assurance sites for JOSM data.
 
 \end{itemize}
 
@@ -584,14 +607,14 @@ A total of 5020 asset points were collected during the project. These include:
 
 \subsubsection{Data Visualization}
 \begin{figure}[h]
-{\color{RHgreen}\caption{Screenshot Showing Risk Identification Map of Kawe Ward }}
+{\color{RHgreen}\caption{Map showing Risk Identification of Kawe Ward}}
  \centering
-  \includegraphics[width=0.8\textwidth]{images/Asset_and_Threat_Data_Viz.png}
+  \includegraphics[width=0.7\textwidth]{Asset_visualization.png}
 \end{figure}
 
 \subsubsection{Use Case}
 \begin{enumerate}
-    \item Develop disaster management plan in collaboration with Deltares
+    \item Develop disaster management plan in collaboration with Deltares.
     \item March, 2019 community flood response, creating resilience plans, mitigation measures through community mapping and impact assessment.
 \end{enumerate}
 
@@ -617,15 +640,13 @@ Re-digitization of the city to update and improve the quality of already digitiz
 \begin{figure}[h]
   \caption{28 prioritized Ramani Huria wards have been re-digitized by the team}
   \centering
-  \includegraphics[width=1\textwidth]{images/Building_Footprint_Digitization.png}
+  \includegraphics[width=0.8\textwidth]{images/Building_Footprint_Digitization.png}
 \end{figure}
-
 
 \subsubsection{Data Collection Methodology}
 
 The purpose of the work was introduced to the team and mbtiles for the wards were created in \href{https://www.gdal.org/gdaladdo.html}{GDAL}\footnote{\url{https://www.gdal.org/gdaladdo.html}} (gdaladdo)---a utility used to build or rebuild overview images. Supervisors of the team created mapping projects on \href{https://tasks.hotosm.org/}{HOT Tasking Manager}\footnote{\url{https://tasks.hotosm.org/}} which were then assigned to the digitization team. Using the 2016 COWI imagery, buildings were re-digitized in JOSM and validation of the re-digitization was done by the validation team.
 
-\medskip
 \subsubsection{Data Model, Timeline, Access and Licensing}
 \begin{center}
 \begin{tabular}{|c|c|c|}  
@@ -639,7 +660,7 @@ Data Model &
     \href{https://drive.google.com/drive/u/1/folders/1Aly4pDcq5JP14vB6VY-IxahTwvt6Ukrv}{Dar es Salaam Buildings}\footnote{\url{https://drive.google.com/drive/u/1/folders/1Aly4pDcq5JP14vB6VY-IxahTwvt6Ukrv}} \\
    
 \hline 
-    Licencing & \href{https://opendatacommons.org/licenses/odbl/index.html}{Open Data Commons Open Database License (ODbL)}\footnote{\url{https://opendatacommons.org/licenses/odbl/index.html}} \\
+    Licensing & \href{https://opendatacommons.org/licenses/odbl/index.html}{Open Data Commons Open Database License (ODbL)}\footnote{\url{https://opendatacommons.org/licenses/odbl/index.html}} \\
 \hline
 \end{tabular}
 \end{center}
@@ -661,35 +682,16 @@ JOSM - using filters to show if the buildings are well aligned and if there are 
 \end{center}
 
 \subsubsection{Data Visualization}
-\begin{figure}
-  \begin{subfigure}[b]{0.5\textwidth}
-    \includegraphics[width=\textwidth]{Magomeni_Before_Redigitization.png}
-   \color{RHgreen}\caption{Map showing Magomeni ward before re-digitization using UAV imagery}
-    \label{fig:1}
-  \end{subfigure}
-  %
-  \begin{subfigure}[b]{0.5\textwidth}
-    \includegraphics[width=\textwidth]{Magomeni_After_Redigitization.png}
-    \color{RHgreen}\caption{Map showing Magomeni ward after re-digitization using UAV imagery}
-    \label{fig:2}
-  \end{subfigure}
-\end{figure}
+\begin{tabular}{|c@{}c|}
+  \hline
+  \includegraphics[width=0.5\textwidth]{images/Magomeni_Before_Redigitization.png}&%
+     \includegraphics[width=0.5\textwidth]{images/Magomeni_After_Redigitization.png}\\
+  \includegraphics[width=0.5\textwidth]{images/Detailed_Magomeni_Before_Redigitization.png}&%
+     \includegraphics[width=0.5\textwidth]{images/Detailed_Magomeni_After_Redigitization.png}\\
+  \hline
+\end{tabular}
+%\caption{Map and Image showing Magomeni ward before and after re-digitization using UAV imagery}
 
- \vspace{2mm}
- 
-\begin{figure}
-  \begin{subfigure}[b]{0.5\textwidth}
-    \includegraphics[width=\textwidth]{images/Detailed_Magomeni_Before_Redigitization.png}
-   \color{RHgreen}\caption{Detailed image showing Magomeni ward before re-digitization using UAV imagery}
-    \label{fig:1}
-  \end{subfigure}
-  %
-  \begin{subfigure}[b]{0.5\textwidth}
-    \includegraphics[width=\textwidth]{images/Detailed_Magomeni_After_Redigitization.png}
-    \color{RHgreen}\caption{Detailed image showing Magomeni ward after re-digitization using UAV imagery}
-    \label{fig:2}
-  \end{subfigure}
-\end{figure}
 
 \subsubsection{Use Case}
 Apart from showing how buildings are arranged, the digitized data has been used in other Ramani Huria activities such as Green WastePro and Assets and Threat Mapping.
@@ -703,8 +705,8 @@ Dar es Salaam is a fast growing city and with that there are physical changes or
 Re-digitization using a high quality imagery is important because the features can be seen clearly and it is difficult to miss any features when the image is clearer.
 
 \newpage
-\subsection{Administrative Divisions and Landmarks}
-Hyperlocal boundaries are divisions within subwards regarded as political boundaries previously referred to as ten cell divisions as they were originally comprised of ten households.
+\subsection{Hyper-local Boundary Mapping}
+Hyper-local boundaries are divisions within subwards regarded as political boundaries previously referred to as ten cell divisions as they were originally comprised of ten households.
 Due to the increase in population, they comprise of 30 to 200 households and are administered by local leaders (wajumbe). Wajumbe are increasingly functioning as non-partisan public servants, often the first---in most cases---point of interaction between the government and citizens.
 \medskip
 
@@ -961,12 +963,12 @@ Data Model &
  \hline
   Timeline  &  2018-07-30 to 2018-08-03 \\
 \hline  
- Access  & 
-   \href{http://dar-trash-viz.herokuapp.com/}{Visualised in Application}\footnote{\url{http://dar-trash-viz.herokuapp.com/}} \\
-   Access  &  \href{https://drive.google.com/file/d/1asvYaiCwnR-SO-GaJwGAURHFEOndLuri/view?usp=sharing_eil&ts=5cb889ca}{Dar-Trash-with-Image-Path.geojson}
-    \footnote{\url{https://drive.google.com/file/d/1asvYaiCwnR-SO-GaJwGAURHFEOndLuri/view?usp=sharing_eil&ts=5cb889ca}} \\
+\multirow {Access}
+       & \multicolumn{1}{l}
+       {\href{http://dar-trash-viz.herokuapp.com/}{Visualied in Application}\footnote{\url{http://dar-trash-viz.herokuapp.com/}}}\\
+       & \multicolumn{1}{l}{\href{https://drive.google.com/file/d/1asvYaiCwnR-SO-GaJwGAURHFEOndLuri/view?usp=sharing_eil&ts=5cb889ca}{Dar-Trash-with-Image-Path.geojson} \footnote{\url{https://drive.google.com/file/d/1asvYaiCwnR-SO-GaJwGAURHFEOndLuri/view?usp=sharing_eil&ts=5cb889ca}}}\\ 
 \hline
-\hline
+
 \end{tabular}
 \end{center}
 
@@ -1006,7 +1008,7 @@ As a response to heavy rainfall on March, 3rd, 2019, that resulted in heavy floo
 3 majorly affected wards in Dar es Salaam with the March 3rd, 2019 rainfall
 
 \begin{figure}[h]
-  \color{RHgreen}\caption{Map showing the wards mapped during the March flood response}
+  \color{RHgreen}\caption{Map showing wards mapped during the March flood response}
   \centering
   \includegraphics[width=0.8\textwidth]{images/flood_response.png}
 \end{figure}
