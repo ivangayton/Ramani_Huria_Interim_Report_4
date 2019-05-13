@@ -3,6 +3,7 @@
 \graphicspath{ {./images/} }
 \usepackage{wrapfig}
 \usepackage{indentfirst} % indent first paragraph of each section (not really correct for academic papers, but follows more common business convention)
+
 \usepackage{pdfpages,caption,geometry} %enables you to add pdf and a caption
 
 \usepackage{geometry}
@@ -43,7 +44,7 @@
 
 \usepackage{caption}
 \usepackage[font={color=captiongreen,small,bf},figurename=Fig.,labelfont={small,it}]{caption}
-\usepackage{subcaption} 
+\usepackage{subcaption} %font color RHgreen, figure label is italic
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -70,7 +71,7 @@
 %\urlstyle{same}
 
 \usepackage{footnote}
-\makesavenoteenv{tabular} %For creating footnotes in a table
+\makesavenoteenv{tabular} %For creating linked footnotes in a table
 
 \usepackage[framemethod=tikz]{mdframed}
 \usepackage{lipsum} %For creating a tight box around text
@@ -376,7 +377,6 @@ ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
 \
 Preparation of field paper (soft copy) in KoBo Toolbox for the ODK application for drain segments and points. Field mappers then installed ODK on their Android phones and with the URL for the server to be used, they downloaded the survey forms, filled the required information from the field and uploaded the forms.
 
-\bigskip
 \subsubsection{Data Model, Timeline, Access and Licensing}
 \begin{center}
   \begin{tabular}{|c|c|c|}  
@@ -385,10 +385,7 @@ Preparation of field paper (soft copy) in KoBo Toolbox for the ODK application f
  \hline
    Timeline  &   August, 2017 and Ongoing \\
  \hline  
- \multirow {Access}
-       & \multicolumn{1}{l}
-       {\href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}{UhuruLabs\_Drain Points}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}}}\\ 
-       & \multicolumn{1}{l}{\href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}{UhuruLabs\_Drain Segments}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}}} \\ 
+Access & {\href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}{UhuruLabs\_Drain Points}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}}}\\ {} & {\href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}{UhuruLabs\_Drain Segments}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Segments}}} \\ 
  \hline      
   Licensing & CC-BY 4.0 \\
  \hline
@@ -399,7 +396,6 @@ Preparation of field paper (soft copy) in KoBo Toolbox for the ODK application f
 During the data cleaning process, the ODK forms that were filled in the field are downloaded from the server in Comma Separated Value (CSV) format and converted to GeoPackage (.gpkg) in QGIS. The plugin to convert ODK form to CSV format is found in \href{https://github.com/zestyping/odk_csv}{GitHub}\footnote{\url{https://github.com/zestyping/odk\_csv}}. The drain segments and points are styled with a pre-defined .qml style found in QGIS---Drain\_lines\_categorized\_with\_labels\_and\_directions and Drain\_points\_categorized\_with\_labels. After the data is cleaned, it is run in the \href{https://github.com/openearth/hydro-osm}{Hydro OSM model}\footnote{\url{https://github.com/openearth/hydro-osm}} to ensure all drain segments and points are connected.
 
 The team also used QGIS with pre-installed template styles for the segments and points, a high resolution 2016 COWI imagery.
-
 
 \subsubsection{Statistics}
 Number of segments culverts, drains, ditches and decommissioned (destroyed or buried) mapped are 16207 with 653 kilometers and 12620 number of drain points.
@@ -417,7 +413,7 @@ This is summarized in the table below
 
 \subsubsection{Data Visualization}
 \begin{figure}[h]
-  \centering
+ \color{RHgreen}\caption{A detailed image showing the drainage channel flow in Dar es Salaam.}
   \includegraphics[width=0.8\textwidth]{images/Drainage_Visualization.jpeg}
 \end{figure}
 
@@ -430,14 +426,13 @@ Accurate elevation data is still missing from the data. To create a good flood m
 \subsubsection{Lessons Learned}
 \begin{itemize}
     
-
-\item {\color {RHblue}{Field work outpacing data cleaning and analysis}}
+\item {\color {RHblue}{Field work outpacing data cleaning and analysis:}}
 We underestimated resources and time allocation in data cleaning. We had more data coming in from the field than the pace of cleaning- and when we found missing data or any inaccuracy we had to send the team to the field again for repairing data in the wards that were mapped months back and it is sometimes difficult to determine what went wrong. 
-\item {\color {RHblue} {Data Cleaning}}
-when doing field work, it is very important for the cleaning process to go simultaneously with data collection to avoid any inconveniences such as re-doing the work.
-\item{\color {RHblue} {Imagery checking}}
+\item {\color {RHblue} {Data Cleaning:}}
+When doing field work, it is very important for the cleaning process to go simultaneously with data collection to avoid any inconveniences such as re-doing the work.
+\item{\color {RHblue} {Imagery checking:}}
 Before field work, we need to have clear and up to date aerial images to support data collection especially in sensitive areas such as military base and airports.
-\item {\color {RHblue} {Constant updating collected data}} some of the data points may be very dynamic, for example drain blockage and damage can change over a day.
+\item {\color {RHblue} {Constant updating of collected data:}} Some of the data points may be very dynamic, for example drain blockage and damage can change over a day.
 \end{itemize}
 \newpage
 \subsection{Soil Sediment Sampling}
@@ -465,7 +460,6 @@ recorded.
 The following materials were used: a set of metal sieves, scales, hand wash station and gloves, brush, cloth and towel for cleaning sieves, an Android phone with ODK Collect and sieving survey.
 \end{multicols}
 
-\medskip
 \subsubsection{Data Model, Timeline, Access and Licensing}
 \begin{center}
   \begin{tabular}{|c|c|c|}  
@@ -499,32 +493,33 @@ JBA  primarily intended for use this data for erosion modeling. The resulting da
 \subsubsection{Data Gap}
 We have size of particles and maps but there is no data showing the chemical decomposition of soil.
 
-\subsubsection{Lesson Learned}
-{\color {RHblue}Budgeting time for seeking permissions-}
+\subsubsection{Lessons Learned}
+\begin{itemize}
+    \item {\color {RHblue}Budgeting time for seeking permissions-}
 \
 A common challenge in this type of activity is seeking permission for doing what may be suspicious-looking activities (running around random areas of a major city with a shovel, for example).
-
-{\color {RHblue}Inconsistent offset procedure-}
+    \item {\color {RHblue}Inconsistent offset procedure-}
 \
 Looking at the map of the sites that were actually collected, there were several for which it is not precisely clear what offset procedure was actually used when a given grid site was not accessible.
 
-{\color{RHblue}Failure to realize the sensitivity of the error thresholds-}
+    \item {\color {RHblue}Failure to realize the sensitivity of the error thresholds-}
 \
 When looking at individual measurements anecdotally, we found that most were of high quality. In other words, it was possible to examine a few dozen measurements and only find one or two potential errors, which on the surface appeared to show that things were going well. This was grossly misleading!
 
-{\color{RHblue} Field work outpacing analysis, insufficient early feedback-}
+    \item {\color{RHblue} Field work outpacing analysis, insufficient early feedback-}
 \
 As the team felt that the field work would be the most difficult part (and certainly it was the larger consumer of time and resources), we focused on it, and failed to become alarmed when the analysis (sieving) work fell behind. This contributed to there being a substantial backlog of sieving to be done at the end of the field collection, but also contributed to our not discovering the high proportion of discrepancies until long after the field work was complete.
 
-{\color{RHblue}Inadequate backup of samples-}
+    \item {\color{RHblue}Inadequate backup of samples-}
 \
 We did not build backup into our analysis; we discarded all of the sediment immediately after sieving and measurement, and only collected enough for a single round of sieving at each site.
 
-{\color{RHblue}Data entry system design-}
+    \item {\color{RHblue}Data entry system design-}
 \
 It’s critical to design the tools carefully. We encountered problems in data entry, in part because we didn’t invest enough in making sure the system was robust and simple.
 
-Management of data is highly needed to avoid unnecessary cost.
+    \item Management of data is highly needed to avoid unnecessary cost.
+\end{itemize}
 
 \newpage
 
@@ -535,7 +530,32 @@ Flood risk identification on flood prone areas of the city by conducting a serie
 \end{multicols}
 
 \subsubsection{Spatial Extent}
-The inventory covered  243 subwards in 49 wards of Dar es Salaam. 
+The inventory covered  243 subwards in 49 wards of Dar es Salaam.
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+\hline
+ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
+\hline
+1 & Buguruni & 17 & Kwembe & 33 & Mzimuni\\
+2 & Gongo la Mboto & 18 & Liwiti & 34 & Ndugumbi\\
+3 & Hannanasifu & 19 & Mabibo & 35 & Pugu\\
+4 & Ilala & 20  & Magomeni & 36 & Pugu Station\\
+5 & Jangwani & 21 & Makongo & 37 & Sandali\\
+6 & Kariakoo & 22 & Makuburi & 38 & Saranga\\
+7 & Kawe & 23 & Makumbusho & 39 & Segerea\\
+8 & Kigogo & 24 & Makurumla & 40 & Sinza\\
+9 & Kijitonyama & 25 & Manzese & 41 & Tabata\\
+10 & Kimanga & 26 & Mburahati & 42 & Tandale\\
+11 & Kimanga & 27 & Mchikichini & 43 & Temeke\\
+12 & Kinondoni & 28 & Mikocheni & 44 & Ubungo\\
+13 & Kinyerezi & 29 & Mnyamani & 45 & Ukonga\\
+14 & Kipawa & 30 & Msasani & 46 & Upanga Magharibi\\
+15 & Kisukuru & 31 & Msigani & 47 & Upanga Mashariki\\
+16 & Kunduchi & 32 & Mwananyamala & 48 & Vingunguti\\
+ \hline
+\end{tabular}
+\end{center}
 \begin{figure}[h]
   \color{RHgreen}\caption{49 Wards covered during the community asset and threat mapping inventory}
   \centering
@@ -555,7 +575,6 @@ The discussion was based on three major key points:
     \item Main causes of flood in the subward
 \end{enumerate}
 
-\medskip
 \subsubsection{Timeline, Access and Licensing}
 \begin{center}
 \begin{tabular}{|c|c|c|}  
@@ -601,13 +620,13 @@ A total of 5020 asset points were collected during the project. These include:
  Roads and road names & 65868 \\
  \hline
  Landmarks & 1538 \\
- \hline
+ \hline 
 \end{tabular}
 \end{center}
 
 \subsubsection{Data Visualization}
 \begin{figure}[h]
-{\color{RHgreen}\caption{Map showing Risk Identification of Kawe Ward}}
+{\color{RHgreen}\caption{A detailed map showing Risk Identification of Kawe Ward. The red dots show assets that are at risk of flooding}}
  \centering
   \includegraphics[width=0.7\textwidth]{Asset_visualization.png}
 \end{figure}
@@ -637,6 +656,32 @@ Re-digitization of the city to update and improve the quality of already digitiz
 
 \subsubsection{Spatial Extent}
 28 out of 44 Ramani Huria prioritized wards in Dar es Salaam have been re-digitized
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+\hline
+ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
+\hline
+1 & Upanga Mashariki & 17  & Makumbusho & 33  & Mikocheni\\
+2 &  Makurumla & 18 &  Makuburi & 34  & Kariakoo\\
+3 &  Mburahati & 19  & Msigani & 35  & Ndugumbi\\
+4 &  Sandali & 20  & Kinyerezi & 36  & Ubungo\\
+5  & Vingunguti & 21  & Hananasifu & 37  & Segerea\\
+6 &  Mzimuni & 22  & Gongolamboto & 38  & Kurasini\\
+7  & Magomeni & 23  & Keko & 39  & Msasani\\
+8  & Mchikichini & 24  & Sinza & 40  & Temeke\\
+9  & Jangwani & 25  & Kimanga & 41  & Kwembe\\
+10  & Mabibo & 26  & Tandale & 42  & Makongo\\
+11  & Gerezani & 27  & Kijitonyama & 43  & Kipawa\\
+12  & Kimara & 28  & Tabata & 44  & Kunduchi\\
+13 &  Upanga Magharibi & 29  & Saranga & 45  & Kawe\\
+14 &  Kinondoni & 30  & Mwananyamala & 46  & Manzese\\
+15 &  Pugu & 31  & Mchafukoge & 47  & Kigogo\\
+16 &  Buguruni & 32  & Ilala & 48  & Ukonga\\
+ \hline
+\end{tabular}
+\end{center}
+
 \begin{figure}[h]
   \caption{28 prioritized Ramani Huria wards have been re-digitized by the team}
   \centering
@@ -664,8 +709,6 @@ Data Model &
 \hline
 \end{tabular}
 \end{center}
-\subsubsection{Data Model}
-\href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Buildings}{Dar es Salaam\_Ramani Huria\_OpenStreetMap Wiki}\footnote{\url{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria\#Buildings}}
 
 \subsubsection{Quality Assurance}
 JOSM - using filters to show if the buildings are well aligned and if there are any duplicates and validation tool to see if there is any errors i.e unconnected nodes.
@@ -692,12 +735,12 @@ JOSM - using filters to show if the buildings are well aligned and if there are 
 \end{tabular}
 %\caption{Map and Image showing Magomeni ward before and after re-digitization using UAV imagery}
 
-
 \subsubsection{Use Case}
 Apart from showing how buildings are arranged, the digitized data has been used in other Ramani Huria activities such as Green WastePro and Assets and Threat Mapping.
 
 \subsubsection{Data Gap}
 Only 28 wards out of 44 Ramani Huria wards have been re-digitized by using high resolution imagery. There is a need to do the same for the remaining 20 Ramani Huria wards.
+
 \subsubsection{Lessons Learned}
 Dar es Salaam is a fast growing city and with that there are physical changes or development of the city in terms of buildings. New buildings are constructed and some are demolished from time to time therefore there is a need for re-digitization of the whole city.
 \medskip
@@ -705,7 +748,7 @@ Dar es Salaam is a fast growing city and with that there are physical changes or
 Re-digitization using a high quality imagery is important because the features can be seen clearly and it is difficult to miss any features when the image is clearer.
 
 \newpage
-\subsection{Hyper-local Boundary Mapping}
+\subsection{Hyper-local Administrative Boundary Mapping}
 Hyper-local boundaries are divisions within subwards regarded as political boundaries previously referred to as ten cell divisions as they were originally comprised of ten households.
 Due to the increase in population, they comprise of 30 to 200 households and are administered by local leaders (wajumbe). Wajumbe are increasingly functioning as non-partisan public servants, often the first---in most cases---point of interaction between the government and citizens.
 \medskip
@@ -714,13 +757,33 @@ Given the rate of urbanization in Dar es Salaam, it is very difficult to locate 
 
 \subsubsection{Spatial Extent}
 36 out of 44 prioritized Ramani Huria wards in Dar es Salaam
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+\hline
+ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
+\hline
+1  &  Tandale &  13 &   Ukonga &  25  &  Makuburi\\
+2  &  Hananasifu &  14  &  Kipawa &  26  &  Manzese\\
+3  &  Kinyerezi &  15  &  Kinondoni &  27  &  Kariakoo\\
+4 &  Temeke &  16  &  Kimara &  28  &  Mnyamani\\
+5  &  Ubungo &  17  &  Upanga Magharibi &  29  &  Buguruni\\
+6 &   Ndugumbi &  18  &  Mabibo &  30  &  Kimanga\\
+7 &   Ilala &  19  &  Mchikichini &  31  &  Pugu\\
+8 &   Sandali &  20  &  Jangwani &  32  &  Liwiti\\
+9  &  Mburahati &  21  &  Magomeni &  33  &  Segerea\\
+10  &  Makurumla &  22  &  Mzimuni &  34  &  Kisukuru\\
+11  &  Upanga Mashariki &  23  &  Tabata &  35  &  Vingunguti\\
+12  &  Kigogo &  24  &  Gongo la Mboto &  36  & Pugu Station\\
+ \hline
+\end{tabular}
+\end{center}
+
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing Ramani Huria collaboration with Data Zetu hyper-local boundaries mapping}
   \centering
   \includegraphics[width=0.8\textwidth]{images/hyperlocal_boundary.png}
 \end{figure}
-
-
 
 \subsubsection{Data Collection Methodology}
 \begin{itemize}
@@ -743,7 +806,7 @@ Data Model &
     \href{https://drive.google.com/drive/u/1/folders/1bagTRoBVYX88VJpgYm61Rl2WXHgrvBJi}{Hyperlocal administrative boundary data}\footnote{\url{https://drive.google.com/drive/u/1/folders/1bagTRoBVYX88VJpgYm61Rl2WXHgrvBJi}} \\
    
 \hline 
-    Licencing & CC-BY 4.0 \\
+    Licensing & CC-BY 4.0 \\
 \hline
 \end{tabular}
 \end{center}
@@ -756,9 +819,6 @@ Data Model &
 
 \end{enumerate}
 
-\subsubsection{Statistics}
-2612 hyperlocal boundaries mapped in 36 wards of Dar es Salaam
-
 \newpage
 \subsubsection{Data Visualization}
 \begin{figure}[h]
@@ -766,6 +826,7 @@ Data Model &
   \centering
   \includegraphics[width=0.8\textwidth]{images/Shinas_Data_Viz.png}
 \end{figure}
+
 \subsubsection{Use Case}
 To find people’s address in Dar es Salaam, \href{https://www.hotosm.org/updates/piloting-tanzanias-first-patient-origin-tracking-system/}{Amana Hospital patient origin tracking system}\footnote{\url{https://www.hotosm.org/updates/piloting-tanzanias-first-patient-origin-tracking-system/}}
 
@@ -789,10 +850,24 @@ After identification of the problems, the team decided to validate the already c
 Ramani Huria and Green Waste Pro Ltd. (GWPL) partnered in August 2018 to provide datasets for waste management. Green WastePro is a private company specialized in waste management with the aim to offer eco-friendly solutions in cleaning and waste management. They are mostly operate in formal settlements. The company needed digital methodology to obtain clients’ information including locations, clients contacts etc, so they can track clients and provide services accordingly.
 
 \subsubsection{Spatial Extent}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+ID & WARD NAME\\
+\hline
+1 & Gongo la Mboto\\
+2 & Kisutu\\
+3 & Kivukoni\\
+4 & Mchafukoge\\
+ \hline
+\end{tabular}
+\end{center}
+
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing the mapped wards with GreenWaste Pro Limited}
   \centering
-  \includegraphics[width=0.8\textwidth]{images/GWPL_trial.png}
+  \includegraphics[width=0.8\textwidth]{images/GWPL.png}
 \end{figure}
 
 \subsubsection{Methodology}
@@ -821,14 +896,13 @@ Data Model &
 
 JOSM for buildings, QGIS for barcodes
 \begin{itemize}
-    \item Josm used to check if buildings and other necessary information have been correctly, for example, checking spellings, writing. 
-     \item QGIS to check if clients points have been placed on buildings precisely and to make sure scanned barcodes corresponds with the buildings 
+    \item JOSM is used to check if buildings and other necessary information have been tagged correctly for example, checking spellings, tags, etc. 
+     \item QGIS to check used if client points' have been placed precisely on buildings and to make sure scanned barcodes correspond with the buildings.
 \end{itemize}
 
 \subsubsection{Statistics}
 Two wards of the city, mapped 4706 clients and around 4500 client data are used by the company to collect trash.
 
-\newpage
 \subsubsection{Data Visualization}
 
 \begin{figure}
@@ -844,10 +918,13 @@ Two wards of the city, mapped 4706 clients and around 4500 client data are used 
     \label{fig:2}
   \end{subfigure}
 \end{figure}
+
 \subsubsection{Use Case}
-Creation of a client tracking system now used by GWPL to keep track of their clients
+Creation of a client tracking system now used by GWPL to keep track of their clients.
+
 \subsubsection{Data Gaps}
-Data was collected in only 2 wards of Dar es Salaam. The process needs to be replicated to other wards of the city
+Data was collected in only 2 wards of Dar es Salaam. The process needs to be replicated to other wards of the city.
+
 \subsubsection{Lessons Learned}
 \begin{enumerate}
     \item Trash collection companies lose a lot of money because they lack clear data.
@@ -855,33 +932,44 @@ Data was collected in only 2 wards of Dar es Salaam. The process needs to be rep
     \item From the experience with GWPL there is a need to set a workshop with trash collection companies in the city, to understand their challenges and how data can help overcome those challenges.
 \end{enumerate}
 
-
-
 \newpage
-\subsection{Trash Mapping in Informal Settlement (Joshemi Company Limited)}
+\subsection{Trash Mapping in Informal Settlements (Joshemi Company Limited)}
 
 Ramani Huria partnered with Joshemi Company Limited, a company  dealing with trash collection in Tabata ward with eight subwards therein. JCL needed to know the number of clients as it was very difficult to track them all, revenue flow and an effective feedback system on services provided by the company. The aim was shifting JCL’s analogue system of trash collection to a digital system by providing them with their own maps of clients’ locations and a system of tracking them. This way, JCL would improve their services to clients, increase their revenues and create an effective waste collection mechanism.
 
 \subsubsection {Spatial Extent}
 2 pilot subwards (Msimbazi Magharibi and Msimbazi Mama) out of eight subwards in Tabata ward.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c}
+\hline
+ID & WARD NAME & ID & WARD NAME\\
+\hline
+1  & Buguruni & 6  & Mchikichini\\
+2 &  Charambe & 7  & Msasani\\
+3  & Hananasifu & 8  & Mwananyamala\\
+4  & Jangwani & 9  & Tabata\\
+5  & Kigogo & 10  & Tandale\\
+ \hline
+\end{tabular}
+\end{center}
+
 \begin{figure}[h]
-  \caption{A Screenshot of a map showing subwards in Tabata where trash mapping was conducted(green), pending subwards (blue) and yellow represent other infromal areas that needs to be mapped}
+  \caption{Map showing subwards in Tabata where trash mapping was conducted and other infromal areas that need to be mapped}
   \centering
-  \includegraphics[width=1\textwidth]{images/JCL_Spatial_Extent.png}
+  \includegraphics[width=0.8\textwidth]{images/JCL_Trash_Mapping.png}
 \end{figure}
 \newpage
 \subsubsection{Methodology}
 \begin{multicols}{2}
-
 
 We used OpenDataKit (ODK) Collect and OpenMapKit (OMK) an extension of ODK which is a free and open android application for data collection. The team worked with revenue collectors to map the clients as they have a better understanding of the area to simplify the process of data collection. 
 
 Ramani Huria team switched to working with local community leaders (wajumbe) who better understand their area of administration which normally ranges from 30 to 200 households. Among other things, wajumbe  are responsible for allocating resident leases and titles, therefore were able to provide clients’ details even when the clients were absent.
 
 Tabata ward is 50 percent informally developed hence most houses do not have house numbers. In order to connect the buildings’ geo locations with client information we developed “fake house ID” numbers as a baseline for the use of collected data.
-
 \end{multicols}
-\medskip
+
 \subsubsection{Data Model, Timeline, Access and Licensing}
 \begin{center}
 \begin{tabular}{|c|c|c|}  
@@ -936,7 +1024,7 @@ A system to collect  revenues and update clients who pay for the trash services 
 \end{itemize}
 
 \newpage
-\subsection{Dar es Salaam Trash Data}
+\subsection{Dar es Salaam Trash Mapping}
 
 A collaboration between Nipe Fagio (“give me the broom” in Swahili), a civil society organization founded in 2013 and Ramani Huria that joined forces and mapped trash sites in Dar es Salaam. The trash mapping initiative was part and parcel of the large Let’s-Do-It-World campaign, a civic-led mass movement to clean up countries.
 \medskip
@@ -945,6 +1033,38 @@ The mapped data helped to identify location of the areas with poorly managed was
 
 \subsubsection{Spatial Extent}
 50 wards in Dar es Salaam
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+\hline
+ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
+\hline
+1 & Buguruni & 18 & Kunduchi & 35 & Mzimuni\\
+2 & Buza & 19 & Kwembe & 36 & Ndugumbi\\
+3 & Charambe & 20 & Mabibo & 37 & Pugu\\
+4 & Gongo la Mboto & 21 & Magomeni & 38 & Sandali\\
+5 & Hananasifu & 22 & Makongo & 39 & Saranga\\
+6 & Ilala & 23 & Makuburi & 40 & Segerea\\
+7 & Jangwani & 24 & Makumbusho & 41 & Sinza\\
+8 & Kariakoo & 25 & Makurumla & 42 & Tabata\\
+9 & Kawe & 26 & Manzese & 43 & Tandale\\
+10 & Kigamboni & 27 & Mbezi & 44 & Tandika\\
+11 & Kigogo & 28 & Mburahati & 45 & Temeke\\
+12 & Kijitonyama & 29 & Mchikichini & 46 & Ubungo\\
+13 & Kimanga & 30 & Mianzini & 47 & Ukonga\\
+14 & Kimara & 31 & Mikocheni & 48 & Upanga Magharibi\\
+15 & Kinondoni & 32 & Msasani & 49 & Upanga Mashariki\\
+16 & Kinyerezi & 33 & Msigani & 50 & Vingunguti\\
+17 & Kipawa & 34 & Mwananyamala & {} & {}\\
+ \hline
+\end{tabular}
+\end{center}
+
+\begin{figure}[h]
+  \caption{Map showing wards mapped for the trash mapping initiative in Dar es Salaam}
+  \centering
+  \includegraphics[width=0.8\textwidth]{images/Dar_Trash_Map.png}
+\end{figure}
 
 \subsubsection{Methodology}
 Using OpenDataKit to collect trash points in the city and filling out the survey on the type of waste (debris, glass, metal), and the size of trash (hand full, bag full, truckload, cart etc) to ease cleaning process.
@@ -963,10 +1083,10 @@ Data Model &
  \hline
   Timeline  &  2018-07-30 to 2018-08-03 \\
 \hline  
-\multirow {Access}
-       & \multicolumn{1}{l}
-       {\href{http://dar-trash-viz.herokuapp.com/}{Visualied in Application}\footnote{\url{http://dar-trash-viz.herokuapp.com/}}}\\
-       & \multicolumn{1}{l}{\href{https://drive.google.com/file/d/1asvYaiCwnR-SO-GaJwGAURHFEOndLuri/view?usp=sharing_eil&ts=5cb889ca}{Dar-Trash-with-Image-Path.geojson} \footnote{\url{https://drive.google.com/file/d/1asvYaiCwnR-SO-GaJwGAURHFEOndLuri/view?usp=sharing_eil&ts=5cb889ca}}}\\ 
+Access & {\href{http://dar-trash-viz.herokuapp.com/}{Visualized in Application}\footnote{\url{http://dar-trash-viz.herokuapp.com/}}}\\
+{} & {\href{https://drive.google.com/file/d/1asvYaiCwnR-SO-GaJwGAURHFEOndLuri/view?usp=sharing_eil&ts=5cb889ca}{Dar-Trash-with-Image-Path.geojson} \footnote{\url{https://drive.google.com/file/d/1asvYaiCwnR-SO-GaJwGAURHFEOndLuri/view?usp=sharing_eil&ts=5cb889ca}}}\\
+\hline
+Licensing & CC-BY 4.0\\
 \hline
 
 \end{tabular}
@@ -997,7 +1117,6 @@ Data was used in the world clean up day on  September 15th, 2018 to help clean u
 
 A decision to retain the data model used by the pioneers of the Clean Up the World Movement in Estonia was made since the model included the collection of waste piles as small as a handful or bagful, which in the context of Dar es Salaam was far too small and mappers possibly confused by the \textit{bagful} category in some cases collected the locations of waste which was bagged and prepared for pickup by waste disposal personnel. The removal of the two attributes dropped the number of trash points from 20,392 to 9,452.
 
-
 \subsubsection{Lessons Learned}
 A clear piloting and training with examples to mappers is needed before field excursion, from the analysis mappers seemed to collect trash even from peoples backyard which was out of the context. This will serve time and costs during data collection.
 \newpage
@@ -1006,6 +1125,18 @@ As a response to heavy rainfall on March, 3rd, 2019, that resulted in heavy floo
 
 \subsubsection{Spatial Extent}
 3 majorly affected wards in Dar es Salaam with the March 3rd, 2019 rainfall
+
+\begin{center}
+\begin{tabular}{|c|c|c}
+\hline
+ID & WARD NAME\\
+\hline
+1 & Hananasifu\\
+2 & Jangwani\\
+3 & Tandale\\
+\hline
+\end{tabular}
+\end{center}
 
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing wards mapped during the March flood response}
@@ -1060,7 +1191,7 @@ Jangwani & Mtambani & 427 houses \\
 \newpage
 \subsubsection{Data Visualization}
 \begin{figure}[h]
-  \color{RHgreen}\caption{Map showing flooded subward in Tandale ward, The whole ward was flooded during March, 2019 rainfall}
+  \color{RHgreen}\caption{Map showing Kwa Mkunduge subward in Tandale ward. The whole ward was flooded during the March, 2019 rainfall}
   \centering
     \includegraphics[width=0.8\textwidth]{images/Flood_Response_Data_Viz.png}
 \end{figure}
@@ -1095,12 +1226,27 @@ Historical flood extent covered areas that are mostly affected by floods during 
 The information captured aimed to know whether the respondent had been affected by floods in the previous years, the flood depth and flood occurrence years---historical flood events. Individuals were asked to reflect on historical flood extents; therefore there is inherent subjectivity in their memories
 
 \subsubsection{Spatial Extent}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c}
+\hline
+ID & WARD NAME & ID & WARD NAME\\
+\hline
+1 & Buguruni & 7 & Mchikichini\\
+2 & Hananasifu & 8 & Mzimuni\\
+3 & Ilala & 9 & Ndugumbi\\
+4 & Jangwani & 10 & Tabata\\
+5 & Kigogo & 11 & Upanga Magharibi\\
+6 &  Magomeni & {} & {} \\
+ \hline
+\end{tabular}
+\end{center}
+
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing the flood extent mapping progress in Dar es Salaam}
   \centering
   \includegraphics[width=0.8\textwidth]{Flood_Extent.png}
 \end{figure}
-
 
 \subsubsection{Data Collection Methodology}
 Using ODK survey form and asking questions to community members about their experience of floods in their neighbourhoods. Community members of the respective wards were trained on how to collect data using ODK and were the ones to collect these information in their own neighborhood.
@@ -1117,9 +1263,9 @@ Data Model &  \href{https://drive.google.com/file/d/1AeOFvxXFKlXTxc-Je8Mo0riiWLg
 \hline  
  Access  & 
     \href{https://drive.google.com/drive/u/1/folders/1F8P8A5tmxnC8pth4ZDrR6G_OwHF0rV5k}{Historical flood extent data}\footnote{\url{https://drive.google.com/drive/u/1/folders/1F8P8A5tmxnC8pth4ZDrR6G_OwHF0rV5k}}\\
-Access & 
+{} & 
     \href{http://geonode.uhurulabs.org/layers/geonode\%3Adar_flood_depths#more}{Dar es Salaam Flood Survey}\footnote{\url{http://geonode.uhurulabs.org/layers/geonode\%3Adar_flood_depths#more}}\\
- Access &    
+ {} &    
      \href{http://geonode.uhurulabs.org/layers/geonode\%3Adar_flood_depths#more}{Dar es Salaam Flood Depths}\footnote{\url{http://geonode.uhurulabs.org/layers/geonode\%3Adar_flood_depths#more}} \\
 \hline
 Licensing   &  CC-BY 4.0 \\
@@ -1128,17 +1274,17 @@ Licensing   &  CC-BY 4.0 \\
 \end{center}
 
 \subsubsection{Quality Assurance}
-    \large{Excel}
+    Excel
     \begin{itemize}
     \item was used  to clean spelling error of the data collected especially open ended questions,removing unnecessary columns that are not needed during map making and also sorting of all data in ascending order
     \end{itemize}
-    \large{QGIS}
+    QGIS
     \begin{itemize}
         \item Check all points which  were above 5m from the surveyed house and correct them
         \item Ensuring area coverage
         \item Checking out of the missing information from site if there is any, surveyors will be sent back to collect missing data
     \end{itemize}
-    \large{Other non- technical quality checks}
+    Other non- technical quality checks
     \begin{itemize}
         \item Moving house by house with local leaders to make sure all houses are collected.
 Data verification with subward leaders after producing draft map to be confident that there are no mistakes and missing data before producing the final output.
@@ -1147,10 +1293,9 @@ Data verification with subward leaders after producing draft map to be confident
 \subsubsection{Statistics}
 Approximately 30 000 houses were surveyed during the historical flood extents
 
-
 \subsubsection{Data Visualization}
 \begin{figure}[h]
-  \color{RHgreen}\caption{Flood Extent Map, Red dots shows flooded areas}
+  \color{RHgreen}\caption{Flood Extent Map, Red dots show flooded areas}
   \centering
   \includegraphics[width=0.8\textwidth]{images/Flood_Extent_Data_Viz.png}%I will change this image to a good viz
 \end{figure}
