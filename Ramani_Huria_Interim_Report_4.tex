@@ -4,6 +4,7 @@
 \graphicspath{ {./images/} }
 \usepackage{wrapfig}
 \usepackage{indentfirst} % indent first paragraph of each section (not really correct for academic papers, but follows more common business convention)
+\setlength{\parskip}{1em} %adds a 1em space after each paragraph
 
 \usepackage{pdfpages,caption,geometry} %enables you to add pdf and a caption
 
@@ -132,7 +133,7 @@
 \color{RHgrey}
 
 \begin{center}
-%temp image {\includegraphics[width=5cm]{Dar_Ramani_Huria_logo.png}}
+{\includegraphics[width=5cm]{Dar_Ramani_Huria_logo.png}}
 \end{center}
 
 This report was prepared by William Evans, Immaculate Mwanja, Hawa Adinani, Innocent Maholi, Ivan Buendia Gayton, Jess Beutler, Paul Uithol, Tyler Radford and many others from the Humanitarian OpenStreetMap Team in Tanzania.
@@ -166,7 +167,7 @@ Unless otherwise noted, photos by Godfrey Kassano and the Ramani Huria team. Map
 
 \tableofcontents
 \newpage
-\section{Executive Summary}
+\section{Executive Summary} %ivan please review the executive summary
 \label{executivesummary}
 \begin{multicols}{2}
 
@@ -176,31 +177,29 @@ been collecting data for urban resilience with a particular emphasis on flooding
 
 We are working to transfer knowledge and hand over to Tanzania Resilience Academy, the successor project to Ramani Huria.
 
-Together with the coalescing Resilience Academy team, we are working to disseminate the knowledge and data to as many users as possible━particularly those who are likely to have impact improving resilience.
+Together with the coalescing Resilience Academy team, we are working to disseminate the knowledge and data to as many users as possible---particularly those who are likely to have impact improving resilience.
 
 The second phase of Ramani Huria is set to last in June 2019 (with support extending to end of August 2019). During this phase, we have collected a number of datasets that can serve for several purposes including the primary focus of the project, creating maps for flood resilience in the city. 
 
 Datasets collected during this phase include: soil sediment sampling data, city drainage data, historical flood extent data, hyperlocal boundaries data, asset and threat data for flood risks identification, city trash hotspots data for waste management, flood responses data for assessing damage and buildings footprint digitization.
 
-This overview of digital datasets is an annex to the final project report to be submitted in June 2019. It contains a brief summary of the dataset, spatial extent, methodology used for data collection, data model and/or survey forms used, methods used to review data quality, data gap, timeline, statistics, visualization of data, link to access the data, licencing (in case of data sharing), data use case and lessons learned throughout the process of data collection.
+This overview of digital datasets is an annex to the final project report to be submitted in June 2019. It contains a brief summary of the dataset, spatial extent, methodology used for data collection, data model and/or survey forms used, methods used to review data quality, data gap, timeline, statistics, visualization of data, link to access the data, licensing (in case of data sharing), data use case and lessons learned throughout the process of data collection.
 
 Ramani Huria team conducted a number of activities including a community flood response following the heavy rainfall on March 3rd 2019, soil sediment analysis for geomorphological assessment of the city and erosion modeling. The team participated in Innovation Week on March 2019, to showcase how we conducted sediment analysis using cheap yet practical methods and came out with professional results. The Ramani Huria team also conducted River Mapping activities which involve flying drones along the major rivers of Dar es Salaam to  provide a digital photographic mark-up of the current status of Dar es Salaam’s waterways, to help in solid waste management on major rivers of the city.
 
 \end{multicols}
 
-%temp image \includegraphics[width=0.8\textwidth]{sample_locations.jpg}
-
 \newpage
 \section{Introduction}
 \label{Introduction}
 
-This report describes the activities of Ramani Huria 2.0 from November 2018 to June 2019 and provides an overview of digital assets collected since October.
-\bigskip
+This report describes the activities of Ramani Huria 2.0 from November 2018 to June 2019 and provides an overview of digital assets collected since October. %ivan please work on the introduction
+
 We also would like to point out a link to  \href{https://ramanihuria.org}{a website}\footnote{\url{http://ramanihuria.org}\color{RHgrey} { }because it's really, really interesting. You should click on that link.}. Did you notice that there was a footnote there? If you look at the footnote it contains the full URL of the link, so that people reading the document on paper can see what it links to? Cool, huh? The rest of the text on this page will be in two columns, just because we can do that with the \LaTeX{} \textbf{\textit{multicols}} plugin. By the way, I can highlight code with a color box like \textbf{\colorbox{code}{this.}}
 
 Hi I'm Imma! And now we can view side by side! It's even working in the output file. This is the introduction. No, it's actually not...
 
-Heyyy!!!! Really?
+Heyyy!!!! Really? Hi Kirsten
 
 \newpage
 \section{Monthly Activity Summary}
@@ -352,8 +351,8 @@ The ODbL was created with the goal of allowing users to share their data freely 
 
 \newpage
 \section{Datasets}
-In this case, a dataset contains all digital assets/ data collected by Ramani Huria from 2017 to 2019. Not all data can contain characteristics of a 'dataset' but rather provide an overview of the data collected in the Ramani Huria project.%unclear
-The following is a list of datasets presented in the same format for consistency, and listed in no particular order.%do you think we ought to put these in chronological order, have them be random, or sorted in some other way?
+In this case, a dataset contains all digital assets/ data collected by Ramani Huria from 2017 to 2019. Not all data can contain characteristics of a 'dataset' but rather provide an overview of the data collected in the Ramani Huria project.%ivan unclear
+The following is a list of datasets presented in the same format for consistency, and listed in no particular order.%ivan do you think we ought to put these in chronological order, have them be random, or sorted in some other way?
 \subsection{Drainage}
 \begin{wrapfigure}{r}{0.25\textwidth} %this figure will be at the right
     \centering
@@ -395,7 +394,7 @@ ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing the drainage mapping progress as of March, 2019}
   \centering
-  %temp image \includegraphics[width=0.8\textwidth]{images/Drain_Mapping.png}
+  \includegraphics[width=0.8\textwidth]{images/Drain_Mapping.png}
 \end{figure}
 
 \subsubsection{Data Collection Methodology}
@@ -440,10 +439,11 @@ This is summarized in the table below
 \end{tabular}
 \end{center}
 
+%ivan the image in pdfview skips to the next page and is note in line with its heading
 \subsubsection{Data Visualization}
 \begin{figure}[h]
  \color{RHgreen}\caption{A detailed image showing the drainage channel flow in Dar es Salaam.}
-  %temp image \includegraphics[width=0.8\textwidth]{images/Drainage_Visualization.jpeg}
+  \includegraphics[width=0.8\textwidth]{images/Drainage_Visualization.jpeg}
 \end{figure}
 
 \subsubsection{Use Case}
@@ -475,7 +475,7 @@ Dar es Salaam and neighboring districts of Pwani region i.e. Bagamoyo, Kibaha an
 \begin{figure}[h]
   {\color{RHblue}\caption{A geo-referenced set of soil sediment profiles in Dar es Salaam and Pwani regions}}
   \centering
-  %temp image \includegraphics[width=0.8\textwidth]{images/soil_sample_locations.jpg}
+  \includegraphics[width=0.8\textwidth]{images/soil_sample_locations.jpg}
 \end{figure}
 
 \subsubsection{Data Collection Methodology}
@@ -516,7 +516,7 @@ The quality control of soil sampling was done by  using the ODK form to flag any
 \begin{figure}[h]
   \caption{A detail of the map showing the soil particle size in Dar es Salaam. The upward-facing histogram bars represent the top (surface) samples, and the downward-facing bars represent the bottom samples.}
   \centering
- %temp image  \includegraphics[width=1\textwidth]{soil_map_detail_peninsula_with_legend}
+  \includegraphics[width=1\textwidth]{soil_map_detail_peninsula_with_legend}
 \end{figure}
 
 \subsubsection{Use Case}
@@ -536,7 +536,7 @@ Looking at the map of the sites that were actually collected, there were several
 
     \item {\color {RHblue}Failure to realize the sensitivity of the error thresholds-}
 \
-When looking at individual measurements anecdotally, we found that most were of high quality. In other words, it was possible to examine a few dozen measurements and only find one or two potential errors, which on the surface appeared to show that things were going well. This was grossly misleading! %this needs a bit more explanation.
+When looking at individual measurements anecdotally, we found that most were of high quality. In other words, it was possible to examine a few dozen measurements and only find one or two potential errors, which on the surface appeared to show that things were going well. This was grossly misleading! %ivan this needs a bit more explanation.
 
     \item {\color{RHblue} Field work outpacing analysis, insufficient early feedback-}
 \
@@ -597,7 +597,7 @@ ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
 \begin{figure}[h]
   \color{RHgreen}\caption{49 Wards covered during the community asset and threat mapping inventory}
   \centering
-  %temp image \includegraphics[width=0.8\textwidth]{images/Asset&Threat.png}
+  \includegraphics[width=0.8\textwidth]{images/Asset&Threat.png}
 \end{figure}
 \subsubsection{Data Collection Methodology}
 We set up meetings with community leaders and influential people i.e. religious leaders in the specific wards. We first introduced how the data can help in reducing flooding, then asked them to identify and trace their boundaries on a map printed on A1 and point out assets and disaster threats in their neighbourhoods. We also printed satellite image maps of the respective subward to simplify identification of areas in their subwards.
@@ -672,7 +672,7 @@ A total of 5020 asset points, road and road names and 1538 landmarks were collec
 \begin{figure}[h]
 {\color{RHgreen}\caption{A detailed map showing Risk Identification of Kawe Ward. The red dots show assets that are at risk of flooding}}
  \centering
- %temp image \includegraphics[width=0.7\textwidth]{Asset_visualization.png}
+ \includegraphics[width=0.7\textwidth]{Asset_visualization.png}
 \end{figure}
 
 \subsubsection{Use Case}
@@ -727,7 +727,7 @@ ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
 \begin{figure}[h]
   \caption{28 prioritized Ramani Huria wards have been re-digitized by the team}
   \centering
- %temp image \includegraphics[width=0.8\textwidth]{images/Building_Footprint_Digitization.png}
+ \includegraphics[width=0.8\textwidth]{images/Building_Footprint_Digitization.png}
 \end{figure}
 
 \subsubsection{Data Collection Methodology}
@@ -771,10 +771,10 @@ JOSM - using filters to show if the buildings are well aligned and if there are 
   \hline
  % \caption {Map and Image showing Magomeni ward before and after re-digitization using UAV imagery}
  
- %temp image \includegraphics[width=0.5\textwidth]{images/Magomeni_Before_Redigitization.png}&%
-    %temp image \includegraphics[width=0.5\textwidth]{images/Magomeni_After_Redigitization.png}\\
- %temp image \includegraphics[width=0.5\textwidth]{images/Detailed_Magomeni_Before_Redigitization.png}&%
-  %temp image   \includegraphics[width=0.5\textwidth]{images/Detailed_Magomeni_After_Redigitization.png}\\
+ \includegraphics[width=0.5\textwidth]{images/Magomeni_Before_Redigitization.png}&%
+    \includegraphics[width=0.5\textwidth]{images/Magomeni_After_Redigitization.png}\\
+ \includegraphics[width=0.5\textwidth]{images/Detailed_Magomeni_Before_Redigitization.png}&%
+    \includegraphics[width=0.5\textwidth]{images/Detailed_Magomeni_After_Redigitization.png}\\
   \hline
 \end{tabular}
 
@@ -782,7 +782,7 @@ JOSM - using filters to show if the buildings are well aligned and if there are 
 \subsubsection{Use Case}
 Redigitized footprints were used to create OSM layers as a basemap for OMK during data collection activities including trash (clients) mapping and Risk Identification during assets and threat mapping. 
 
-Re-digitized footprints were also used in Community Flood Response mapping in Hananasif, Jangwani and Tandale wards in March, 2019. We are now conducting assessments in Kigogo, Manzese, Mwananyamala, Mzimuni, Tabata and Mabibo wards following the rains of May, 2019. Data is used to calculate the affected buildings nn QGIS.
+Re-digitized footprints were also used in Community Flood Response mapping in Hananasif, Jangwani and Tandale wards in March, 2019. We are now conducting assessments in Kigogo, Manzese, Mwananyamala, Mzimuni, Tabata and Mabibo wards following the rains of May, 2019. Data is used to calculate the affected buildings in QGIS.
 
 
 \subsubsection{Data Gap}
@@ -827,7 +827,7 @@ ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing Ramani Huria collaboration with Data Zetu hyper-local boundaries mapping}
   \centering
- %temp image \includegraphics[width=0.8\textwidth]{images/hyperlocal_boundary.png}
+ \includegraphics[width=0.8\textwidth]{images/hyperlocal_boundary.png}
 \end{figure}
 
 \subsubsection{Data Collection Methodology}
@@ -867,7 +867,7 @@ Data Model &
 \begin{figure}[h]
   \color{RHgreen}\caption{Shina Data Visualization}
   \centering
- %temp image \includegraphics[width=0.8\textwidth]{images/Shinas_Data_Viz.png}
+ \includegraphics[width=0.8\textwidth]{images/Shinas_Data_Viz.png}
 \end{figure}
 
 \subsubsection{Use Case}
@@ -915,7 +915,7 @@ ID & WARD NAME\\
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing the mapped wards with GreenWaste Pro Limited}
   \centering
- %temp image \includegraphics[width=0.8\textwidth]{images/GWPL.png}
+ \includegraphics[width=0.8\textwidth]{images/GWPL.png}
 \end{figure}
 
 \subsubsection{Methodology}
@@ -935,7 +935,7 @@ Data Model &
     \href{https://drive.google.com/drive/u/1/folders/17DZDPi-_4FZlgXXd1qQ8deMHI57vdZcY}{GreenWaste Pro Limited data}\footnote{\url{https://drive.google.com/drive/u/1/folders/17DZDPi-_4FZlgXXd1qQ8deMHI57vdZcY}} \\
    
 \hline 
-    Licencing & CC-BY 4.0 \\
+    Licensing & CC-BY 4.0 \\
 \hline
 \end{tabular}
 \end{center}
@@ -955,13 +955,13 @@ Around 4500 client data points are used by the company to collect trash.
 
 \begin{figure}
   \begin{subfigure}[b]{0.4\textwidth}
-  %temp image  \includegraphics[width=\textwidth]{images/GWPL_client_map.png}
+   \includegraphics[width=\textwidth]{images/GWPL_client_map.png}
    \color{RHgreen}\caption{Map showing detailed collected points at Kisutu ward}
     \label{fig:1}
   \end{subfigure}
   %
   \begin{subfigure}[b]{0.5\textwidth}
-  %temp image  \includegraphics[width=\textwidth]{images/GWPL_client_tracking_system.png}
+   \includegraphics[width=\textwidth]{images/GWPL_client_tracking_system.png}
     \color{RHgreen}\caption{GWPL new client tracking system}
     \label{fig:2}
   \end{subfigure}
@@ -1005,7 +1005,7 @@ ID & WARD NAME & ID & WARD NAME\\
 \begin{figure}[h]
   \caption{Map showing subwards in Tabata where trash mapping was conducted and other infromal areas that need to be mapped}
   \centering
- %temp image \includegraphics[width=0.8\textwidth]{images/JCL_Trash_Mapping.png}
+ \includegraphics[width=0.8\textwidth]{images/JCL_Trash_Mapping.png}
 \end{figure}
 
 \subsubsection{Methodology}
@@ -1034,7 +1034,7 @@ Data Model &
    \href{https://drive.google.com/drive/u/1/folders/1tUg6Tk2fQ4paIn-nQeUNFoQfmhkAaQYA}{Joshemi Company Limited (JCL) data}\footnote{\url{https://drive.google.com/drive/u/1/folders/1tUg6Tk2fQ4paIn-nQeUNFoQfmhkAaQYA}} \\
    
 \hline 
-    Licencing & CC-BY 4.0 \\
+    Licensing & CC-BY 4.0 \\
 \hline
 \end{tabular}
 \end{center}
@@ -1054,13 +1054,13 @@ Data Model &
 \subsubsection{Data Visualization}
 \begin{figure}
   \begin{subfigure}[b]{0.5\textwidth}
-  %temp image  \includegraphics[width=\textwidth]{images/Msimbazi_mama.png}
+   \includegraphics[width=\textwidth]{images/Msimbazi_mama.png}
    \color{RHgreen}\caption{A map showing client distribution, houses and hyperlocal boundaries in Msimbazi Mama}
     \label{fig:1}
   \end{subfigure}
   %
   \begin{subfigure}[b]{0.5\textwidth}
-  %temp image  \includegraphics[width=\textwidth]{images/Msimbazi_magharibi.png}
+   \includegraphics[width=\textwidth]{images/Msimbazi_magharibi.png}
     \color{RHgreen}\caption{Map showing client distribution, houses and hyperlocal boundaries in Msimbazi Magharibi}
     \label{fig:2}
   \end{subfigure}
@@ -1116,7 +1116,7 @@ ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
 \begin{figure}[h]
   \caption{Map showing wards mapped for the trash mapping initiative in Dar es Salaam}
   \centering
- %temp image \includegraphics[width=0.8\textwidth]{images/Dar_Trash_Map.png}
+ \includegraphics[width=0.8\textwidth]{images/Dar_Trash_Map.png}
 \end{figure}
 
 \subsubsection{Methodology}
@@ -1155,7 +1155,7 @@ A total of 20,392 points were collected and reduced to 9,452 after cleaning.
 \begin{figure}[h]
   \color{RHgreen}\caption{Trash points collected during Dar es Salaam Trash Mapping}
   \centering
- %temp image \includegraphics[width=0.8\textwidth]{images/dar_trash.png}
+ \includegraphics[width=0.8\textwidth]{images/dar_trash.png}
 \end{figure}
 
 \subsubsection{Use Case}
@@ -1193,7 +1193,7 @@ ID & WARD NAME\\
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing wards mapped during the March flood response}
   \centering
- %temp image \includegraphics[width=0.8\textwidth]{images/flood_response.png}
+ \includegraphics[width=0.8\textwidth]{images/flood_response.png}
 \end{figure}
 
 \subsubsection{Methodology}
@@ -1245,7 +1245,7 @@ Jangwani & Mtambani & 427 houses \\
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing Kwa Mkunduge subward in Tandale ward. The whole ward was flooded during the March, 2019 rainfall}
   \centering
-   %temp image \includegraphics[width=0.7\textwidth]{images/Flood_Response_Data_Viz.png}
+   \includegraphics[width=0.7\textwidth]{images/Flood_Response_Data_Viz.png}
 \end{figure}
 
 \subsubsection{Use Case}
@@ -1292,7 +1292,7 @@ ID & WARD NAME & ID & WARD NAME\\
 \begin{figure}[h]
   \color{RHgreen}\caption{Map showing the flood extent mapping progress in Dar es Salaam}
   \centering
- %temp image \includegraphics[width=0.8\textwidth]{Flood_Extent.png}
+ \includegraphics[width=0.8\textwidth]{Flood_Extent.png}
 \end{figure}
 
 \subsubsection{Data Collection Methodology}
@@ -1356,7 +1356,7 @@ Number of houses & Percentage (\%)\\
 \begin{figure}[h]
   \color{RHgreen}\caption{Flood Extent Map. Red dots represent flooded houses while the green dots represent houses that were not flooded}
   \centering
- %temp image \includegraphics[width=0.8\textwidth]{images/Flood_Extent_Visualization.PNG}
+ \includegraphics[width=0.8\textwidth]{images/Flood_Extent_Visualization.PNG}
 \end{figure}
 
 \subsubsection{Use Case}
