@@ -161,18 +161,19 @@ Unless otherwise noted, photos by Godfrey Kassano and the Ramani Huria team. Map
 \vcenteredhbox{\includegraphics[height=1.2cm]{images/logo_UDSM.jpg}}
 
 
-
 \newpage
 
+% Reduce the spacing between Table of Contents items to get it down to 1 page
+\renewcommand{\baselinestretch}{0.7}\normalsize
 \tableofcontents
+\renewcommand{\baselinestretch}{1.0}\normalsize
+
 \newpage
-\section{Executive Summary} %ivan please review the executive summary
+\section{Executive Summary}
 \label{executivesummary}
 \begin{multicols}{2}
 
-With the support of the World Bank in Tanzania, the Ramani Huria (RH) team has
-been collecting data for urban resilience with a particular emphasis on flooding since
-2015. As the program nears its end in September of 2019, the RH team is now primarily working to curate, organize, document, and publish the data, tools and knowledge that have been created.
+With the support of the World Bank in Tanzania, the Ramani Huria (RH) team has been collecting data for urban resilience with a particular emphasis on flooding since 2015. As the program nears its end in September of 2019, the RH team is now primarily working to curate, organize, document, and publish the data, tools and knowledge that have been created.
 
 We are working to transfer knowledge and hand over to Tanzania Resilience Academy, the successor project to Ramani Huria.
 
@@ -182,7 +183,7 @@ The second phase of Ramani Huria is set to last in June 2019 (with support exten
 
 Datasets collected during this phase include: soil sediment sampling data, city drainage data, historical flood extent data, hyperlocal boundaries data, asset and threat data for flood risks identification, city trash hotspots data for waste management, flood responses data for assessing damage and buildings footprint digitization.
 
-This overview of digital datasets is an annex to the final project report to be submitted in June 2019. It contains a brief summary of the dataset, spatial extent, methodology used for data collection, data model and/or survey forms used, methods used to review data quality, data gap, timeline, statistics, visualization of data, link to access the data, licensing (in case of data sharing), data use case and lessons learned throughout the process of data collection.
+This overview of activities and digital datasets is an annex to the final project report to be submitted in June 2019. It contains a brief summary of the dataset, spatial extent, methodology used for data collection, data model and/or survey forms used, methods used to review data quality, data gap, timeline, statistics, visualization of data, link to access the data, licensing (in case of data sharing), data use case and lessons learned throughout the process of data collection.
 
 Ramani Huria team conducted a number of activities including a community flood response following the heavy rainfall on March 3rd 2019, soil sediment analysis for geomorphological assessment of the city and erosion modeling. The team participated in Innovation Week on March 2019, to showcase how we conducted sediment analysis using cheap yet practical methods and came out with professional results. The Ramani Huria team also conducted River Mapping activities which involve flying drones along the major rivers of Dar es Salaam to  provide a digital photographic mark-up of the current status of Dar es Salaam’s waterways, to help in solid waste management on major rivers of the city.
 
@@ -192,18 +193,28 @@ Ramani Huria team conducted a number of activities including a community flood r
 \section{Introduction}
 \label{Introduction}
 
-This report describes the activities of Ramani Huria 2.0 from November 2018 to June 2019 and provides an overview of digital assets collected since October. %ivan please work on the introduction
+This report describes the activities of Ramani Huria 2.0 from November 2018 to June 2019 and provides an overview of digital assets collected since October 2018. Much of the material here will be included in the final report for the Ramani Huria project, expected in September 2019 after the final Industrial Training, during which time the RH team will largely hand over activities to the Resilience Academy.
 
-We also would like to point out a link to  \href{https://ramanihuria.org}{a website}\footnote{\url{http://ramanihuria.org}\color{RHgrey} { }because it's really, really interesting. You should click on that link.}. Did you notice that there was a footnote there? If you look at the footnote it contains the full URL of the link, so that people reading the document on paper can see what it links to? Cool, huh? The rest of the text on this page will be in two columns, just because we can do that with the \LaTeX{} \textbf{\textit{multicols}} plugin. By the way, I can highlight code with a color box like \textbf{\colorbox{code}{this.}}
+This report is structured by activity. For each of the main activities the Ramani Huria team has been undertaking in the period of the report, we include:
 
-Hi I'm Imma! And now we can view side by side! It's even working in the output file. This is the introduction. No, it's actually not...
+\begin{itemize}
+  \item A spatial extent, showing where the activity took place
+  \item A description of the methodology used to collect the data or conduct the activity
+  \item A discussion of the data model for the activity, how it can be accessed, and the license applied to the final output data (almost invariably an open data license)
+  \item A description of the quality assurance process
+  \item Some statistics on the overall activity and its outputs
+  \item If possible/applicable, an example visualization of the data
+  \item A description of the intended use of the data, or the rationale for the activity
+  \item If applicable, a discussion of gaps or shortcomings in the data (in many cases to highlight what may be done during the upcoming Industrial Training.
+  \item A frank discussion of lessons learned in the implementation of the activity, ultimately intended to help others avoid any pitfalls or errors should they wish to implement a similar project.
+\end{itemize}
 
-Heyyy!!!! Really? Hi Kirsten
-
-Hi! I'm Hawa!!! This is Kassano
+These indivudual sections are intended to be readable as stand-alone updates on the activities they describe; it is not necessary to read the entire report sequentially in order to understand each activity.
 
 \newpage
-\section{Monthly Activity Summary}
+\section{Activity Summary}
+
+During the period of this report, the Ramani Huria team worked on data consolidation, preparation for the upcoming Industrial Training, and documentation of our activies and processes. We provided data, support, and expertise for outside agencies such as the President's Office for Regional Administration and Local Governance (PO-RALG), the National Bureau of Statistics (NBS), the health NGO PATH, and various student and civil society groups. The team attended several workshops and gatherings where we showcased our work and liased with others in the space. We also engaged in several specific one-off activities during this period, described in this section.
 
 \begin{multicols}{2}
 \subsection{Community Flood Response}
@@ -286,9 +297,8 @@ Drone flights enable studying any aggregations of waste/informal dumps that are 
 \newpage
 \section{Team Composition and Assignments}
 
-\textbf{Permanent Staff}
+\textbf{The Ramani Huria Management Team is currently composed of:}
 
-The Ramani Huria Management Team is currently composed of:
 \begin{itemize}
      
  \item Ivan Gayton, Senior Consultant
@@ -337,6 +347,8 @@ The ODbL was created with the goal of allowing users to share their data freely 
 
 \section{Spatial Extent Color Schema}
 
+In order to make it clear to our readers where each activity has taken place, we have established a standardized color schema to display the status of each activity across the city. 
+
 \begin{tabular}{|c|c|c|c|}
 \hline
 {\colorbox{RHgreen}{   }} & RHgreen & Data has been collected and cleaned\\
@@ -351,9 +363,11 @@ The ODbL was created with the goal of allowing users to share their data freely 
 \end{tabular}
 
 \newpage
-\section{Datasets}
-In this case, a dataset contains all digital assets/ data collected by Ramani Huria from 2017 to 2019. Not all data can contain characteristics of a 'dataset' but rather provide an overview of the data collected in the Ramani Huria project.%ivan unclear
-The following is a list of datasets presented in the same format for consistency, and listed in no particular order.%ivan do you think we ought to put these in chronological order, have them be random, or sorted in some other way?
+\section{Activities and Datasets}
+The activities undertaken by the Ramani Huria team generally produce specific datasets. This section describes the activities and provides an overview of the digital assets/data associated with them.
+
+The following is a list of datasets presented in a similar format for consistency.
+
 \subsection{Drainage}
 \begin{wrapfigure}{r}{0.25\textwidth} %this figure will be at the right
     \centering
@@ -440,8 +454,9 @@ This is summarized in the table below
 \end{tabular}
 \end{center}
 
-%ivan the image in pdfview skips to the next page and is note in line with its heading
+\newpage
 \subsubsection{Data Visualization}
+
 \begin{figure}[h]
  \color{RHgreen}\caption{A detailed image showing the drainage channel flow in Dar es Salaam.}
   \includegraphics[width=0.8\textwidth]{images/Drainage_Visualization.jpeg}
@@ -537,7 +552,7 @@ Looking at the map of the sites that were actually collected, there were several
 
     \item {\color {RHblue}Failure to realize the sensitivity of the error thresholds-}
 \
-When looking at individual measurements anecdotally, we found that most were of high quality. In other words, it was possible to examine a few dozen measurements and only find one or two potential errors, which on the surface appeared to show that things were going well. This was grossly misleading! %ivan this needs a bit more explanation.
+When looking at individual measurements anecdotally, we found that most were of high quality. In other words, it was possible to examine a few dozen measurements and only find one or two potential errors, which on the surface appeared to show that things were going well. This was grossly misleading! In fact, since each site required 19 individual soil mass measurements---not even counting the measurements of the original samples and the empty sieves---one error in twenty measuremnts would be sufficient to invalidate the entire dataset. Since it is difficult for most people to notice errors in low single-digit percentages, it became necessary to structure the quality control very rigorously, including automated checks on the data in the entry procedure (ODK forms) and in the download/collation process. 
 
     \item {\color{RHblue} Field work outpacing analysis, insufficient early feedback-}
 \
@@ -1370,11 +1385,6 @@ Individuals were asked to reflect on historical flood extents; therefore there i
 Community members did not know the units of measurements in metrics, therefore this posed as a problem to the team during data collection. In some of their responses, they estimated flood depth as 100 meters which was practically impossible.
 
 The team had to re-design the ODK form to make it simple when community members estimate the depth of floods by using man’s height i.e. knee deep, chest deep, waist deep etc.
-
-
-
-\newpage
-\section{Annexes}
 
 
 \end{document}
