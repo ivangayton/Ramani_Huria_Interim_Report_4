@@ -1,94 +1,6 @@
 % !TeX program = lualatex
 \documentclass[a4paper,12pt,twoside]{article}
-\usepackage{graphicx}
-\graphicspath{ {./images/} }
-\usepackage{wrapfig}
-\usepackage{indentfirst} % indent first paragraph of each section (not really correct for academic papers, but follows more common business convention)
-\setlength{\parskip}{1em} %adds a 1em space after each paragraph
-
-\usepackage{pdfpages,caption,geometry} %enables you to add pdf and a caption
-
-\usepackage{geometry}
-\geometry{
-  a4paper,
-  total={170mm,257mm},
-  left=20mm,
-  top=40mm,
-  bottom=30mm,
-}
-
-\usepackage{fontspec}
-\setmainfont{Exo 2}[%
-    Path            =   fonts/,
-    Extension       =   .otf,
-    UprightFont     =   *-Regular,
-    ItalicFont      =   *-Italic,
-    BoldFont        =   *-Bold,
-    BoldItalicFont  =   *-BoldItalic,
-    FontFace        =   {black}{n}{*-Black},
-    FontFace        =   {black}{it}{*-BlackItalic},
-]
-
-\usepackage[dvipsnames]{xcolor}
-\definecolor{RHgrey}{RGB}{101,101,101}
-\definecolor{RHblue}{RGB}{7,163,216}
-\definecolor{RHgreen}{RGB}{30,165,43}
-\definecolor{RHyellow}{RGB}{251,210,0}
-\definecolor{code}{RGB}{200,200,200}
-\definecolor{textbox}{RGB}{200,255,200}
-\definecolor{captiongreen}{RGB}{50,165,60}
-\definecolor{RHolive}{RGB}{239, 240, 125}
-  
-\usepackage{sectsty}
-\sectionfont{\color{RHblue}} 
-\subsectionfont{\color{RHblue}}
-\subsubsectionfont{\color{RHblue}}
-
-\usepackage{caption}
-\usepackage[font={color=captiongreen,small,bf},figurename=Fig.,labelfont={small,it}]{caption}
-\usepackage{subcaption} %font color RHgreen, figure label is italic
-
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-
-\usepackage{multicol} % Allows multiple columns to be used on the fly
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{\color{RHgrey} \leftmark}
-\rhead{\color{RHgrey} \rightmark}
-\fancyfoot[LE]{\color{RHgrey} \thepage \hspace{5mm} \scriptsize RAMANI HURIA INTERIM REPORT 4}
-\fancyfoot[RO]{\color{RHgrey} \scriptsize RAMANI HURIA INTERIM REPORT 4 \hspace{3mm} \normalsize \thepage}
-
-\usepackage{hyperref}
-\hypersetup{
-  colorlinks=true,
-  linkcolor=RHblue, % to match the Ramani Huria blue text
-  filecolor=magenta,      
-  urlcolor=cyan,
-  pdftitle={RH Interim Report 4},
-  %pdfpagemode=FullScreen,
-}
-%\urlstyle{same}
-
-\usepackage{footnote}
-\makesavenoteenv{tabular} %For creating linked footnotes in a table
-
-\usepackage[framemethod=tikz]{mdframed}
-\usepackage{lipsum} %For creating a tight box around text
-
-
-\title{Ramani Huria Interim Report 4}
-\author{Humanitarian OpenStreetMap Team}
-\usepackage[nodayofweek,level]{datetime}
-\newdate{date}{15}{04}{2019}
-\date{\displaydate{date}}
-
-\newcommand*{\vcenteredhbox}[1]{\begingroup
-\setbox0=\hbox{#1}\parbox{\wd0}{\box0}\endgroup} % For creating vertically centered rows of logos
-
-\setcounter{tocdepth}{2} % Table of Contents includes only sections and subsections, not subsubsections.
+\usepackage{rhreport}
 
 \begin{document}
 \thispagestyle{empty}
@@ -137,13 +49,13 @@
 
 This report was prepared by William Evans, Immaculate Mwanja, Hawa Adinani, Innocent Maholi, Ivan Buendia Gayton, Jess Beutler, Paul Uithol, Tyler Radford and many others from the Humanitarian OpenStreetMap Team in Tanzania.
 
-Contributions from Nuru Kalulunga, Iddy Chazua, Asha Mustapher,  Dorica Mugusi, Emanuel Kombe, Elia Dominic, Gwantwa Mwakibete, Dorice Mawona, Anitha Gosbert, Christabell Alendwase, Johanes Petro, Amour Nyalusi, Bornlove Ntikha, Benedcto Adamu, Wombura Kimacha, Tonny John.
+Contributions from Nuru Kalulunga, Iddy Chazua, Asha Mustapher,  Dorica Mugusi, Emanuel Kombe, Elia Dominic, Gwantwa Mwakibete, Dorice Mawona, Anitha Gosbert, Christabell Alendwase, Johanes Petro, Amour Nyalusi, Bornlove Ntikha, Benedicto Adamu, Wombura Kimacha, Tonny John.
 
 Graphic design by Ivan Buendia Gayton and Immaculate Mwanja based on the Ramani Huria design guideline by Darragh Amelia Coward. Layout was done using the \LaTeX{} typesetting system.
 
 Guidance and input on the project came from Edward Anderson, Caroline Gevaert, Roza Vasileva, and Msilikale Msilanga at the World Bank.
 
-Unless otherwise noted, photos by Godfrey Kassano and the Ramani Huria team. Maps were prepared by the Ramani Huria team using QGIS.
+Unless otherwise noted, photos by the Ramani Huria team. Maps were prepared by the Ramani Huria team using QGIS.
 
 
 \bigskip\bigskip\bigskip\bigskip\bigskip
@@ -214,7 +126,7 @@ These individual sections are intended to be readable as stand-alone updates on 
 \newpage
 \section{Activity Summary}
 
-During the period of this report, the Ramani Huria team worked on data consolidation, preparation for the upcoming Industrial Training, and documentation of our activities and processes. We provided data, support, and expertise for outside agencies such as the President's Office for Regional Administration and Local Governance (PO-RALG), the National Bureau of Statistics (NBS), the health NGO PATH, and various student and civil society groups. The team attended several workshops and gatherings where we showcased our work and liased with others in the space. We also engaged in several specific one-off activities during this period, described in this section.
+During the period of this report, the Ramani Huria team worked on data consolidation, preparation for the upcoming Industrial Training, and documentation of our activities and processes. We provided data, support, and expertise for outside agencies such as the President's Office for Regional Administration and Local Governance (PO-RALG), the National Bureau of Statistics (NBS), the health NGO PATH, and various student and civil society groups. The team attended several workshops and gatherings where we showcased our work and liaised with others in the space. We also engaged in several specific one-off activities during this period, described in this section.
 
 \begin{multicols}{2}
 \subsection{Community Flood Response}
@@ -233,7 +145,7 @@ This activity helped the team to establish the point of contact with local and c
 With the support of the World Bank in Tanzania, Ramani Huria and JBA Consulting partnered in October 2018 to develop a surface soil sediment dataset for the greater Dar es Salaam region of Tanzania. This was intended to support a geomorphological assessment taking into account soil sediment characteristics for erosion and flood risk studies.
 
 
-A national-level soil profile had existed for Tanzania prior to this effort but contained only a single sample from Dar es Salaam. This was not sufficient to analyse erosion potential across the city. The JBA team in consultation with Ramani Huria decided to use a 2km grid, which resulted in 731 sampling points being pre-established throughout the city. A team of 10 field mappers and 4 office technicians—all Tanzanian youth participants in the Ramani Huria project—were trained in sample collection and analysis (sieving). A total of 643 points were sampled and sieved; 88 sites were inaccessible.
+A national-level soil profile had existed for Tanzania prior to this effort but contained only a single sample from Dar es Salaam. This was not sufficient to analyze erosion potential across the city. The JBA team in consultation with Ramani Huria decided to use a 2km grid, which resulted in 731 sampling points being pre-established throughout the city. A team of 10 field mappers and 4 office technicians—all Tanzanian youth participants in the Ramani Huria project—were trained in sample collection and analysis (sieving). A total of 643 points were sampled and sieved; 88 sites were inaccessible.
 
 
 The 643 samples were analyzed by sieving each to separate the sediment by particle size and weighing the resulting fractions. The resulting dataset, a geo-referenced set of soil sediment profiles, is published and available as \href{https://geonode.uhurulabs.org/layers/geonode3A_2019_02_26_dar_soil_sampling_final_results_v1}{open data}\footnote{\url{https://geonode.uhurulabs.org/layers/geonode3A_2019_02_26_dar_soil_sampling_final_results_v1}}.
@@ -244,7 +156,7 @@ Innovation Week is a week-long series of events hosted by Human Development Inno
 We also showcased a drone that was built locally using bamboo with the aim of capturing aerial images at a low cost without importing drones, which might be expensive. This also aligns with our slogan of local people, local devices and open knowledge.
 
 \subsection{River Mapping}
-In order to provide Nipe Fagio, I4ID and other partners with high-quality and interactive spatial data to better understand solid waste management and service quality across all five municipalities of Dar es Salaam, several drone flights have been conducted along five major rivers of Dar es Salaam- Msimbazi, Mpiji, Tegeta, Kizinga and Mzinga Rivers - covering approximately 60 km of Dar es Salaam’s critical water arteries. 
+In order to provide Nipe Fagio, I4ID and other partners with high-quality and interactive spatial data to better understand solid waste management and service quality across all five municipalities of Dar es Salaam, several drone flights have been conducted along five major rivers of Dar es Salaam---Msimbazi, Mpiji, Tegeta, Kizinga and Mzinga Rivers---covering approximately 60 km of Dar es Salaam’s critical water arteries. 
 
 The drone flights provide a digital photographic mark-up of the current status of Dar es Salaam’s waterways. The broad purpose of this work is to provide Nipe Fagio, I4ID and other partners with high-quality and interactive spatial data to better understand solid waste management and service quality across all five municipalities of Dar es Salaam and the city’s key five rivers.
 
@@ -312,7 +224,7 @@ Drone flights enable studying any aggregations of waste/informal dumps that are 
  \item Immaculate Mwanja, Operations Assistant
  \item Elia Dominic, Mapping Supervisor
  \item Anitha Gosbert, Mapping Supervisor
- \item Christabel Alendwase, Mapping Supervisor
+ \item Christabell Alendwase, Mapping Supervisor
  \item Amour Nyalusi, Mapping Supervisor
  \item Emanuel Kombe, Mapping Supervisor & QA
  \item Benedicto Adamu, Associate Quality Assurance Officer
@@ -330,7 +242,7 @@ Ramani Huria activities follow the  HOT Data Quality Framework as a guide for ea
 \end{multicols}
 
 \subsection{Data Model}
-Data that have been uploaded to OpenStreetMap have a clear defined data model. Links to ODK survey forms that were used to collect data or a wiki page containing information on the process of data collection and that clarifies how datasets were obtained will be provided for data with no defined data models.
+Data that have been uploaded to OpenStreetMap have a clear defined \href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria}{data model}\footnote{\url{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria}}. Links to ODK survey forms that were used to collect data or a wiki page containing information on the process of data collection will be provided for non-OSM collected data.
 
 \section{Licensing and Data Sharing}
 \begin{itemize}
@@ -370,8 +282,6 @@ In order to make it clear to our readers where each activity has taken place, we
     \centering
     \includegraphics[width=0.25\textwidth]{images/Drainage_Mapping.jpg}
 \end{wrapfigure}
-
-\
 
 Drainage data collected in the most flood prone areas across Dar es Salaam using cheap  and practical methods. This information will be used to develop a flood model which requires accurately collected specifications of drains such as depth, width, blockage (by either vegetation or material), connectivity, and diameter (typically for culverts).
 
@@ -432,7 +342,7 @@ Access & {\href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}
 \subsubsection{Quality Assurance}
 During the data cleaning process, the ODK forms that were filled in the field are downloaded from the server in Comma Separated Value (CSV) format and converted to GeoPackage (.gpkg) in QGIS. The plugin to convert ODK form to CSV format is found in \href{https://github.com/zestyping/odk_csv}{GitHub}\footnote{\url{https://github.com/zestyping/odk\_csv}}. The drain segments and points are styled with a pre-defined .qml style found in QGIS---\textit{Drain\_lines\_categorized\_with\_labels\_and\_directions} and \textit{Drain\_points\_categorized\_with\_labels}.
 
-After the data is cleaned, it is run in the \href{https://github.com/openearth/hydro-osm}{Hydro OSM model}\footnote{\url{https://github.com/openearth/hydro-osm}} to ensure all drain segments and points are connected  (connectivity) for the first and last point i.e. outflow, no\_exit, others and begins..
+After the data is cleaned, it is run in the \href{https://github.com/openearth/hydro-osm}{Hydro OSM model}\footnote{\url{https://github.com/openearth/hydro-osm}} to ensure all drain segments and points are connected  (connectivity) for the first and last point i.e. outflow, no\_exit, others and begins.
 
 The team also used QGIS with pre-installed template styles for the segments and points, a high resolution 2016 COWI imagery.
 
@@ -451,7 +361,6 @@ This is summarized in the table below
 \end{tabular}
 \end{center}
 
-\newpage
 \subsubsection{Data Visualization}
 
 \begin{figure}[h]
@@ -476,6 +385,7 @@ When doing field work, it is very important for the cleaning process to go simul
 Before field work, we need to have clear and up to date aerial images to support data collection especially in sensitive areas such as military bases and airports.
 \item {\color {RHblue} {Constant updating of collected data:}} Some of the data points may be very dynamic, for example drain blockage and damage can change over a day.
 \end{itemize}
+
 \newpage
 \subsection{Soil Sediment Sampling}
 
@@ -491,10 +401,14 @@ Dar es Salaam and neighboring districts of Pwani region i.e. Bagamoyo, Kibaha an
   \includegraphics[width=0.8\textwidth]{images/soil_sample_locations.jpg}
 \end{figure}
 
+\
+
+\
+
 \subsubsection{Data Collection Methodology}
 
 \begin{multicols}{2}
-We created 2km by 2 km grid points. A set of data was recorded at each site using OpenDataKit’s Android application ODK Collect. Each field sampling team of two people carried the following equipment: trowel or small shovel, plastic “ziploc” bags with 1kg capacity, Android phone pre-loaded with ODK Collect---a separate maps and navigation application, maps.me---pre-loaded with the locations to be visited, first aid kit, marker pens, permission letter for the sampling activity from the municipal authorities and a tape measure. 
+We created 2km by 2 km grid points. A set of data was recorded at each site using OpenDataKit’s Android application ODK Collect. Each field sampling team of two people carried the following equipment: trowel or small shovel, plastic “Ziploc” bags with 1kg capacity, Android phone pre-loaded with ODK Collect---a separate maps and navigation application, maps.me---pre-loaded with the locations to be visited, first aid kit, marker pens, permission letter for the sampling activity from the municipal authorities and a tape measure. 
 
 We got training from a geo-morphologist and set up our own citizen-style lab to analyze the soil samples. The pair of samples—top and bottom—from each site was passed through a set of progressively finer-mesh sieves, resulting in nine separate fractions. Each fraction was weighed. The resulting measurements, which represent the proportion of each sediment particle size at each site, were
 recorded.
@@ -549,7 +463,7 @@ Looking at the map of the sites that were actually collected, there were several
 
     \item {\color {RHblue}Failure to realize the sensitivity of the error thresholds-}
 \
-When looking at individual measurements anecdotally, we found that most were of high quality. In other words, it was possible to examine a few dozen measurements and only find one or two potential errors, which on the surface appeared to show that things were going well. This was grossly misleading! In fact, since each site required 19 individual soil mass measurements---not even counting the measurements of the original samples and the empty sieves---one error in twenty measuremnts would be sufficient to invalidate the entire dataset. Since it is difficult for most people to notice errors in low single-digit percentages, it became necessary to structure the quality control very rigorously, including automated checks on the data in the entry procedure (ODK forms) and in the download/collation process. 
+When looking at individual measurements anecdotally, we found that most were of high quality. In other words, it was possible to examine a few dozen measurements and only find one or two potential errors, which on the surface appeared to show that things were going well. This was grossly misleading! In fact, since each site required 19 individual soil mass measurements---not even counting the measurements of the original samples and the empty sieves---one error in twenty measurements would be sufficient to invalidate the entire dataset. Since it is difficult for most people to notice errors in low single-digit percentages, it became necessary to structure the quality control very rigorously, including automated checks on the data in the entry procedure (ODK forms) and in the download/collation process. 
 
     \item {\color{RHblue} Field work outpacing analysis, insufficient early feedback-}
 \
@@ -704,7 +618,7 @@ Planning on paper vs actual fieldwork. We underestimated the time allocation in 
 \newpage
 \subsection{Buildings Footprint Digitization}
 \begin{multicols}{2}
-Re-digitization of the city to update and improve the quality of already digitized layers using COWI imagery with 10cm resolution provided by the Ministry of Lands, Housing and Human Settlements. (Previously the city was digitized using either Bing, Mapbox or Digitalglobe which have lower resolutions compared to COWI imagery. 
+Re-digitization of the city to update and improve the quality of already digitized layers using COWI imagery with 10cm resolution provided by the Ministry of Lands, Housing and Human Settlements. (Previously the city was digitized using either Bing, MapBox or Digital Globe which have lower resolutions compared to COWI imagery. 
 
 So far the team has been able to digitize 28 out of 44 Ramani Huria wards. Namely Kisutu, Temeke, Vingunguti, Upanga Mashariki, Upanga Magharibi, Jangwani, Sandali, Kivukoni, Mwananyamala, Tabata, Kigogo, Kariakoo, Gerezani, Mchikichini, Hananasifu, Sinza, Kjitonyama, Magomeni, Tandale, Buguruni, Ilala, Keko, Mbagala, Mbagala Kuu, Mabibo, Mchafukoge and Mzimuni. The wards digitized have a total of 299,691 buildings. This number includes new and existing buildings altogether.
 \end{multicols}
@@ -903,9 +817,13 @@ After identification of the problems, the team decided to validate the already c
 
 
 \newpage
-\subsection{Trash Mapping in Formal Settlements (Green WastePro Limited)}
+<<<<<<< HEAD
+\subsection{Trash Mapping in Formal Settlements}
+=======
+\subsection{Trash Mapping in Formal Settlements (Green Waste Pro Limited)}
+>>>>>>> 08efcbaaaf7a29428e262f9f9efc02c7b3eb7889
 
-Ramani Huria and Green WastePro Ltd. (GWPL) partnered in August 2018 to provide datasets for waste management. Green WastePro is a private company specialized in waste management with the aim to offer eco-friendly solutions in cleaning and waste management. They mostly operate in formal settlements. The company needed digital methodology to obtain clients’ information including locations, clients contacts etc, so they can track clients and provide services accordingly.
+Ramani Huria and Green Waste Pro Ltd. (GWPL) partnered in August 2018 to provide datasets for waste management. Green Waste Pro is a private company specialized in waste management with the aim to offer eco-friendly solutions in cleaning and waste management. They mostly operate in formal settlements. The company needed digital methodology to obtain clients’ information including locations, clients contacts etc, so they can track clients and provide services accordingly.
 
 \subsubsection{Spatial Extent}
 
@@ -956,7 +874,7 @@ Data Model &
 \subsubsection{Quality Control}
 \begin{itemize}
     \item JOSM was used to check if buildings and other necessary information have been tagged correctly for example, checking spellings, tags, etc., geometry errors (i.e. overlapping buildings, too small or too large of objects). 
-     \item QGIS to check used if client points' have been placed on their actual buildings and to make sure scanned barcodes correspond with the buildings.
+     \item QGIS to check used if client points' have been placed on their actual buildings and to make sure scanned bar codes correspond with the buildings.
 \end{itemize}
 
 \subsubsection{Statistics}
@@ -994,9 +912,9 @@ Data was collected in only 2 wards of Dar es Salaam. The process needs to be rep
 \end{enumerate}
 
 \newpage
-\subsection{Trash Mapping in Informal Settlements (Joshemi Company Limited)}
+\subsection{Trash Mapping in Informal Settlements}
 
-Ramani Huria partnered with Joshemi Company Limited, a company  dealing with trash collection in Tabata ward with eight subwards therein. JCL needed to know the \textit{number of clients} as it was very difficult to track them all \textit{revenue flow} and an effective \textit{feedback system} on services provided by the company. The aim was shifting JCL’s analogue system of trash collection to a digital system by providing them with their own maps of clients’ locations and a system of tracking them. This way, JCL would improve their services to clients, increase their revenues and create an effective waste collection mechanism.
+Ramani Huria partnered with Joshemi Company Limited (JCL), a company  dealing with trash collection in Tabata ward with eight subwards therein. JCL needed to know the \textit{number of clients} as it was very difficult to track them all \textit{revenue flow} and an effective \textit{feedback system} on services provided by the company. The aim was shifting JCL’s analogue system of trash collection to a digital system by providing them with their own maps of clients’ locations and a system of tracking them. This way, JCL would improve their services to clients, increase their revenues and create an effective waste collection mechanism.
 
 \subsubsection {Spatial Extent}
 2 pilot subwards (Msimbazi Magharibi and Msimbazi Mama) out of eight subwards in Tabata ward.
@@ -1016,7 +934,7 @@ ID & WARD NAME & ID & WARD NAME\\
 \end{center}
 
 \begin{figure}[h]
-  \caption{Map showing subwards in Tabata where trash mapping was conducted and other infromal areas that need to be mapped}
+  \caption{Map showing subwards in Tabata where trash mapping was conducted and other informal areas that need to be mapped}
   \centering
  \includegraphics[width=0.8\textwidth]{images/JCL_Trash_Mapping.png}
 \end{figure}
@@ -1056,7 +974,7 @@ Data Model &
 \begin{itemize}
     \item Google Spreadsheet was used by team during the cleaning process whereby, more than one person could contribute to ensure every clients’ details are filled in accurately, removing duplicates and errors made during data collection.
     \item JOSM was used to check if buildings and other necessary information have been tagged correctly for example, checking spellings, tags, etc.
-    \item QGIS to check used if client points' have been placed precisely on buildings and to make sure scanned barcodes correspond with the buildings.
+    \item QGIS to check used if client points' have been placed precisely on buildings and to make sure scanned bar codes correspond with the buildings.
 \end{itemize}
 
 \subsubsection{Statistics}
@@ -1093,7 +1011,7 @@ A system to collect revenues and update clients who pay for the trash services h
 
 \newpage
 \subsection{Dar es Salaam Trash Mapping}
-A collaboration between Nipe Fagio (“give me the broom” in Swahili), a civil society organisation founded in 2013, and Ramani Huria joined forces and mapped trash sites in Dar es Salaam. The trash mapping initiative was part and parcel of the large Let’s-Do-It-World campaign, a civic-led mass movement to clean up countries.
+A collaboration between Nipe Fagio (“give me the broom” in Swahili), a civil society organization founded in 2013, and Ramani Huria joined forces and mapped trash sites in Dar es Salaam. The trash mapping initiative was part and parcel of the large Let’s-Do-It-World campaign, a civic-led mass movement to clean up countries.
 
 The mapped data helped to identify location of the areas with poorly managed waste materials, type and size of waste and clean up methods. This process helped ease cleaning the city on September 15th, 2018, a celebration of World Clean Up Day.
 
