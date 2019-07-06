@@ -275,18 +275,19 @@ In order to make it clear to our readers where each activity has taken place, we
 \hline
 \end{tabular}
 
-\subsubsection{Overview of Datasets}
+\subsection{Overview of Datasets}
 The following  list represents over 20 different geospatial datasets for Dar es Salaam, Tanzania. They can be broken down by three separate components (Exposure, Environment, Hazard) under the \href{https://www.worldbank.org/en/programs/tanzania-urban-resilience-program}{Tanzania Urban Resilience Program}\footnote{\url{https://www.worldbank.org/en/programs/tanzania-urban-resilience-program}} (TURP). In this report, we go in depth to explore ten that the Ramani Huria team led. For the remaining datasets, much of the data is contributed by communities and users of OpenStreetMap. 
 For a comprehensive list of these datasets, please reference the Climate Risk Database hosted by the Resilience Academy geonode.
 
-\begin{center}
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
-TURP Component & Title & Summary/Abstract
+TURP Component & Title & Summary/Abstract\\
 \hline
-Exposure & Administrative Wards & An administrative boundary corresponding to level 3 in the Database of Global Administrative Areas\\
+Exposure & Administrative Wards & An administrative boundary corresponding to level 3\\
+{} & {} & in the Database of Global Administrative Areas\\
 \hline
- & Administrative Subwards & An administrative boundary corresponding to level 4 in the Database of Global Administrative Areas\\
+ & Administrative Subwards & An administrative boundary corresponding to level 4\\
+{} & {} & in the Database of Global Administrative Areas\\
 \hline
  & Buildings & Buildings in Dar es Salaam\\
 \hline
@@ -307,7 +308,8 @@ Exposure & Administrative Wards & An administrative boundary corresponding to le
 \hline
  & Retail Service Location & Areas selling retail products in Dar es Salaam\\
 \hline
- & Tourist Attractions & Areas in Dar es Salaam providing information to support tourists\\
+ & Tourist Attractions & Areas in Dar es Salaam providing\\
+ {} & {} & information to support tourists\\
 \hline
  & Public Water Points & Public water points in Dar es Salaam\\
 \hline 
@@ -323,21 +325,26 @@ Exposure & Administrative Wards & An administrative boundary corresponding to le
 \hline
 Environment & Drains & Drainage data in Dar es Salaam\\
 \hline
- & Soil Classes & Soil sediment sample in Dar es Salaam and some part of Pwani region\\
+ & Soil Classes & Soil sediment sample in Dar es Salaam\\
+{} & {} & and some part of Pwani region\\
 \hline
- & Waste Sites & Areas in Dar es Salaam with poorly managed solid waste\\
+ & Waste Sites & Areas in Dar es Salaam with\\
+{} & {} & poorly managed solid waste\\
 \hline
- & Assets and Flood Risks & Flood risk identification on flood prone areas in Dar es Salaam\\
+ & Assets and Flood Risks & Flood risk identification on\\
+{} & {} & flood prone areas in Dar es Salaam\\
 \hline
- & Building Footprint Digitization & Re-digitized buildings using 2016 UAV high resolution imagery\\
+ & Building Footprint Digitization & Re-digitized buildings using\\
+{} & {} & 2016 UAV high resolution imagery\\
 \hline
- & Community Flood Response & Rapid assessment of flooded areas by March 2019, rains\\
+ & Community Flood Response & Rapid assessment of flooded\\
+{} & {} & areas by March 2019, rains\\
 \hline
-Hazard & Flood Depths &\\
+Hazard & Flood Depths & Flood depth history in Dar es Salaam\\
 \hline
- & Flood Extents Flood history in Dar es Salaam\\
+ & Flood Extents & Flood history in Dar es Salaam\\
 \hline
-
+\end{tabular}
 
 \subsection{Drainage}
 \begin{wrapfigure}{r}{0.25\textwidth} %this figure will be at the right
@@ -402,14 +409,13 @@ Access & {\href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}
 \end{center}
 
 \subsubsection{Quality Assurance}
-During the data cleaning process, the ODK forms that were filled in the field are downloaded from the server in Comma Separated Value (CSV) format and converted to GeoPackage (.gpkg) in QGIS. The plugin to convert ODK form to CSV format is found in \href{https://github.com/zestyping/odk_csv}{GitHub}\footnote{\url{https://github.com/zestyping/odk\_csv}}. The drain segments and points are styled with a pre-defined .qml style found in QGIS---\textit{Drain\_lines\_categorized\_with\_labels\_and\_directions} and \textit{Drain\_points\_categorized\_with\_labels}.
+During the data cleaning process, the ODK forms that were filled in the field are downloaded from the server in Comma Separated Value (CSV) format and converted to GeoPackage (.gpkg) in QGIS. The plugin to convert ODK form to CSV format is found in \href{https://github.com/zestyping/odk_csv}{GitHub}\footnote{\url{https://github.com/zestyping/odk\_csv}}. The drain segments and points are styled with a pre-defined .qml style found in QGIS---\textit{Drain\_lines\_categorized\_with\_labels\_and\_directions} and \textit{Drain\_points\_categorized\_with\_labels} and a high resolution 2016 COWI imagery was used in cleaning to determine the position of drain segments and points in QGIS.
 
 After the data is cleaned, it is run in the \href{https://github.com/openearth/hydro-osm}{Hydro OSM model}\footnote{\url{https://github.com/openearth/hydro-osm}} to ensure all drain segments and points are connected  (connectivity) for the first and last point i.e. outflow, no\_exit, others and begins.
 
-The team also used QGIS with pre-installed template styles for the segments and points, a high resolution 2016 COWI imagery.
-
 \subsubsection{Statistics}
-16207 segments of culverts, drains, ditches, and decommissioned drainage infrastructure totaling 653 kilometers; and 12620 drain points.
+18350 segments of culverts, drains, ditches, and decommissioned drainage infrastructure totaling 705.739 kilometer. Whereby lined drains cover 56.69\%, culverts cover 37.37\% while unlined drains (ditches) cover 5.25\%.
+13385 drain points have been collected whereby 3.9\% are blockage/damage points with either solid waste materials or sands and 4.9\%are  points with no\_exit(drainage channel ends with no outflow)
 
 This is summarized in the table below
 
@@ -431,7 +437,7 @@ This is summarized in the table below
 \end{figure}
 
 \subsubsection{Use Case}
-Development of a flood model and early warning systems
+Development of a flood model and early warning systems. This data is used by the Tanzania Rural and Urban Road Agency (TARURA) and the Dar es Salaam Metropolitan Development Project (DMDP).
 
 \subsubsection{Data Gap}
 Accurate elevation data is still missing from the data. To create a good flood model of the city, you need a high accuracy elevation data to a few centimeters.
@@ -475,8 +481,11 @@ We created 2km by 2 km grid points. A set of data was recorded at each site usin
 We got training from a geo-morphologist and set up our own citizen-style lab to analyze the soil samples. The pair of samples—top and bottom—from each site was passed through a set of progressively finer-mesh sieves, resulting in nine separate fractions. Each fraction was weighed. The resulting measurements, which represent the proportion of each sediment particle size at each site, were
 recorded.
 
-The following materials were used: a set of metal sieves, scales, hand wash station and gloves, brush, cloth and towel for cleaning sieves, an Android phone with ODK Collect and sieving survey.
+In the office, materials were used for analysis: a set of metal sieves, scales, hand wash station and gloves, brush, cloth and towel for cleaning sieves, an Android phone with ODK Collect and sieving survey.
 \end{multicols}
+
+\subsubsection{Human Resources}
+A team of 14 recent university graduates; 10 were field mappers to collect soil data and 4 office technicians to do analysis (sieving and measurements) were trained in two days by JBA Consulting.
 
 \subsubsection{Data Model, Timeline, Access and Licensing}
 \begin{center}
@@ -496,7 +505,7 @@ Licensing &  CC-BY 4.0 \\
 \end{center}
 
 \subsubsection{Quality Assurance}
-The quality control of soil sampling was done by  using the ODK form to flag any discrepancies such as negative masses or discrepancies in sums immediately.
+The quality control of soil sampling was done by  using the ODK form to flag any discrepancies such as negative masses or great differences, inconsistency and/or disparity in the sums immediately.
 
 \subsubsection{Statistics}
 731 soil sample points created using a 2 km grid. 643 points sampled and sieved; 88 sample points were either inaccessible or hard to collect sample e.g. paved areas, military base.
@@ -507,6 +516,7 @@ The quality control of soil sampling was done by  using the ODK form to flag any
   \centering
   \includegraphics[width=1\textwidth]{soil_map_detail_peninsula_with_legend}
 \end{figure}
+The bars of the histogram—upper for the top samples and lower for the bottom samples—represent the proportion of each particle size.
 
 \subsubsection{Use Case}
 JBA  primarily intended for use this data for erosion modeling. The resulting dataset, a geo-referenced set of soil profiles, has been published as open data.
@@ -591,7 +601,7 @@ ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
 \subsubsection{Data Collection Methodology}
 We set up meetings with community leaders and influential people i.e. religious leaders in the specific wards. We first introduced how the data can help in reducing flooding, then asked them to identify and trace their boundaries on a map printed on A1 and point out assets and disaster threats in their neighbourhoods. We also printed satellite image maps of the respective subward to simplify identification of areas in their subwards.
 
-Each meeting had 10 to 12 participants and 6 student mappers to facilitate the process. Student mappers split community members into three groups, each group guided by two students.
+Each meeting had 10 to 12 participants---2 religious leaders, 1 leader of community based organisation (CBO) and NGO available at the subward, 3 representatives from Subward’s Health, and Environment committees, 1 prominent elderly person with good knowledge of the neighbourhood, 1 prominent young person with good knowledge about the neighbourhood and 1-6 shina sladers (1-6). These participants were chosen following gender balance, religion, social relations and their local knowledge of the neighborhood---and 6 student mappers to facilitate the process. Student mappers split community members into three groups, each group guided by two students.
 
 The discussion was based on three major key points:
 \begin{enumerate}
@@ -600,13 +610,17 @@ The discussion was based on three major key points:
     \item Main causes of flood in the subward
 \end{enumerate}
 
+To develop a complete detailed map the following process was followed:
 \begin{itemize}
-    \item Mapping all important features in the subward in collaboration with community members using free Android Applications such as OpenDataKit and OpenMapKit.
-    \item Data Cleaning and Map Making using QGIS to prepare first draft maps to be used in community meetings.
+    \item Mapping all important features in the subward in collaboration with community members using free Android Applications such as OpenDataKit and OpenMapKit---This component was true to the wards that were not previously mapped by Ramani Huria.
+    \item Data Entry, Cleaning and Map Making using QGIS to prepare first draft maps to be used in community meetings.
     \item Conducting community meeting using the first draft maps as guide basemaps in risk identification.
     \item Collecting missing data that community members mentioned and were not found on the map using ODK and OMK.
     \item Lastly, cleaning the collected data, writing reports of the meetings and producing maps that correspond with the reports.
 \end{itemize}
+
+\subsubsection{Human Resources}
+Over 300 university students with guidance from 12 supervisors during the 2018 Industrial Training, after receiving two weeks’ worth of training in community engagement, data collection tools, and map making. 
 
 \subsubsection{Timeline, Access and Licensing}
 \begin{center}
@@ -656,6 +670,7 @@ A total of 5020 asset points, road and road names and 1538 landmarks were collec
  \hline 
 \end{tabular}
 \end{center}
+Points that were used as evacuation centers were mostly government facilities such as schools, subward and ward offices, open areas and also religious institutions. For areas with no evacuation centers, residents would evacuate to their neighbors and relatives.
 
 \subsubsection{Data Visualization}
 \begin{figure}[h]
@@ -723,6 +738,9 @@ ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
 
 Aligning buildings with higher resolution image of 10cm provided by COWI company using Mbtiles created in \href{https://www.gdal.org/gdaladdo.html}{GDAL}\footnote{\url{https://www.gdal.org/gdaladdo.html}} (gdaladdo)---a utility used to build or rebuild overview images. Supervisors of the team created mapping projects on \href{https://tasks.hotosm.org/}{HOT Tasking Manager}\footnote{\url{https://tasks.hotosm.org/}} which were then assigned to the digitization team. Using the 2016 COWI imagery, buildings were re-digitized in JOSM and validation of the re-digitization was done by the validation team.
 
+\subsection{Human Resources}
+25 digitizers who participated in this activity were just part of 100 that were trained to digitize buildings on the mini-grids project in early 2018.  They were trained for 3 weeks in order to achieve good quality data. Based on the skills that they obtained, they have been participating in mapping buildings and roads as well.
+
 \subsubsection{Data Model, Timeline, Access and Licensing}
 \begin{center}
 \begin{tabular}{|c|c|c|}  
@@ -733,7 +751,7 @@ Data Model &
   Timeline  &  2018-08-24 to 2018-10-20 \\
 \hline  
  Access  & 
-    \href{https://drive.google.com/drive/u/1/folders/1Aly4pDcq5JP14vB6VY-IxahTwvt6Ukrv}{Dar es Salaam Buildings}\footnote{\url{https://drive.google.com/drive/u/1/folders/1Aly4pDcq5JP14vB6VY-IxahTwvt6Ukrv}} \\
+    \href{https://drive.google.com/drive/folders/1oZc2HTZfTsShQW2__1o8DKi4F2824y97?usp=sharing}{Dar es Salaam Buildings}\footnote{\url{https://drive.google.com/drive/folders/1oZc2HTZfTsShQW2__1o8DKi4F2824y97?usp=sharing}} \\
    
 \hline 
     Licensing & \href{https://opendatacommons.org/licenses/odbl/index.html}{Open Data Commons Open Database License (ODbL)}\footnote{\url{https://opendatacommons.org/licenses/odbl/index.html}} \\
@@ -742,18 +760,7 @@ Data Model &
 \end{center}
 
 \subsubsection{Quality Assurance}
-JOSM - using filters to show if the buildings are well aligned and if there are any duplicates and validation tool to see if there are any errors i.e unconnected nodes.
-
-\subsubsection{Statistics}
-\begin{center}
-\begin{tabular}{|c|c|}
-\hline
-   Buildings before re-digitization & 460,917 \\
-\hline
-   Buildings after re-digitization & 677,478 \\
-\hline
-\end{tabular}
-\end{center}
+The QA team used validation plugin to detect errors and warnings such as duplications, crossing buildings,unconnected ways/nodes and fixing them. The team also used the filters in JOSM to show untagged and undigitized buildings.
 
 \subsubsection{Data Visualization}
   %\caption {Map and Image showing Magomeni ward before and after re-digitization using UAV imagery}
@@ -772,12 +779,21 @@ JOSM - using filters to show if the buildings are well aligned and if there are 
 	\includegraphics[width=0\textwidth]{images/Building_Footprint_Digitization.png}
 \end{figure}
 
+\subsubsection{Statistics}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+   Buildings before re-digitization & 191,856 \\
+\hline
+   Buildings after re-digitization & 229,274 \\
+\hline
+\end{tabular}
+\end{center}
 
 \subsubsection{Use Case}
 Redigitized footprints were used to create OSM layers as a basemap for OMK during data collection activities including trash (clients) mapping and Risk Identification during assets and threat mapping. 
 
-Re-digitized footprints were also used in Community Flood Response mapping in Hananasif, Jangwani and Tandale wards in March, 2019. We are now conducting assessments in Kigogo, Manzese, Mwananyamala, Mzimuni, Tabata and Mabibo wards following the rains of May, 2019. Data is used to calculate the affected buildings in QGIS.
-
+Re-digitized footprints were also used in Community Flood Response mapping in Hananasif, Jangwani and Tandale wards in March, 2019. We are now conducting assessments in Kigogo, Manzese, Mwananyamala, Mzimuni, Tabata and Mabibo wards following the rains of May, 2019. Data is used to calculate the affected buildings in QGIS. The data was used to calculate the affected buildings in QGIS which were 1907 in total.
 
 \subsubsection{Data Gap}
 Only 28 wards out of 44 Ramani Huria wards have been re-digitized by using high resolution imagery. There is a need to do the same for the remaining 20 Ramani Huria wards.
@@ -786,6 +802,8 @@ Only 28 wards out of 44 Ramani Huria wards have been re-digitized by using high 
 Dar es Salaam is a fast growing city and with that there are physical changes or development of the city in terms of buildings. New buildings are constructed and some are demolished from time to time therefore there is a need for re-digitization of the whole city.
 
 Re-digitization using a high quality imagery is important because the features can be seen clearly and it is difficult to miss any features when the image is clearer.
+
+Misalignment between imagery is also a challenge for the digitization efforts.
 
 \newpage
 \subsection{Hyper-local Administrative Boundary Mapping}
@@ -827,9 +845,12 @@ ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
 \subsubsection{Data Collection Methodology}
 \begin{itemize}
     \item Introduction of the project from subward offices followed by training of selected community mappers on how to use ODK.
-    \item Trained mappers work with wajumbe to trace their administrative boundaries. With assistance from supervisors, the collected data is checked and uploaded to the server. 
+    \item Trained mappers worked with wajumbe to trace their administrative boundaries. The boundaries were traced using ODK trace and then added to QGIS for further processing. With assistance from supervisors, the collected data is checked and uploaded to the server. 
     \item Data cleaning was done using excel  and map creation using QGIS.
 \end{itemize}
+
+\subsection{Human Resources}
+Mapping of the hyperlocal administrative boundaries was done by 15 student volunteers with guidance from community members, mainly wajumbe and subward officers.
 
 \subsubsection{Data Model, Timeline, Access and Licensing}
 \begin{center}
@@ -851,7 +872,7 @@ Data Model &
 
 \subsubsection{Quality Assurance}
 \begin{enumerate}
-    \item QGIS was used to digitize boundaries which were collected from the field, Adding connection between two shina which share same boundaries, visualization of the dataset according to the name of subward leader and shina numbers. 
+    \item QGIS was used to digitize boundaries which were collected from the field, Adding connection between two shina which share the same boundaries, visualization of the dataset according to the name of subward leader and shina numbers. 
     \item Excel was used to clean all spelling errors of the either names of the subward leaders or deleting information which were not correct during data collection. 
     \item Data verification with local leader after producing the first draft map  to insure all boundaries were traced correctly ,no any missing boundary within their subward and  there is no any missing information or spelling errors of the names or shina numbers. 
 
@@ -865,7 +886,9 @@ Data Model &
 \end{figure}
 
 \subsubsection{Use Case}
-To find people’s address in Dar es Salaam, \href{https://www.hotosm.org/updates/piloting-tanzanias-first-patient-origin-tracking-system/}{Amana Hospital patient origin tracking system}\footnote{\url{https://www.hotosm.org/updates/piloting-tanzanias-first-patient-origin-tracking-system/}}
+To find people’s address in Dar es Salaam, \href{https://www.hotosm.org/updates/piloting-tanzanias-first-patient-origin-tracking-system/}{Amana Hospital patient origin tracking system}\footnote{\url{https://www.hotosm.org/updates/piloting-tanzanias-first-patient-origin-tracking-system/}}. The system---electronic Health Information System (eHIS)---was developed by a consulting company (Global Professional IT Group) with close support from HOT (in person Ka Ping Yee) by linking their Dashboard with the map.
+
+Currently, Amana Hospital in Dar es Salaam is using the patient origin tracking system. Hyperlocal boundaries data can also be used for disaster management and rescue i.e. fire or floods by Multi-agency emergency response teams, especially if the data is incorporated with highways.
 
 \subsubsection{Data Gap}
 The team faced political misunderstandings among wajumbe in Mabibo ward as most of the hyperlocal boundaries overlapped among different political parties and made it difficult for the team to trace the boundaries.
@@ -917,6 +940,9 @@ ID & WARD NAME\\
 
 Collection of building data for each structure and resident/client data for each unit (residence or business) within the buildings in Kisutu and Mchafukoge wards in Dar es Salaam. Robust barcode stickers were placed at the entry of each unit, and a survey was completed for each unit where possible. The building data was uploaded to OSM, along with some amenity information gleaned from the unit surveys, and the remainder of the per-unit data was provided to GWPL.
 
+\subsection{Human Resources}
+10 student volunteers mapped 2 wards in Dar es Salaam---Kisutu and Mchafukoge---working with revenue collectors from GWPL to obtain clients’ information. Each student collected at least 20 barcodes per day.
+
 \subsubsection{Data Model, Timeline, Access and Licensing}
 \begin{center}
 \begin{tabular}{|c|c|c|}  
@@ -945,7 +971,7 @@ Data Model &
 A total of 4706 clients mapped.
 Around 4500 client data points are used by the company to collect trash.
 
-
+\newpage
 \subsubsection{Data Visualization}
 
 \begin{figure}
@@ -963,7 +989,7 @@ Around 4500 client data points are used by the company to collect trash.
 \end{figure}
 
 \subsubsection{Use Case}
-Creation of a client tracking system now used by GWPL to keep track of their clients.
+Using the information/data collected by the HOT team, GWPL was able to create a client tracking system that they are now using to keep track of their clients. The client tracking system has also simplified revenue collection for the company.
 
 \subsubsection{Data Gaps}
 Data was collected in only 2 wards of Dar es Salaam. The process needs to be replicated to other wards of the city.
@@ -1012,9 +1038,12 @@ Ramani Huria team switched to working with local community leaders (wajumbe) who
 
 Tabata ward is 50\% informally developed hence most houses do not have house numbers. In order to connect the buildings’ geo locations with client information we developed unofficial numbers as a baseline for the use of collected data.
 
-A system to track the monthly income revenue of the clients was created as a final output of the the data. This was created in a Google spreadsheet containing client details and wajumbe names. The Ramani Huria team trained JCL revenue collectors how to update the monthly income generation column in the spreadsheet. The sheet was also integrated to OMK to ensure every customer is reached by the revenue collectors.
+A system to track the monthly income revenue of the clients was created as a final output of the data. This was created in a Google spreadsheet containing client details and wajumbe names. The Ramani Huria team trained JCL revenue collectors how to update the monthly income generation column in the spreadsheet. The sheet was also integrated to OMK to ensure every customer is reached by the revenue collectors.
 
 \end{multicols}
+
+\subsection{Human Resources}
+A team of 4 student volunteers working with revenue collectors from JCL to collect clients’ information in the 2 subwards---Msimbazi Magharibi and Msimbazi Mama---in Tabata ward.
 
 \subsubsection{Data Model, Timeline, Access and Licensing}
 \begin{center}
@@ -1033,8 +1062,6 @@ Data Model &
 \hline
 \end{tabular}
 \end{center}
-
-\newpage
 
 \subsubsection{Quality Assurance}
 \begin{itemize}
@@ -1077,7 +1104,7 @@ A system to collect revenues and update clients who pay for the trash services h
 \subsection{Dar es Salaam Trash Mapping}
 A collaboration between Nipe Fagio (“give me the broom” in Swahili), a civil society organization founded in 2013, and Ramani Huria joined forces and mapped trash sites in Dar es Salaam. The trash mapping initiative was part and parcel of the large Let’s-Do-It-World campaign, a civic-led mass movement to clean up countries.
 
-The mapped data helped to identify location of the areas with poorly managed waste materials, type and size of waste and clean up methods. This process helped ease cleaning the city on September 15th, 2018, a celebration of World Clean Up Day.
+The mapped data helped to identify the location of the areas with poorly managed waste materials, type and size of waste and clean up methods. This process helped ease cleaning the city on September 15th, 2018, a celebration of World Clean Up Day.
 
 \subsubsection{Spatial Extent}
 50 wards in Dar es Salaam
@@ -1118,6 +1145,9 @@ ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
 Using OpenDataKit to collect trash points in the city and filling out the survey on the type of waste (debris, glass, metal), and the size of trash (hand full, bag full, truckload, cart etc) to ease cleaning process.
 
 Before field work, introduction letters were sent to ward officers so they can be informed and for mappers’ security in case there is any assistance needed from the ward office.
+
+\subsubsection{Human Resources}
+Over 540 university students were trained and deployed in the field to actively engage in the collection of trash points in Dar es Salaam
 
 \subsubsection{Data Model, Timeline, Access and Licensing}
 \begin{center}
@@ -1196,6 +1226,9 @@ Meetings with ward leaders in the three most affected subwards and zone the affe
 
 Field visit to survey the affected area and take points to verify what community leaders zoned on the map.
 
+\subsubsection{Human Resources}
+A team of 6 volunteers reached 4 subwards in 3 wards in Dar es Salaam to collect data on affected buildings in the rains that hit the city on March 3rd, 2019. The team used printed maps to work with the community members to determine the affected areas.
+
 \subsubsection{Timeline, Access and Licensing}
 \begin{center}
 \begin{tabular}{|c|c|c|}  
@@ -1246,7 +1279,8 @@ Jangwani & Mtambani & 427 houses \\
 \subsubsection{Use Case}
 \begin{enumerate}
     \item To extract some types of information which are otherwise difficult to access by traditional methods, particularly for flood forecasting and flood water movement through identifying the affected areas and causative.
-    \item Conducting damage assessment of the affected areas.
+    \item Conducting damage assessment of the affected areas. The data has been shared with Red Cross, which will help them to prepare for the next rain season and for risk prevention analysis.
+
 \end{enumerate}
 
 \subsubsection{Data Gaps}
@@ -1292,6 +1326,9 @@ ID & WARD NAME & ID & WARD NAME\\
 
 \subsubsection{Data Collection Methodology}
 Using an ODK survey form and asking questions to community members about their experience of floods in their neighbourhoods. Community members of the respective wards were trained on how to collect data using ODK and were the ones to collect these information in their own neighborhood.
+
+\subsubsection{Human Resources}
+A team of five people, with knowledge in planning and added skills of ODK, OMK and OSM was tasked to train community members on how to use ODK in filling the survey and managing the flowing data.
 
 \subsubsection{Data Model, Timeline, Access and Licensing}
 \begin{center}
@@ -1364,6 +1401,66 @@ Individuals were asked to reflect on historical flood extents; therefore there i
 Community members did not know the units of measurements in metrics, therefore this posed as a problem to the team during data collection. In some of their responses, they estimated flood depth as 100 meters which was practically impossible.
 
 The team had to re-design the ODK form to make it simple when community members estimate the depth of floods by using man’s height i.e. knee deep, chest deep, waist deep etc.
+
+\newpage
+\section{Communications}
+\subsection{Blogs}
+\subsubsection{Ramani Huria Blog}
+\begin{tabular}{|c|c|c|c|}
+\hline
+S/N & Blog Name & Timeline\\
+\hline
+1 & \href{https://www.ippmedia.com/en/features\%20amana-hospital-launches-patient-origin-tracking-system}{Amana Hospital Launches Patient Tracking System\footnote{\url{https://www.ippmedia.com/en/features\%20amana-hospital-launches-patient-origin-tracking-system}}}  & January 10th, 2019\\
+{} & (published in local media website, The Guardian) & {}\\
+\hline
+2 & \href{https://www.hotosm.org/updates/piloting-tanzanias-first-patient-origin-tracking-system/}{Piloting Tanzania’s First Patient Origin Tracking System\footnote{\url{https://www.hotosm.org/updates/piloting-tanzanias-first-patient-origin-tracking-system/}}} & January 31st, 2019\\
+{} & (published on HOT’s website) & {}\\
+\hline
+3 & \href{https://www.thecitizen.co.tz/magazine/success/-Local-graduate-using-drones-for-mapping/1843788-4967500-c6pj0rz/index.html}{Local Graduate Using Drones for Mapping\footnote{\url{https://www.thecitizen.co.tz/magazine/success/-Local-graduate-using-drones-for-mapping/1843788-4967500-c6pj0rz/index.html}}} & February 5th, 2019\\
+{} & (published in local media, The Citizen) & {}\\
+\hline
+4 & \href{https://www.ippmedia.com/en/features/hot-tackles-dar-es-salaam\%E2\%80\%99s-waste-problem-one-dataset-time}{HOT Tackles Dar es Salaam’s Waste Problem\footnote{\url{https://www.ippmedia.com/en/features/hot-tackles-dar-es-salaam\%E2\%80\%99s-waste-problem-one-dataset-time}}} & May 3rd, 2019\\
+{} & (published in local media website, The Guardian) & {}\\
+\hline
+\end{tabular}
+
+\subsubsection{Ramani Huria Account Statistics}
+\begin{center}
+
+\begin{tabular}{|c|c|c|}
+\hline
+Facebook & 946 followers\\
+\hline
+Instagram & 539 followers\\
+\hline
+Twitter & 1688 followers\\
+\hline
+\end{tabular}
+\end{center}
+
+Ramani Huria Twitter Account Stats
+
+From June 2018 to June 2019 the Ramani Huria Twitter account has gained:
+\begin{itemize}
+    \item 179,096 impressions
+    \item 5,223 engagements
+    \item 577 retweets
+    \item 32 replies
+    \item 1,743 likes
+\end{itemize}
+
+\subsubsection{OpenMap Development Tanzania (@OMDTZ) Twitter Account}  
+To further promote the Ramani Huria project,  we have deleted the HOT Tanzania Twitter account and focused on the OpenMap Development Tanzania (OMDTZ) account. This was done for two reasons. First, in order to promote the local organization, and second, so as not to split our audiences. For all locally important matters this account has been very active in sharing project updates - for bigger, or internationally relevant stories, the HOT main account has also been used. Currently there are 1,403 followers. 
+
+
+\subsection{A few words on the impact of social media}
+Ramani Huria Social Media has been vital in connecting people to our work. For example, Students from across the globe doing their research on Ramani Huria project. I.e a student at the London School of Hygiene and Tropical Medicine studying Public Health, Health Services Management, who reached us through facebook chanell and wants to know if any work is being done on evaluating Ramani Huria information or if you need assistance with researching any particular field to improve these services especially connecting RH maps with public health.
+
+We also got a request from Facebook by Ryan Thomas from Cornell University asking the RH team to participate and/or support on GIS training in Moshi, Kilimanjaro Summer 2020.
+
+\subsection{Tools}
+In keeping with our commitment to using open source software, we are now preparing all reports, atlases and communication materials using \href{https://en.wikipedia.org/wiki/LaTeX}{\LaTeX{}\footnote{\url{https://en.wikipedia.org/wiki/LaTeX}}}---an open and  advanced typesetting system used to handle and design complex technical and academic texts. Moving forward, all of our communication templates will be stored on \href{https://github.com/}{Github}\footnote{\url{https://github.com/}} 
+
 
 
 \end{document}
