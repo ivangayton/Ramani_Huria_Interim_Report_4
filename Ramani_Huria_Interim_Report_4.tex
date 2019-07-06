@@ -2,6 +2,12 @@
 \documentclass[a4paper,12pt,twoside]{article}
 \usepackage{rhreport}
 
+\usepackage{titlesec}
+
+\titlespacing\section{-5pt}{12pt plus 4pt minus 2pt}{-5pt plus 2pt minus 2pt}
+\titlespacing\subsection{-5pt}{12pt plus 4pt minus 2pt}{-5pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{-5pt}{12pt plus 4pt minus 2pt}{-5pt plus 2pt minus 2pt}
+
 \begin{document}
 \thispagestyle{empty}
 \begin{center}
@@ -279,70 +285,78 @@ In order to make it clear to our readers where each activity has taken place, we
 The following  list represents over 20 different geospatial datasets for Dar es Salaam, Tanzania. They can be broken down by three separate components (Exposure, Environment, Hazard) under the \href{https://www.worldbank.org/en/programs/tanzania-urban-resilience-program}{Tanzania Urban Resilience Program}\footnote{\url{https://www.worldbank.org/en/programs/tanzania-urban-resilience-program}} (TURP). In this report, we go in depth to explore ten that the Ramani Huria team led. For the remaining datasets, much of the data is contributed by communities and users of OpenStreetMap. 
 For a comprehensive list of these datasets, please reference the Climate Risk Database hosted by the Resilience Academy geonode.
 
-\begin{tabular}{|c|c|c|c|c|c|}
+\begin{tabular}{|l|c|l|c|l|c|l|}
 \hline
-TURP Component & Title & Summary/Abstract\\
+\bfseries TURP Component & \bfseries Title & \bfseries Summary/Abstract\\
 \hline
-Exposure & Administrative Wards & An administrative boundary corresponding to level 3\\
-{} & {} & in the Database of Global Administrative Areas\\
+Exposure & Administrative & An administrative boundary corresponding\\
+{} & Wards &  to level 3 in the Database of Global\\
+{} & {} &  Administrative Areas\\
 \hline
- & Administrative Subwards & An administrative boundary corresponding to level 4\\
-{} & {} & in the Database of Global Administrative Areas\\
+Exposure & Administrative  & An administrative boundary corresponding \\
+{} & Subwards & to level 4 in the Database of Global\\
+{} & {} & Administrative Areas\\
 \hline
- & Buildings & Buildings in Dar es Salaam\\
+Exposure & Buildings & Buildings in Dar es Salaam\\
 \hline
- & Business Locations & Business areas in Dar es Salaam for commercial purposes\\
+Exposure & Business Locations & Business areas in Dar es Salaam for \\
+{} & {} & commercial purposes\\
 \hline
- & Education Facilities & Educational facilities in Dar es Salaam\\
+Exposure & Education Facilities & Educational facilities in Dar es Salaam\\
 \hline
- & Government Offices & Government offices in Dar es Salaam\\
+Exposure & Government Offices & Government offices in Dar es Salaam\\
 \hline
- & Hospitals' Location & 
+Exposure & Hospitals' Location & 
  Health care institutions in Dar es Salaam\\
 \hline
- & Hyperlocal Boundaries & Hyperlocal administrative boundaries in Dar es Salaam\\
+Exposure & Hyperlocal Boundaries & Hyperlocal administrative boundaries in \\
+{} & {} & Dar es Salaam\\
 \hline
- & Non-Governmental Offices & NGO offices in Dar es Salaam providing services\\
+Exposure & Non-Governmental & NGO offices in Dar es Salaam \\
+{} & Offices & providing services\\
 \hline
- & Religious Service Facilities & Place of worship in Dar es Salaam\\
+Exposure & Religious Service  & Place of worship in Dar es Salaam\\
+{} & Facilities & {}\\
 \hline
- & Retail Service Location & Areas selling retail products in Dar es Salaam\\
+Exposure & Retail Service Location & Areas selling retail products in Dar es \\
+{} & {} & Salaam\\
 \hline
- & Tourist Attractions & Areas in Dar es Salaam providing\\
+Exposure & Tourist Attractions & Areas in Dar es Salaam providing\\
  {} & {} & information to support tourists\\
 \hline
- & Public Water Points & Public water points in Dar es Salaam\\
+Exposure & Public Water Points & Public water points in Dar es Salaam\\
 \hline 
- & Schools’ Location & Educational facilities in Dar es Salaam\\
+Exposure & Schools’ Location & Educational facilities in Dar es Salaam\\
 \hline
- & Public Toilets & Public toilets in Dar es Salaam\\
+Exposure & Public Toilets & Public toilets in Dar es Salaam\\
 \hline
- & Pharmacies & Drug store shops in Dar es Salaam\\
+Exposure & Pharmacies & Drug store shops in Dar es Salaam\\
 \hline
- & Open Areas & Undeveloped pieces of land in Dar es Salaam\\
+Exposure & Open Areas & Undeveloped pieces of land in Dar es \\
+{} & {} & Salaam\\
 \hline
- & Roads & Highway data of all roads in Dar es Salaam\\
+Exposure & Roads & Highway data of roads in Dar es Salaam\\
 \hline
 Environment & Drains & Drainage data in Dar es Salaam\\
 \hline
- & Soil Classes & Soil sediment sample in Dar es Salaam\\
+Environment & Soil Classes & Soil sediment sample in Dar es Salaam\\
 {} & {} & and some part of Pwani region\\
 \hline
- & Waste Sites & Areas in Dar es Salaam with\\
+Environment & Waste Sites & Areas in Dar es Salaam with\\
 {} & {} & poorly managed solid waste\\
 \hline
- & Assets and Flood Risks & Flood risk identification on\\
+Environment & Assets and Flood Risks & Flood risk identification on\\
 {} & {} & flood prone areas in Dar es Salaam\\
 \hline
- & Building Footprint Digitization & Re-digitized buildings using\\
-{} & {} & 2016 UAV high resolution imagery\\
+Environment & Building Footprint & Re-digitized buildings using\\
+{} & Digitization  & 2016 UAV high resolution imagery\\
 \hline
- & Community Flood Response & Rapid assessment of flooded\\
-{} & {} & areas by March 2019, rains\\
+Environment & Community Flood & Rapid assessment of flooded\\
+{} & Response & areas by March 2019, rains\\
 \hline
 Hazard & Flood Depths & Flood depth history in Dar es Salaam\\
 \hline
- & Flood Extents & Flood history in Dar es Salaam\\
+Hazard & Flood Extents & Flood history in Dar es Salaam\\
 \hline
 \end{tabular}
 
@@ -764,6 +778,11 @@ The QA team used validation plugin to detect errors and warnings such as duplica
 
 \subsubsection{Data Visualization}
   %\caption {Map and Image showing Magomeni ward before and after re-digitization using UAV imagery}
+ \begin{figure}[h]
+ 	\caption{Map and Image showing Magomeni ward before and after re-digitization using UAV imagery}
+ 	\centering
+ 	\includegraphics[width=0\textwidth]{images/Building_Footprint_Digitization.png}
+ \end{figure}
 \begin{tabular}{|c@{}c|}
   \hline
  
@@ -773,13 +792,13 @@ The QA team used validation plugin to detect errors and warnings such as duplica
     \includegraphics[width=0.5\textwidth]{images/Detailed_Magomeni_After_Redigitization.png}\\
   \hline
 \end{tabular}
-\begin{figure}[h]
-	\caption{Map and Image showing Magomeni ward before and after re-digitization using UAV imagery}
-	\centering
-	\includegraphics[width=0\textwidth]{images/Building_Footprint_Digitization.png}
-\end{figure}
 
 \subsubsection{Statistics}
+Before redigitization, buildings were fewer in number compared to after redigitization using the 2016 high resolution COWI imagery, this was due to different facts including: 
+\begin{itemize}
+	\item The imagery that were used before were not very clear, hence when digitizing the buildings, some would blur or would be mistaken for other features such as cars.
+	\item The imagery used were outdated compared to the 2016 COWI imagery. In this case, the number of buildings had increased over the years.
+\end{itemize}
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
@@ -973,20 +992,18 @@ Around 4500 client data points are used by the company to collect trash.
 
 \newpage
 \subsubsection{Data Visualization}
-
-\begin{figure}
-  \begin{subfigure}[b]{0.4\textwidth}
-   \includegraphics[width=\textwidth]{images/GWPL_client_map.png}
-   \color{RHgreen}\caption{Map showing detailed collected points at Kisutu ward}
-    \label{fig:1}
-  \end{subfigure}
-  %
-  \begin{subfigure}[b]{0.5\textwidth}
-   \includegraphics[width=\textwidth]{images/GWPL_client_tracking_system.png}
-    \color{RHgreen}\caption{GWPL new client tracking system}
-    \label{fig:2}
-  \end{subfigure}
+\begin{figure}[h]
+	\caption{Images showing detailed collected points at Kisutu ward and the dashboard for GWPL new client tracking system respectively}
+	\centering
+	\includegraphics[width=0\textwidth]{images/Building_Footprint_Digitization.png}
 \end{figure}
+\begin{tabular}{|c@{}c|}
+	\hline
+	
+	\includegraphics[width=0.5\textwidth]{images/GWPL_client_map.png}&%
+	\includegraphics[width=0.5\textwidth]{images/GWPL_client_tracking_system.png}\\
+	\hline
+\end{tabular}
 
 \subsubsection{Use Case}
 Using the information/data collected by the HOT team, GWPL was able to create a client tracking system that they are now using to keep track of their clients. The client tracking system has also simplified revenue collection for the company.
@@ -1074,19 +1091,19 @@ Data Model &
 20163 client points collected in 2 subwards of Tabata ward
 
 \subsubsection{Data Visualization}
-\begin{figure}
-  \begin{subfigure}[b]{0.5\textwidth}
-   \includegraphics[width=\textwidth]{images/Msimbazi_mama.png}
-   \color{RHgreen}\caption{A map showing client distribution, houses and hyperlocal boundaries in Msimbazi Mama}
-    \label{fig:1}
-  \end{subfigure}
-  %
-  \begin{subfigure}[b]{0.5\textwidth}
-   \includegraphics[width=\textwidth]{images/Msimbazi_magharibi.png}
-    \color{RHgreen}\caption{Map showing client distribution, houses and hyperlocal boundaries in Msimbazi Magharibi}
-    \label{fig:2}
-  \end{subfigure}
+
+\begin{figure}[h]
+	\caption{Maps showing client distribution, houses and hyperlocal boundaries in Msimbazi Mama and Msimbazi Magharibi subwards in Taba ward respectively}
+	\centering
+	\includegraphics[width=0\textwidth]{images/Building_Footprint_Digitization.png}
 \end{figure}
+\begin{tabular}{|c@{}c|}
+	\hline
+	
+	\includegraphics[width=0.5\textwidth]{images/Msimbazi_mama.png}&%
+	\includegraphics[width=0.5\textwidth]{images/Msimbazi_magharibi.png}\\
+	\hline
+\end{tabular}
 
 \subsubsection{Use Case}
 Data is used in the subward by Joshemi company in daily trash collection and tracking clients for payment. The process needs to be replicated to other wards of the city as it will help in managing solid waste, reduce improper dumping which cause blockage of drains and rivers. 
