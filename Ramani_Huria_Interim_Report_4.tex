@@ -426,28 +426,36 @@ During the data cleaning process, the ODK forms that were filled in the field ar
 
 After the data is cleaned, it is run in the \href{https://github.com/openearth/hydro-osm}{Hydro OSM model}\footnote{\url{https://github.com/openearth/hydro-osm}} to ensure all drain segments and points are connected  (connectivity) for the first and last point i.e. outflow, no\_exit, others and begins.
 
+\subsubsection{Data Visualization}
+
+\begin{figure}[h]
+	\color{RHgreen}\caption{A detailed image showing the drainage channel flow in Dar es Salaam.}
+	\includegraphics[width=0.8\textwidth]{images/Drainage_Visualization.jpeg}
+\end{figure}
+
 \subsubsection{Statistics}
-18350 segments of culverts, drains, ditches, and decommissioned drainage infrastructure totaling 705.739 kilometer. Whereby lined drains cover 56.69\%, culverts cover 37.37\% while unlined drains (ditches) cover 5.25\%.
+18350 segments of culverts, drains, ditches, and decommissioned drainage infrastructure totaling 705.739 kilometers. Whereby lined drains cover 56.69\%, culverts cover 37.37\% while unlined drains (ditches) cover 5.25\%.
 13385 drain points have been collected whereby 3.9\% are blockage/damage points with either solid waste materials or sands and 4.9\%are  points with no\_exit(drainage channel ends with no outflow)
 
 This is summarized in the table below
 
 \begin{center}
-\begin{tabular}{|c|c|}
-\hline
-   Number of Segments & 16207 \\
-\hline
-   Number of Points & 12620 \\
-   \hline
-\end{tabular}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\bfseries Segments & \bfseries Points\\
+		\hline
+		Lined 56.69\% & Blocked by solid waste 3.9\%\\
+		\hline
+		Culverts 37.37\% & No exit/Outflow 4.9\%\\
+		\hline
+		Unlined (Ditches) 5.25\% & {}\\
+		\hline
+		Distance 705.739 km & {}\\
+		\hline
+		\bfseries Total Segments 18350 & \bfseries Total Points 12620\\
+		\hline
+	\end{tabular}
 \end{center}
-
-\subsubsection{Data Visualization}
-
-\begin{figure}[h]
- \color{RHgreen}\caption{A detailed image showing the drainage channel flow in Dar es Salaam.}
-  \includegraphics[width=0.8\textwidth]{images/Drainage_Visualization.jpeg}
-\end{figure}
 
 \subsubsection{Use Case}
 Development of a flood model and early warning systems. This data is used by the Tanzania Rural and Urban Road Agency (TARURA) and the Dar es Salaam Metropolitan Development Project (DMDP).
