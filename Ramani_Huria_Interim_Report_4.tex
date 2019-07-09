@@ -399,7 +399,14 @@ ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
 \end{figure}
 
 \subsubsection{Data Collection Methodology}
+\begin{multicols}{2}
 Preparation of survey forms in KoBo Toolbox for the ODK application for drain segments and points. Field mappers then installed ODK on their Android phones and with the URL for the server to be used, they downloaded the survey forms, filled the required information from the field and uploaded the forms.
+
+For data collection, measuring tapes and measuring rods---special wooden measuring sticks created by the RH team to measure the bottom width and depth of drains---were used. In some cases where trapezoidal drains are covered with water, the use of measuring rods was the best option. It enables taking measurements without the mapper having to get into the drainage channel, while for drains with narrow width the use of measuring tape was most efficient.
+
+A 2016 COWI imagery was used for data cleaning due to its high resolution which effects fixing GPS errors. Some Android smartphones installed with ODK Collect have a GPS with an accuracy of 5 meters or which results to a +/- 5 meters error from the real position - using a high resolution imagery in data cleaning helps fixing this problem.
+\end{multicols}
+
 
 \subsubsection{Human Resources}
 A small team of 12 student volunteers was trained in the specifics of drainage mapping i.e. using a measuring rods and measuring tapes to acquire dimensions of a drainage shape and size. Apart from drainage linear features---drain, culvert and ditch---the team was also taught how to map point features which support linear features, i.e. when attached to each other. For instance, drain points when explaining the uppermost part of drain and showing the blockage points. Although this team comprised of students with various backgrounds, no one had prior knowledge of drainage mapping - rather some of them had been involved in other mapping activities, such as cadastral survey.
@@ -421,17 +428,17 @@ Access & {\href{https://geonode.uhurulabs.org/layers/geonode\%3ADrain\%20Points}
 \end{tabular}
 \end{center}
 
+\subsubsection{Data Visualization}
+\begin{figure}[h]
+	\color{RHgreen}\caption{A detailed image showing the drainage channel flow in Dar es Salaam.}
+		\centering
+	\includegraphics[width=0.8\textwidth]{images/Drainage_Visualization.jpeg}
+	\end{figure}
+
 \subsubsection{Quality Assurance}
 During the data cleaning process, the ODK forms that were filled in the field are downloaded from the server in Comma Separated Value (CSV) format and converted to GeoPackage (.gpkg) in QGIS. The plugin to convert ODK form to CSV format is found in \href{https://github.com/zestyping/odk_csv}{GitHub}\footnote{\url{https://github.com/zestyping/odk\_csv}}. The drain segments and points are styled with a pre-defined .qml style found in QGIS---\textit{Drain\_lines\_categorized\_with\_labels\_and\_directions} and \textit{Drain\_points\_categorized\_with\_labels} and a high resolution 2016 COWI imagery was used in cleaning to determine the position of drain segments and points in QGIS.
 
 After the data is cleaned, it is run in the \href{https://github.com/openearth/hydro-osm}{Hydro OSM model}\footnote{\url{https://github.com/openearth/hydro-osm}} to ensure all drain segments and points are connected  (connectivity) for the first and last point i.e. outflow, no\_exit, others and begins.
-
-\subsubsection{Data Visualization}
-
-\begin{figure}[h]
-	\color{RHgreen}\caption{A detailed image showing the drainage channel flow in Dar es Salaam.}
-	\includegraphics[width=0.8\textwidth]{images/Drainage_Visualization.jpeg}
-\end{figure}
 
 \subsubsection{Statistics}
 18350 segments of culverts, drains, ditches, and decommissioned drainage infrastructure totaling 705.739 kilometers. Whereby lined drains cover 56.69\%, culverts cover 37.37\% while unlined drains (ditches) cover 5.25\%.
