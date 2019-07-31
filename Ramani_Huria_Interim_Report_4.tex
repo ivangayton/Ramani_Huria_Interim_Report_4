@@ -159,7 +159,7 @@ Innovation Week is a week-long series of events hosted by Human Development Inno
 We also showcased a drone that was built locally using bamboo with the aim of capturing aerial images at a low cost without importing drones, which might be expensive. This also aligns with our slogan of "local people, local devices and open knowledge".
 
 \subsection{River Mapping}
-In order to provide Nipe Fagio, I4ID and other partners with high-quality and interactive spatial data to better understand solid waste management and service quality across all five municipalities of Dar es Salaam, several drone flights have been conducted along five major rivers of Dar es Salaam---Msimbazi, Mpiji, Tegeta, Kizinga and Mzinga Rivers---covering approximately 60 km of Dar es Salaam’s critical water arteries. 
+In order to provide Nipe Fagio, I4ID, Tanzania Urban Resilience Program (TURP), Resilience Academy and other partners with high-quality and interactive spatial data to better understand solid waste management and service quality across all five municipalities of Dar es Salaam, several drone flights have been conducted along five major rivers of Dar es Salaam---Msimbazi, Mpiji, Tegeta, Kizinga and Mzinga Rivers---covering approximately 60 km of Dar es Salaam’s critical water arteries. 
 
 The drone flights provide a digital photographic mark-up of the current status of Dar es Salaam’s waterways. The broad purpose of this work is to provide Nipe Fagio, I4ID and other partners with high-quality and interactive spatial data to better understand solid waste management and service quality across all five municipalities of Dar es Salaam and the city’s key five rivers.
 
@@ -1435,6 +1435,79 @@ Individuals were asked to reflect on historical flood extents; therefore there i
 Community members did not know the units of measurements in metrics, therefore this posed as a problem to the team during data collection. In some of their responses, they estimated flood depth as 100 meters which was practically impossible.
 
 The team had to re-design the ODK form to make it simple when community members estimate the depth of floods by using man’s height i.e. knee deep, chest deep, waist deep etc.
+
+\subsection{Ramani Huria Base Data}
+\begin{multicols}{2}
+
+Ramani Huria teams collect and create a wide range of base-map data, which primarily go to the OpenStreetMap platform. This is the underlying map layer upon which specific datasets important to resilience are overlaid---the equivalent of common web-based maps such as Google Maps, but freely available open data backed by a global community and extensive quality assurance. 
+
+This includes roads, buildings, health care facilities, schools and universities, transportation infrastructure such as bus stops and Rapid Transit lines, businesses such as restaurants, shops, salons and hotels, public offices, recreation facilities, natural features such as rivers and wetlands, parks, etc. This data is being constantly updated as the physical features of the city change and evolve, as well as when users or the community choose to focus on a particular feature type (for example, if a local agency wishes to visualize where people get drinking water, volunteers---including Ramani Huria students---may specifically focus on features relevant to that need for a time.  
+
+Most Ramani Huria data is available on \href{https://openstreetmap.org}{OpenStreetMap} \footnote{\url{https://openstreetmap.org}}, but specific reslience-related datasets (including most of those described in the preceding sections) are collated in static for  to platforms such as the Resilience Academy GeoNode. The base data described here is not generally kept in a static form, but is viewed on the OpenStreetMap website or accessed via tools such as the \href{https://exports.hotosm.org}{HOT Export tool} \footnote{\url{https://exports.hotosm.org}} or \href{https://overpass-turbo.eu/}{Overpass API} \footnote{\url{https://overpass-turbo.eu/}}. These tools provide an up-to-the-minute snapshot of the latest data at any time, and are therefore preferable to static repositories.
+
+\end{multicols}
+
+\subsubsection{Spatial Extent}
+
+OpenStreetMap is a global map! There is no particular boundary or extent to this data. However, the Ramani Huria team's efforts are focused on greater Dar es Salaam, with a particular focus on the 46 Ramani Huria 2.0 wards (just under 50\% of the wards in the city):
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+ID & WARD NAME & ID & WARD NAME & ID & WARD NAME\\
+\hline
+1 & Tandale & 16 & Mburahati & 31 & Magomeni\\
+2 & Hananasifu & 17 & Makurumla & 32 & Vingunguti\\
+3 & Kinyerezi & 18 & Upanga Mashariki & 33 & Tabata\\
+4 & Msigani & 19 & Kigogo & 34 & Mwananyamala\\
+5 & Makumbusho & 20 & Ukonga & 35 & Kimanga\\
+6 & Buguruni & 21 & Kawe & 36 & Sinza\\
+7 & Temeke & 22 & Kipawa & 37 & Gongo la Mboto\\
+8 & Makongo & 23 & Kinondoni & 38 & Makuburi\\
+9 & Ubungo & 24 & Pugu & 39 & Manzese\\
+10 & Mikocheni & 25 & Kimara & 40 & Kunduchi\\
+11 & Ndugumbi & 26 & Upanga Magharibi & 41 & Msasani\\
+12 & Ilala & 27 & Mabibo & 42 & Kwembe\\
+13 & Kijitonyama & 28 & Mchikichini & 43 & Segerea\\
+14 & Saranga & 29 & Jangwani & 44 & Kariakoo\\
+15 & Sandali & 30 & Mzimuni & 45 & Tandika\\
+{} & {} & {} & {} & 46 & Makangarawe\\
+ \hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Data Collection Methodology}
+Ramani Huria base data is collected and created using the range of tools in the OpenStreetMap and Humanitarian OpenStreetMap Team ecosystem, including but not limited to:
+
+\begin{itemize}
+    \item The Java OpenStreetMap Editor (JOSM)
+    \item OpenDataKit
+    \item OpenMapKit
+    \item ID Editor
+    \item HOT Tasking Manager
+    \item QGIS
+\end{itemize}
+
+The two main categories of data creation are remote mapping and field mapping. Remote mapping is done using aerial or satellite imagery, usually with the \href{https://josm.openstreetmap.de/}{JOSM} \footnote{\url{https://josm.openstreetmap.de/}} tool, a desktop editing software that provides a comprehensive suite of tools for viewing imagery and creating vector features upon the raster background.
+
+Ramani Huria teams alongside global OpenStreetMap volunteers have digitized essentially every feature visible feature in aerial imagery of the greater Dar es Salaam city, including over one million individual buildings and virtually all roads. 
+
+Field mapping, usually using OpenDataKit or its derivative OpenMapKit, involves physically visiting features to add local information such as road names, building type, amenities, etc. 
+
+\subsubsection{Human Resources}
+Ramani Huria teams sometimes directly digitize base data from aerial or satellite imagery, particularly when there is a specific need. However, more often the Ramani Huria supervisors teach and mentor volunteers to digitize, either during the Industrial Training programs or during mapathon events. 
+
+The Ramani Huria motto has been "Local People, Local Devices, Open Knowledge." The key to the success of the project has been empowering citizens of Tanzania to map their own environment. While some field mapping---such as the technically demanding drainage mapping---is carried out directly by Ramani Huria teams, much of the work is done by students during the Industrial Training programs, or even by community members themselves, who are trained to use OpenDataKit and encouraged (often with a small stipend or donation of mobile credit) to survey their own neighbors.
+
+\subsubsection{Data Model, Timeline, Access, and Licensing}
+OpenStreetMap itself has an \href{https://wiki.openstreetmap.org/wiki/Elements}{underlying model} \footnote{\url{https://wiki.openstreetmap.org/wiki/Elements}} to describe the physical world---this basically amounts to showing points, lines, and polygons (in OpenStreetMap parlance Nodes, Open Ways, and Closed Ways) as well as "relations" which may, for example, describe how a road also functions a boundary between two Wards.
+
+The Ramani Huria data model is built atop this schema, and is documented on the \href{https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Ramani_Huria}{Ramani Huria Wiki}, which was developed by the Ramani Huria team in consultation with the World Bank and other TURP stakeholders. 
+
+\subsubsection{Quality Assurance}
+The \href{https://tasks.hotosm.org/}{HOT Tasking Manager} \footnote{\url{https://tasks.hotosm.org/}} includes a Validation function. When individuals are allocated mapping tasks, they signal completion by clicking the appropriate button on the Web interface, which marks the area complete but not validated. Ramani Huria team members, as well as volunteer validators from the larger OpenStreetMap community, then re-check each and every area for completeness, errors, and data model adherence.
+
+Additionally, Ramani Huria teams use tools such as \href{https://wiki.openstreetmap.org/wiki/OSMCha}{OSMCHA} \footnote{\url{https://wiki.openstreetmap.org/wiki/OSMCha}}, JOSM, and GIS utilities to ensure that RH data conforms to the data model and contains minimum errors.
 
 \newpage
 \section{Communications}
