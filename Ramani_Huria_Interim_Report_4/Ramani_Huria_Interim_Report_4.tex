@@ -32,7 +32,7 @@
   Humanitarian OpenStreetMap Team
   \
   
-  05 July, 2019
+  31 July, 2019
 \end{center}
 \bigskip
 
@@ -427,6 +427,8 @@ A 2016 COWI imagery was used for data cleaning due to its high resolution which 
 \subsubsection{Human Resources}
 A small team of 12 student volunteers was trained in the specifics of drainage mapping i.e. using a measuring rods and measuring tapes to acquire dimensions of a drainage shape and size. Apart from drainage linear features---drain, culvert and ditch---the team was also taught how to map point features which support linear features, i.e. when attached to each other. For instance, drain points when explaining the uppermost part of drain and showing the blockage points. Although this team comprised of students with various backgrounds, no one had prior knowledge of drainage mapping - rather some of them had been involved in other mapping activities, such as cadastral survey.
 
+A detailed description on how to conduct drainage mapping, tools that are used, data collection, data cleaning and running the data in the model can be found in the \href{https://docs.google.com/document/d/1XeygVKoVkBq6Gb5FTDIPFcVvdEf_YcZoGZarwANVdU0/edit#heading=h.hzdk9wxec1td}{pocket guide to drainage mapping}\footnote{\url{https://docs.google.com/document/d/1XeygVKoVkBq6Gb5FTDIPFcVvdEf_YcZoGZarwANVdU0/edit#heading=h.hzdk9wxec1td}} and the \href{https://wiki.openstreetmap.org/wiki/Urban_Drainage_Mapping}{urban drainage mapping wiki}\footnote{\url{https://wiki.openstreetmap.org/wiki/Urban_Drainage_Mapping}}.
+
 \subsubsection{Data Model, Timeline, Access and Licensing}
 \begin{center}
   \begin{tabular}{|c|c|c|}  
@@ -451,6 +453,7 @@ Access & {\href{https://geonode.resilienceacademy.ac.tz/layers/geonode:drain_poi
 	\includegraphics[width=0.8\textwidth]{images/Drainage_Visualization.jpeg}
 	\end{figure}
 
+\newpage
 \subsubsection{Quality Assurance}
 During the data cleaning process, the ODK forms that were filled in the field are downloaded from the server in Comma Separated Value (CSV) format and converted to GeoPackage (.gpkg) in QGIS. The plugin to convert ODK form to CSV format is found in \href{https://github.com/zestyping/odk_csv}{GitHub}\footnote{\url{https://github.com/zestyping/odk\_csv}}. The drain segments and points are styled with a pre-defined .qml style found in QGIS---\textit{Drain\_lines\_categorized\_with\_labels\_and\_directions} and \textit{Drain\_points\_categorized\_with\_labels} and a high resolution 2016 COWI imagery was used in cleaning to determine the position of drain segments and points in QGIS.
 
@@ -819,8 +822,8 @@ Validation by the digitizers considered consistent naming of the buildings, spel
  
  \includegraphics[width=0.5\textwidth]{images/Magomeni_Before_Redigitization.png}&%
     \includegraphics[width=0.5\textwidth]{images/Magomeni_After_Redigitization.png}\\
- \includegraphics[width=0.5\textwidth]{images/Detailed_Magomeni_Before_Redigitization.png}&%
-    \includegraphics[width=0.5\textwidth]{images/Detailed_Magomeni_After_Redigitization.png}\\
+ \includegraphics[width=0.5\textwidth]{images/Magomeni_Before.png}&%
+    \includegraphics[width=0.5\textwidth]{images/Magomeni_After.png}\\
   \hline
 \end{tabular}
 
